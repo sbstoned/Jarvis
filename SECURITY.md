@@ -16,7 +16,7 @@ Security-sensitive reports may include:
 - leakage of private prompts, sessions, uploads, or runtime data
 - provider credentials being written to logs or generated projects
 
-If GitHub Private Vulnerability Reporting is enabled for this repository, use that mechanism. Otherwise, contact the maintainer privately through the GitHub profile rather than posting sensitive details publicly.
+Use GitHub Private Vulnerability Reporting for security-sensitive reports. Do not post credentials, exploit details, or private data in a public issue.
 
 ## Secrets and credentials
 
