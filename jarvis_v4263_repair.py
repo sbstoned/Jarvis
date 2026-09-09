@@ -44,3 +44,9 @@ def install(g):
              'JARVIS_ACTIVE_ENGINE.txt').write_text('V' + VERSION + '\n', encoding='utf-8')
     except OSError:
         pass
+
+    # V42.66 is a focused post-startup repair policy layer. Keeping the import
+    # here avoids rewriting the very large local_qwen_project.py bootstrap while
+    # ensuring every normal V42.63 startup activates the bounded repair fixes.
+    from jarvis_v4266_repair import install as _v4266_install
+    _v4266_install(g)
