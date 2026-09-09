@@ -12,15 +12,15 @@ That means Jarvis tracks project state, chooses models, runs toolchains, diagnos
 
 ## Highlights
 
-- **Universal project builder** â€” `project_builder_skills/` contains guidance for many languages, frameworks, engines, build systems, databases, mobile, desktop, web, and mixed repositories.
-- **Evidence-driven repair loop** â€” candidate changes are validated with syntax, build, test, and runtime evidence before promotion.
-- **Functional acceptance gates** â€” unresolved functional debt, missing workflow tests, broken builds, and protected regressions block final acceptance.
-- **Checkpoint and resume** â€” incomplete projects can be saved and continued instead of regenerated from scratch.
-- **AUTO hybrid local-model routing** â€” routine work can use a smaller local Qwen worker while harder architecture and repair work can be promoted to a larger specialist.
-- **Strict manual model selection** â€” choosing a model manually locks the project to that model.
-- **Multi-provider support** â€” optional Gemini/Hermes, OpenAI, and Anthropic provider paths are available alongside local Qwen.
-- **Voice + dashboard command center** â€” browser dashboard, voice engine, one-click Windows launcher, optional Air Touch controls, project uploads, and diagnostics.
-- **Local coding safety layer** â€” provider-driven edits are scoped to the selected project and validation mode restricts destructive commands.
+- **Universal project builder** — `project_builder_skills/` contains guidance for many languages, frameworks, engines, build systems, databases, mobile, desktop, web, and mixed repositories.
+- **Evidence-driven repair loop** — candidate changes are validated with syntax, build, test, and runtime evidence before promotion.
+- **Functional acceptance gates** — unresolved functional debt, missing workflow tests, broken builds, and protected regressions block final acceptance.
+- **Checkpoint and resume** — incomplete projects can be saved and continued instead of regenerated from scratch.
+- **AUTO hybrid local-model routing** — routine work can use a smaller local Qwen worker while harder architecture and repair work can be promoted to a larger specialist.
+- **Strict manual model selection** — choosing a model manually locks the project to that model.
+- **Multi-provider support** — optional Gemini/Hermes, OpenAI, and Anthropic provider paths are available alongside local Qwen.
+- **Voice + dashboard command center** — browser dashboard, voice engine, one-click Windows launcher, optional Air Touch controls, project uploads, and diagnostics.
+- **Local coding safety layer** — provider-driven edits are scoped to the selected project and validation mode restricts destructive commands.
 
 ## Architecture
 
