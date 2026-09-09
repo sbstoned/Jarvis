@@ -1,0 +1,2 @@
+# Integration Testing
+Requested tests require executable test files and a real runner, not README claims. Cover major user flows, persistence boundaries, error cases and component integration. Keep tests deterministic and project-local. Unit tests may validate isolated logic; integration/acceptance tests must prove important cross-component behavior. Do not publish while requested tests are absent or failing.

@@ -1,0 +1,41 @@
+{
+  "version": "42.40.2",
+  "engine": "CHECKPOINT_CONTROL_COMPILER_EVIDENCE_FACTORY",
+  "result": "PASS",
+  "regression_checks": {
+    "V42.0 capability and sandbox": "20/20 PASS",
+    "V42.35 candidate runtime parity": "33/33 PASS",
+    "V42.36 fresh native authority": "31/31 PASS",
+    "V42.37 component transaction sandbox": "28/28 PASS",
+    "V42.40 checkpoint and UI recovery": "47/47 PASS",
+    "total": "159/159 PASS"
+  },
+  "static_validation": {
+    "python_compileall": "PASS",
+    "javascript_node_check": "PASS",
+    "html_parser": "PASS",
+    "css_brace_balance": "PASS",
+    "root_json_parse": "PASS"
+  },
+  "runtime_smoke": {
+    "dashboard_http_index": "PASS",
+    "dashboard_layout_api_schema_2": "PASS",
+    "occupied_dashboard_port_fallback": "PASS",
+    "llama_ui_endpoint_rejection": "PASS",
+    "dedicated_jarvis_browser_profile": "PASS",
+    "resumable_checkpoint_packaging": "PASS",
+    "windows_standalone_browser_launch": "SOURCE-VERIFIED; Windows GUI unavailable on validation host",
+    "local_qwen_generation": "NOT RUN; model server and user toolchains unavailable on validation host"
+  },
+  "verified_changes": [
+    "chat panel has stable identity and a visible pointer resize handle",
+    "chat panel geometry persists and legacy unreachable layout state is rejected",
+    "chat input retains protected minimum dimensions and pointer access",
+    "dashboard auto-open starts only after its HTTP server is ready",
+    "STOP + CHECKPOINT interrupts the active Qwen stream and preserves accepted source",
+    "stop state and append-only stop history are written immediately",
+    "repair memory, failure trace, and human-readable failure status persist in generated projects",
+    "repeated exact patches are bounded and validated through the existing candidate transaction gates",
+    "V42.35 through V42.37 component isolation and stale-blocker invalidation remain intact"
+  ]
+}

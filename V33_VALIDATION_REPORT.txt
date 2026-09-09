@@ -1,0 +1,16 @@
+JARVIS V33 VALIDATION REPORT
+============================
+
+Validated before packaging:
+- All 8 Python source modules compile successfully.
+- Dashboard ui/app.js passes node --check.
+- V33 rich project-plan schema includes phase, depends_on, exports, contracts, architecture_rules, and shared_contracts.
+- V33 dependency ordering smoke test produced: foundation -> service -> UI -> entrypoint.
+- V33 skeleton materialization produced importable Python contract shells and build-status metadata.
+- V33 single-attempt generation smoke test confirmed implemented dependency source is included in the file prompt.
+- V33 missing-export repair smoke test selected MISSING_EXPORT_PROVIDER prompt mode and committed a valid provider replacement.
+- V33 plan-merge smoke test confirmed a review can remove a stale/cyclic dependency edge.
+- V33 internal architecture/build-status files are excluded from generated user project ZIPs.
+- Live ai_providers.env is not included in this distributable bundle.
+
+Runtime model policy remains V32 native-262K throughput profile; V33 changes project architecture/generation/repair behavior.

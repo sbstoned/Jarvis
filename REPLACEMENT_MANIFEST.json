@@ -1,0 +1,253 @@
+{
+  "bundle": "Jarvis v2.74.1 Qwen3.5-9B V37.0.0 SMALL-MODEL SOFTWARE FACTORY",
+  "version": "V37.0.0-SMALL-MODEL-SCAFFOLD-SEMANTIC-CLOSURE",
+  "default_profile": "9b35",
+  "server_context_tokens": 262144,
+  "project_limits": {
+    "default_files": 160,
+    "hard_max_files": 1000
+  },
+  "bootstrap_recovery": {
+    "enabled": true,
+    "architecture_failures_reported_separately": true,
+    "tiny_complex_recovery_manifest_disabled": true,
+    "semantic_dependency_normalization": true,
+    "transport_salvage": true
+  },
+  "toolchain_adapters": [
+    "python",
+    "python_desktop",
+    "static_web",
+    "node",
+    "react",
+    "vite",
+    "nextjs",
+    "vue",
+    "sveltekit",
+    "nuxt",
+    "angular",
+    "electron",
+    "tauri",
+    "react_native",
+    "expo",
+    "cpp_cmake",
+    "rust",
+    "go",
+    "dotnet",
+    "java_gradle",
+    "java_maven",
+    "kotlin_gradle",
+    "android_gradle",
+    "flutter",
+    "swiftpm",
+    "ios_xcode",
+    "macos_xcode",
+    "unreal",
+    "unity",
+    "godot",
+    "php_composer",
+    "ruby_bundler",
+    "generic"
+  ],
+  "validation": {
+    "multi_component_graph": true,
+    "clean_python_venv": true,
+    "dependency_provisioning": true,
+    "runtime_smoke": true,
+    "executable_acceptance_tests": true,
+    "reject_noop_build_tests": true,
+    "strict_host_unverified": true,
+    "compiler_diagnostic_hints": true,
+    "android_gradle": true,
+    "swiftpm": true,
+    "xcode_strict_host_aware": true,
+    "unreal_strict_host_aware": true,
+    "unity_strict_host_aware": true,
+    "godot_strict_host_aware": true,
+    "generic_safe_commands": true,
+    "semantic_dependency_resolution": true,
+    "external_dependency_separation": true,
+    "flattening_tolerant_requirement_ledger": true,
+    "read_before_edit_patch_repair": true,
+    "large_file_rewrite_guard": true,
+    "repair_loop_fingerprints": true,
+    "focused_100_line_failure_view": true,
+    "failure_only_bounded_diagnosis": true,
+    "jsonc_validation": true,
+    "internal_import_closure_gate": true
+  },
+  "preserved": [
+    "V27 truncated-file continuation",
+    "V30 root-cause/provider repair",
+    "V32 working-context budgeting",
+    "V33 contract-first dependency-ordered implementation",
+    "V35 multi-component clean build/acceptance",
+    "V36 repository graph, machine contracts, patch transactions and checkpoints",
+    "V36.1 TaskForge real-run hardening",
+    "V36.2 frozen requirements, component planning and dependency closure"
+  ],
+  "files": [
+    {
+      "name": "INSTALL_REPLACEMENTS.bat",
+      "bytes": 3577,
+      "sha256": "94af295dc7e78156cd5aa795b86e5b3fe2c68436ba254c6164908a658e471a8b"
+    },
+    {
+      "name": "jarvis.py",
+      "bytes": 252591,
+      "sha256": "9d4c5f6c223cc0b05a82793c569cdc5cfde8afa741aa1f1dcadde3ac90642d2a"
+    },
+    {
+      "name": "local_qwen_project.py",
+      "bytes": 872954,
+      "sha256": "33f7ef2689f823f9e8a0a5cb21bd342e7475db3148c5713d987019e204d410c7"
+    },
+    {
+      "name": "multi_provider.py",
+      "bytes": 82595,
+      "sha256": "677d28c27e472a2d34255487254d77be4b27250f73af328a1effc3e3ba5ae940"
+    },
+    {
+      "name": "qwen_model_manager.py",
+      "bytes": 16566,
+      "sha256": "93e4959b4e9703a1826daee91c9d7598feb3d5b874b7e0ac5aa66bcca356f784"
+    },
+    {
+      "name": "START_QWEN_LOCAL.ps1",
+      "bytes": 45371,
+      "sha256": "2b5433c587951620ecb8a384d0b46265ae8309eee3c1f70aa876fc0019a42c37"
+    },
+    {
+      "name": "START_QWEN_LOCAL.bat",
+      "bytes": 597,
+      "sha256": "294b2347018bf619153cd65d1687ecb62434b72c572b6c4bfc7249daae89112e"
+    },
+    {
+      "name": "ui/app.js",
+      "bytes": 57192,
+      "sha256": "ca64cc658c628a15d2f9f41f7555bd7d0b7643faa5811d8e8874e68cf4cbff8d"
+    },
+    {
+      "name": "ui/dashboard.py",
+      "bytes": 62649,
+      "sha256": "2713dc46b3479b1d9f42c3f420dfd9a8f9047458f7ea3140278cbe290c75a978"
+    },
+    {
+      "name": "V34_1_UNIVERSAL_BUILDER_README.txt",
+      "bytes": 2919,
+      "sha256": "3fb2195110c669817e8dbec707a84991dd9af71b8c2f4c90327c2b6cd54b6b5c"
+    },
+    {
+      "name": "V34_1_VALIDATION_REPORT.txt",
+      "bytes": 1471,
+      "sha256": "528a2ee1526248d21aca78bcf9067db7cadd9e89aa8ceb02b7a9c160a86290cc"
+    },
+    {
+      "name": "V35_UNIVERSAL_COMPLETION_README.txt",
+      "bytes": 3923,
+      "sha256": "fd50a7fcf569b8938e426f1776417f7a7f90df449a1e17d70220b4c6dc6568b7"
+    },
+    {
+      "name": "CHECK_V35_UNIVERSAL_BUILDER.py",
+      "bytes": 226,
+      "sha256": "7306bf8089382fe0a8b955c9d8ef8af554ae824458892bdf8c62963f5b18f6d1"
+    },
+    {
+      "name": "CHECK_V35_UNIVERSAL_BUILDER.bat",
+      "bytes": 173,
+      "sha256": "c7742a8606ab0b2179f6b8f69181c0799d3c86b086f26f89071a6146ebf5659a"
+    },
+    {
+      "name": "V35_VALIDATION_REPORT.txt",
+      "bytes": 2162,
+      "sha256": "9c62e5601d9b6a29ee3edef0955f8293ac0b23672c6b7328c69077f7523e8802"
+    },
+    {
+      "name": "CHECK_V37_ALL.bat",
+      "bytes": 527,
+      "sha256": "6fe54ed70b55279c53e67d63015f01db6d30255771879cb6316c41c099a242f5"
+    },
+    {
+      "name": "CHECK_V37_SMALL_MODEL_FACTORY.py",
+      "bytes": 14650,
+      "sha256": "ff26d63977c940b35ff93d4196c452ca4c80ec8deb502377f6feba6be224d7fa"
+    },
+    {
+      "name": "CHECK_V37_SMALL_MODEL_FACTORY.bat",
+      "bytes": 222,
+      "sha256": "fc84e2bd3b1607f62bcf74a9794618b67d26b527fd09e5a41920468d2dbc0133"
+    },
+    {
+      "name": "CHECK_V37_CORE_COMPAT.py",
+      "bytes": 12616,
+      "sha256": "c46053c305836d445b99e0d75cec6963d06bd5c0a1d78c840489401397fcee89"
+    },
+    {
+      "name": "CHECK_V37_REAL_RUN_COMPAT.py",
+      "bytes": 8192,
+      "sha256": "342c72641015163143213bc4a6f23c165aeb309f8ef40763fd98311ae406c704"
+    },
+    {
+      "name": "CHECK_V37_PLANNER_COMPAT.py",
+      "bytes": 16758,
+      "sha256": "24bf1b63ccdc989b050d4d2e93ad0935494994a6683ec650884d7b8dac3c39f4"
+    },
+    {
+      "name": "JARVIS_BENCH_V37.py",
+      "bytes": 5809,
+      "sha256": "64e8f73d6d8ef78c063864798d4b6f19e0f401c7a25af3c58b66285a8a67bbbe"
+    },
+    {
+      "name": "JARVIS_BENCH_V37.bat",
+      "bytes": 262,
+      "sha256": "e9b8b38cbf07a95728556ac7df53e4eb14a77764f681f85596701c249d47d609"
+    },
+    {
+      "name": "V37_SMALL_MODEL_FACTORY_README.txt",
+      "bytes": 3649,
+      "sha256": "b26487da6e90252aa5ecb72e78eb9173b8b9810a256f99f4fb68c1140da49c74"
+    },
+    {
+      "name": "V37_VALIDATION_REPORT.txt",
+      "bytes": 3643,
+      "sha256": "fc16fed3be613f3f20186ce9033673e65e1c9450586fd095d900e77906b03447"
+    },
+    {
+      "name": "V37_RESEARCH_NOTES.txt",
+      "bytes": 3055,
+      "sha256": "b4f9335bf7632c80f4f4aae4f374712c144b35002c502c4165eb61ad2e2c2565"
+    },
+    {
+      "name": "VERSION_V37.txt",
+      "bytes": 271,
+      "sha256": "fef1b56843d6ca7da1cf3218283919f0250e62e430a13122c65b0d6eb24c1d93"
+    },
+    {
+      "name": "V37_TASKFORGE_FAILURE_REPLAY.txt",
+      "bytes": 1836,
+      "sha256": "7f6325bf784ac7b5bf33e0606e4705c1bbc5944182931e68d2aeec799eb5b0b6"
+    },
+    {
+      "name": "README_REPLACE_THESE_FILES.txt",
+      "bytes": 3309,
+      "sha256": "236cdd99cfc3a716146eaf84acaf75128d2108775eaa99509c8896a03c0c86f3"
+    }
+  ],
+  "planning": {
+    "hierarchical_components": true,
+    "default_plan_output_tokens": 16384,
+    "explicit_stack_lock_only": true
+  },
+  "small_model_profile": {
+    "target_model": "Qwen3.5-9B Q4_K_M",
+    "native_context_ceiling": 262144,
+    "default_working_context": 32768,
+    "file_output_tokens": 6144,
+    "continuation_rounds": 2,
+    "read_before_edit": true,
+    "focused_context": true,
+    "failure_only_deliberation": true,
+    "repair_loop_detection": true,
+    "large_file_rewrite_guard": true
+  }
+}

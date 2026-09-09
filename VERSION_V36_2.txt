@@ -1,0 +1,3 @@
+JARVIS V36.2.0 UNIVERSAL SOFTWARE FACTORY
+Chunked hierarchical planner + frozen requirements + dependency closure + JSONC/package import gates.
+Recommended verification: CHECK_V362_ALL.bat

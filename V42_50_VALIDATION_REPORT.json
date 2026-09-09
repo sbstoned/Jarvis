@@ -1,0 +1,13 @@
+{
+  "version": "42.50.0",
+  "engine": "REGRESSION_SAFE_FUNCTIONAL_CONVERGENCE_FACTORY",
+  "repair_strategy_generation": "functional-acceptance-v8-regression-safe-component-proof",
+  "selected_regression_assertions": 368,
+  "python_compile": "PASS",
+  "json_files_validated": 63,
+  "dashboard_javascript_syntax": "PASS",
+  "geartrack_e0308_exact_regression": "PASS",
+  "functional_candidate_compile_regression_rejection": "PASS",
+  "compiler_build_failure_precedes_functional_repair": "PASS",
+  "notes": "Functional patches remain disposable until affected component proof stays green and targeted functional issue family strictly decreases."
+}

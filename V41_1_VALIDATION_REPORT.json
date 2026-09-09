@@ -1,0 +1,82 @@
+{
+  "release": "Jarvis V41.1 Universal Multi-Toolchain Factory",
+  "version": "V41.1",
+  "engine": "UNIVERSAL_MULTI_TOOLCHAIN_FACTORY",
+  "generated_at_utc": "2026-08-30T06:20:38.933206+00:00",
+  "source_base": {
+    "uploaded_archive": "web_research.zip",
+    "full_project_base": true
+  },
+  "validation": {
+    "universal_factory_regression": {
+      "passed": 135,
+      "total": 135,
+      "status": "PASS"
+    },
+    "python_compile": {
+      "files_checked": 7,
+      "compile_errors": 0,
+      "status": "PASS"
+    },
+    "toolchain_adapters": {
+      "registered": 59,
+      "status": "PASS"
+    },
+    "skill_cards": {
+      "count": 58,
+      "status": "PASS"
+    },
+    "casual_project_routing": {
+      "build_prompt_routes_to_factory": true,
+      "explanatory_question_stays_chat": true,
+      "status": "PASS"
+    },
+    "project_kind_platform_separation": {
+      "android_unity_game": {
+        "toolchain_adapter": "unity",
+        "project_kinds": [
+          "game",
+          "mobile"
+        ],
+        "platform": "android"
+      },
+      "status": "PASS"
+    },
+    "geartrack_ownership_regression": {
+      "package_json_exports": [],
+      "package_json_build_metadata_symbols": [
+        "Tool",
+        "Category"
+      ],
+      "rust_provider_self_heal": "src-tauri/src/domain.rs",
+      "frontend_provider_self_heal": "src/types/domain.ts",
+      "status": "PASS"
+    },
+    "archive_integrity": {
+      "status": "PASS",
+      "method": "unzip -t",
+      "result": "No errors detected in compressed data"
+    }
+  },
+  "release_files": [
+    "local_qwen_project.py",
+    "jarvis.py",
+    "multi_provider.py",
+    "qwen_model_manager.py",
+    "web_research.py",
+    "ui/dashboard.py",
+    "project_builder_skills/universal.md",
+    "project_builder_skills/toolchains.json",
+    "CHECK_V411_UNIVERSAL_FACTORY.py",
+    "CHECK_V411_UNIVERSAL_FACTORY.bat",
+    "V41_1_UNIVERSAL_FACTORY_README.txt",
+    "V41_1_VALIDATION_REPORT.json",
+    "hardware_helper/",
+    "tools/JarvisHardwareSensors/",
+    "tools/LibreHardwareMonitor/"
+  ],
+  "limitations": [
+    "No full long-running local Qwen generation was executed in this Linux sandbox; host-specific engine/toolchain validation remains dependent on the user Windows machine."
+  ],
+  "validated_at_utc": "2026-08-30T06:21:26.905140+00:00"
+}

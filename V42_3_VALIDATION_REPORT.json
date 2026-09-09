@@ -1,0 +1,64 @@
+{
+  "version": "V42.3.0",
+  "engine": "PROGRESSIVE_GLOBAL_CONVERGENCE_FACTORY",
+  "regression_suites": {
+    "V41.1 universal+expanded registry": {
+      "passed": 166,
+      "total": 166
+    },
+    "V41.2 React/Vite": {
+      "passed": 14,
+      "total": 14
+    },
+    "V41.3 repair convergence": {
+      "passed": 29,
+      "total": 29
+    },
+    "V41.3 failed-workspace replay": {
+      "passed": 7,
+      "total": 7
+    },
+    "V42.0 capability/sandbox": {
+      "passed": 20,
+      "total": 20
+    },
+    "V42.1 Tauri/Cargo": {
+      "passed": 26,
+      "total": 26
+    },
+    "V42.2 component boundary": {
+      "passed": 19,
+      "total": 19
+    },
+    "V42.3 progressive/global convergence": {
+      "passed": 40,
+      "total": 40
+    }
+  },
+  "total_regression_checks": 321,
+  "total_regression_passed": 321,
+  "python_files_checked": 15,
+  "python_compile_errors": [],
+  "toolchain_registry_adapters": 72,
+  "skill_cards": 76,
+  "key_guards": {
+    "coverage_gap_autoaugmentation": true,
+    "requirement_debt_ledger": true,
+    "progressive_build_debt": true,
+    "strict_final_acceptance": true,
+    "publish_with_debt": false,
+    "component_boundary_gate": true,
+    "command_broker": true,
+    "capability_discovery": true,
+    "optional_docker_wsl": true,
+    "registry_driven_marker_detection": true,
+    "adaptive_context_headroom": true
+  },
+  "exact_failure_regression": "project_20260830_202744 pattern: missing csv_import_export/tests no longer aborts solely at preflight; stack-native owners are added and remain hard acceptance obligations.",
+  "limitations": "This environment cannot replay a full Windows-local Qwen generation or Windows-native compiler/SDK run. Deterministic factory regressions, Python compilation, plan/debt behavior and archive integrity are validated here.",
+  "archive_validation": {
+    "filename": "Jarvis_V42_3_PROGRESSIVE_GLOBAL_CONVERGENCE_FACTORY_COMPLETE.zip",
+    "integrity": "PASS",
+    "note": "Final archive is re-tested after packaging; any failing compressed entry prevents release."
+  }
+}

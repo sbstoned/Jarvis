@@ -1,0 +1,51 @@
+{
+  "version": "V42.20.0",
+  "engine": "BUILD_FIRST_INFRASTRUCTURE_AWARE_DISK_BOUNDED_FACTORY",
+  "primary_regression": {
+    "suite": "CHECK_V4220_INFRA_DISK_CONVERGENCE.py",
+    "result": "48/48 PASS"
+  },
+  "compatibility_passes": [
+    {
+      "suite": "CHECK_V4215_RUST_TOPOLOGY_RESUME_AUTHORITY.py",
+      "result": "22/22 PASS"
+    },
+    {
+      "suite": "CHECK_V4213_BOUNDED_SPECIALIST_PROGRESS.py",
+      "result": "26/26 PASS"
+    },
+    {
+      "suite": "CHECK_V4212_ATTACHED_ZIP_RESUME_TRIAL_ISOLATION.py",
+      "result": "21/21 PASS"
+    },
+    {
+      "suite": "CHECK_V4211_ROBUST_ZIP_RESUME_IMPORT.py",
+      "result": "25/25 PASS"
+    },
+    {
+      "suite": "CHECK_V429_WHOLE_PROJECT_AUDIT.py",
+      "result": "18/18 PASS"
+    },
+    {
+      "suite": "CHECK_V423_PROGRESSIVE_GLOBAL_CONVERGENCE.py",
+      "result": "40/40 PASS"
+    },
+    {
+      "suite": "CHECK_V424_PROVIDER_FIRST_FAST_CONVERGENCE.py",
+      "result": "31/31 PASS"
+    }
+  ],
+  "python_compile": "33/33 Python files compiled successfully",
+  "superseded_historical_expectations": [
+    "V42.19/V42.18/V42.17/V42.16 release-identity assertions expect their historical version strings.",
+    "V42.6 expected an automatic second ordinary leaf repair to promote to 27B; V42.19+ intentionally keeps routine repair on 9B unless fresh build evidence indicates a root-cause/architecture failure.",
+    "V42.7 expected 27B watchdogs >=720 seconds; V42.20 intentionally caps the specialist at 300 seconds by default.",
+    "V42.10 expected tsconfig.node.json noEmit=true; V42.18+ uses a project-reference-compatible composite declaration-only configuration instead."
+  ],
+  "geartrack_stopped_run": {
+    "rust_component": "previous stopped-run audit showed cargo build/test/smoke PASS",
+    "react_component": "blocked by V42.19 npm.CMD spaced-path wrapper, now fixed in command broker",
+    "planner_test_debt": "optional Jarvis-generated acceptance debt retired unless the user explicitly asks to create tests",
+    "disk_growth": "resume trials share one build cache; Cargo incremental/debug validation artifacts suppressed; caches pruned on trial commit and terminal packaging"
+  }
+}

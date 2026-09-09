@@ -1,0 +1,81 @@
+{
+  "source": "uploaded GearTrack resumable checkpoint from 2026-09-08",
+  "input_functional_group_count": 9,
+  "scheduled_clusters": [
+    {
+      "phase": 0,
+      "owners": [
+        "src-tauri/src/checkout.rs",
+        "src-tauri/src/tools.rs",
+        "src-tauri/src/main.rs"
+      ],
+      "cluster": true,
+      "evidence_files": [
+        "src-tauri/src/checkout.rs",
+        "src-tauri/src/tools.rs",
+        "src-tauri/src/main.rs",
+        "src-tauri/src/persons.rs",
+        "src-tauri/src/app.rs",
+        "src-tauri/src/categories.rs",
+        "src-tauri/src/db.rs",
+        "src-tauri/src/lib.rs",
+        "src-tauri/src/migrations.rs",
+        "src-tauri/src/models/tool.rs",
+        "src/types/tool.ts",
+        "src/hooks/useCheckouts.ts",
+        "src/components/CheckoutHistoryView.tsx",
+        "src/hooks/useFiltering.ts",
+        "src-tauri/Cargo.toml",
+        "src-tauri/src/models/checkout_record.rs",
+        "src/types/checkout_record.ts",
+        "src-tauri/src/models/person.rs"
+      ]
+    },
+    {
+      "phase": 1,
+      "owners": [
+        "src/hooks/useCSVImportExport.ts",
+        "src/hooks/useCategories.ts",
+        "src/hooks/useCheckouts.ts",
+        "src/hooks/usePersons.ts"
+      ],
+      "cluster": true,
+      "evidence_files": [
+        "src/hooks/useCSVImportExport.ts",
+        "src/hooks/useCategories.ts",
+        "src/hooks/useCheckouts.ts",
+        "src/hooks/usePersons.ts",
+        "src/hooks/useFiltering.ts",
+        "src/hooks/useTauriCommands.ts",
+        "src/main.tsx",
+        "src/vite-env.d.ts",
+        "src-tauri/src/app.rs",
+        "src-tauri/src/lib.rs",
+        "src-tauri/src/main.rs",
+        "src/hooks/useDashboardStats.ts",
+        "src/hooks/useTools.ts",
+        "src-tauri/src/tools.rs",
+        "src/types/tool.ts",
+        "src-tauri/src/models/tool.rs",
+        "src/components/InventoryView.tsx",
+        "src/App.tsx"
+      ]
+    },
+    {
+      "phase": 5,
+      "owners": [
+        "src-tauri/tests/application.rs"
+      ],
+      "cluster": false
+    },
+    {
+      "phase": 5,
+      "owners": [
+        "tests/application.integration.test.ts"
+      ],
+      "cluster": false
+    }
+  ],
+  "production_cluster_count": 2,
+  "expected_production_transactions_per_audit_round": 2
+}

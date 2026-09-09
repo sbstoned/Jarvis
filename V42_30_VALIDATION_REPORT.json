@@ -1,0 +1,96 @@
+{
+  "version": "V42.30.0",
+  "engine": "FRESH_COMPILER_LAST_MILE_ACTIVATION_FACTORY",
+  "new_regression": "17/17 PASS",
+  "top_level_python_compile": {
+    "files": 43,
+    "failures": []
+  },
+  "geartrack_8_error_regression": {
+    "checkpoint": "geartrack_checkpoint_20260903_183651.zip",
+    "input_diagnostics": 8,
+    "input_files": [
+      "src/App.tsx",
+      "src/hooks/useCSVImportExport.ts",
+      "src/hooks/useTools.ts"
+    ],
+    "checks": {
+      "dashboard_metrics_wired": true,
+      "inventory_props_wired": true,
+      "history_props_wired": true,
+      "update_tool_alias_reconciled": true,
+      "delete_tool_alias_reconciled": true,
+      "csv_boolean_preserved": true,
+      "csv_partial_removed": true,
+      "csv_full_parser_present": true
+    },
+    "changed_files": [
+      "src/hooks/useCSVImportExport.ts",
+      "src/hooks/useTools.ts",
+      "src/App.tsx"
+    ],
+    "reasons": {
+      "src/hooks/useCSVImportExport.ts": [
+        "TS2345 reconstruct typed CSV parser parseCSVLine from CSVRow + header contract",
+        "remove dead helper parseField",
+        "TS2322 interface-proven boolean preservation for is_checked_out"
+      ],
+      "src/hooks/useTools.ts": [
+        "TS2339 provider-verified alias updateTool as updateToolCommand",
+        "TS2339 provider-verified alias deleteTool as deleteToolCommand"
+      ],
+      "src/App.tsx": [
+        "import useCategories",
+        "import usePersons",
+        "import useTools",
+        "import useCheckouts",
+        "import useDashboardStats",
+        "wire DashboardView props",
+        "wire InventoryView props",
+        "wire CheckoutHistoryView props",
+        "move module JSX config into component scope"
+      ]
+    },
+    "all_checks_pass": true
+  },
+  "compatibility_results": {
+    "CHECK_V4229_LAST_MILE_CONSTRAINT_SOLVER.py": {
+      "returncode": 0,
+      "tail": "V42.29 regression: 23/23 PASS"
+    },
+    "CHECK_V4228_BEST_STATE_ENDGAME.py": {
+      "returncode": 0,
+      "tail": "V42.28 regression: 15/15 PASS\nV42.28 extended regression: 17/17 PASS"
+    },
+    "CHECK_V4227_PARSER_SAFE_STRUCTURAL_RECOVERY.py": {
+      "returncode": 0,
+      "tail": "V42.27 regression: 15/15 PASS"
+    },
+    "CHECK_V4226_COMPILER_PROOFED_TS_DOCTOR.py": {
+      "returncode": 0,
+      "tail": "V42.26 regression: 17/17 PASS"
+    },
+    "CHECK_V4225_SEMANTIC_EVENT_LOOP_SPILL.py": {
+      "returncode": 0,
+      "tail": "V42.25 regression: 24/24 PASS"
+    },
+    "CHECK_V4224_COMPILER_DIRECTED_MULTIFILE.py": {
+      "returncode": 0,
+      "tail": "V42.24 regression: 14/14 PASS"
+    },
+    "CHECK_V4222_CONSUMER_FIRST_COMPILER_OWNERSHIP.py": {
+      "returncode": 0,
+      "tail": "PASS cross-layer workaround field removed\nPASS consumer repair accepted\nPASS exact consumer repaired first\nPASS stable category provider not touched\nPASS green component validator first call succeeds\nPASS unchanged green component build reused\nPASS cache result marked\nRESULT 21 passed / 0 failed"
+    },
+    "CHECK_V4215_RUST_TOPOLOGY_RESUME_AUTHORITY.py": {
+      "returncode": 0,
+      "tail": "PASS crate models brace import resolves mod.rs\nPASS checkout graph does not point to flat models.rs\nPASS all current planned files accepted\nPASS phantom provider has no provider-health problem\nPASS runtime cleanup removes hallucinated models.rs\nPASS runtime cleanup preserves models/mod.rs\nPASS V42.15 report written\nRESULT 22/22 PASS"
+    }
+  },
+  "notes": [
+    "Fresh real compiler evidence activates last-mile constraints before broad resume repair.",
+    "Event/progress engine identity bypasses historical overwrite wrappers.",
+    "TS2322 object-shape boolean repair uses declared target interface.",
+    "Disk engine marker prevents future stale-process project starts after file upgrades."
+  ]
+}

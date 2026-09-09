@@ -1,0 +1,38 @@
+{
+  "version": "V42.22.0",
+  "engine": "CONSUMER_FIRST_COMPILER_OWNERSHIP_FACTORY",
+  "generated_at": "2026-09-02T22:33:14.961418+00:00",
+  "base_archive": "Jarvis_V42_21_COMPLETE.zip",
+  "validation": {
+    "v4222_regression": "21/21 PASS",
+    "python_compile": "35/35 PASS",
+    "v4215_rust_topology": "22/22 PASS",
+    "legacy_suite_notes": {
+      "V42.16": "23/24; only failure is old-version identity assertion",
+      "V42.19": "43/45; only failures are old release/runtime identity assertions",
+      "V42.20": "45/48; only failures are old release/engine/runtime identity assertions"
+    }
+  },
+  "geartrack_reproduction": {
+    "duplicate_react_imports": "deterministically merged",
+    "checkout_record_metrics_props_workaround": "deterministically removed",
+    "compiler_target_order": [
+      "src/App.tsx",
+      "src/components/InventoryView.tsx"
+    ],
+    "speculative_provider_targets_for_app_prop_error": [],
+    "stable_category_provider_protected": true
+  },
+  "changes": [
+    "Fresh TypeScript compiler file locations are primary repair ownership evidence.",
+    "Removed implicit same-component canonical-provider repair bias.",
+    "Accepted parse-clean TypeScript DTO/type providers are protected from speculative rewrites.",
+    "Explicit module/export compiler evidence can still repair a provider.",
+    "Consumer repair prompts include read-only contracts from actual local imports.",
+    "One accepted TypeScript repair forces a fresh build before another edit.",
+    "Duplicate React imports are merged deterministically.",
+    "Self-described cross-layer Props workaround fields are removed deterministically.",
+    "Unchanged green React/Rust component validations are cached by source fingerprint.",
+    "TypeScript convergence is build-bounded with a no-progress breaker rather than provider rotation."
+  ]
+}

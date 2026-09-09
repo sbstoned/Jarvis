@@ -1,0 +1,45 @@
+{
+  "version": "V42.14",
+  "engine": "current-version-resume-state-reconstruction",
+  "status": "PASS",
+  "regression_total": 606,
+  "regression_passed": 606,
+  "regression_failed": 0,
+  "regression_suites": 19,
+  "python_files_compiled": 27,
+  "python_compile_errors": 0,
+  "toolchain_adapters": 73,
+  "skill_cards": 86,
+  "exact_resume_regression": {
+    "source": "project_20260831_204118.zip pattern",
+    "checks": 27,
+    "passed": 27,
+    "failed": 0,
+    "covered": [
+      "empty/stale domain-owner state",
+      "stale src/types.ts aggregate provider",
+      "stale src-tauri/src/models.rs aggregate provider",
+      "semantic TypeScript provider reconstruction",
+      "semantic Rust provider reconstruction",
+      "duplicate src-tauri/src-tauri topology cleanup",
+      "Tauri v1 package manifest versus v2 Cargo/config/lock reconciliation",
+      "invalid Cargo default-run target repair",
+      "contract registry reconstruction",
+      "repo graph reconstruction",
+      "Project KB reconstruction",
+      "imported baseline revision binding"
+    ]
+  },
+  "preserved_systems": [
+    "AUTO Qwen3.5 9B worker + NEW Qwen3.8 27B Q2_K_P specialist",
+    "manual model strict lock",
+    "continuous IDE diagnostics",
+    "true every-component whole-project audit",
+    "provider-first and contract-graph repair",
+    "endgame/test convergence",
+    "robust ZIP extraction",
+    "resume trial cache isolation",
+    "bounded specialist anti-overnight watchdog",
+    "strict zero-debt publish gate"
+  ]
+}

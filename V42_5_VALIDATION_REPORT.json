@@ -1,0 +1,18 @@
+{
+  "release": "V42.5",
+  "feature": "Optional Qwen3.8-27B HauhauCS Aggressive Q2_K_P local model selector",
+  "base_factory": "V42.4 Provider-First Fast Global Convergence",
+  "default_local_model": "9b35",
+  "new_profile": "27b38q2",
+  "new_model_file": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-Q2_K_P.gguf",
+  "new_model_default_path": "D:\\Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF\\Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-Q2_K_P.gguf",
+  "existing_regressions": "355/355 PASS",
+  "v425_selector_regressions": "25/25 PASS",
+  "total_regressions": "380/380 PASS",
+  "python_files_checked": 18,
+  "python_compile_errors": [],
+  "node_app_js_syntax": "PASS",
+  "default_unchanged": true,
+  "legacy_27b_preserved": true,
+  "hf_repo": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF"
+}

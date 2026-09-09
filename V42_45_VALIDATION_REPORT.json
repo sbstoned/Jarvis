@@ -1,0 +1,57 @@
+{
+  "version": "V42.45.0",
+  "engine": "WARM_CACHE_COMPILER_PROMOTION_FACTORY",
+  "repair_strategy_generation": "sqlx-joined-struct-row-v3-warm-cache-compile-gate",
+  "source_release": "Jarvis_V42_44_0_COMPLETE.zip",
+  "observed_run": {
+    "checkpoint": "geartrack_checkpoint_20260905_145511.zip",
+    "accepted_source_changed_vs_043214": false,
+    "remaining_component": "rust",
+    "remaining_diagnostics": 7,
+    "error_code": "E0277",
+    "primary_site": "src-tauri/src/tools.rs:145",
+    "deterministic_candidate_generated": true,
+    "candidate_reason": "decode SQLx joined row into Tool fields plus holder_name instead of treating Tool as a scalar tuple column",
+    "v4244_result": "validator_failed_unclassified",
+    "focused_proof_timeout_seconds": 180,
+    "model_cycles_after_candidate": 2,
+    "accepted_model_source_changes": 0
+  },
+  "fixes": {
+    "warm_cargo_target_candidate_compile_gate": true,
+    "accepted_workspace_target_cache_reused": true,
+    "candidate_source_remains_disposable": true,
+    "compile_gate_default_timeout_seconds": 300,
+    "compile_gate_max_attempts": 2,
+    "timeout_gets_one_warmed_continuation": true,
+    "strict_diagnostic_decrease_can_promote": true,
+    "compile_green_can_promote_intermediate_progress": true,
+    "full_tests_runtime_revalidate_after_promotion": true,
+    "final_acceptance_still_strict": true,
+    "strategy_generation_reopens_v4244_once": true,
+    "same_v4245_revision_remains_bounded": true,
+    "terminal_dashboard_state_replaces_stale_preflight": true
+  },
+  "regression_suites": {
+    "CHECK_V4245_WARM_CACHE_COMPILER_GATE.py": "9/9 PASS",
+    "CHECK_V4244_PHASE_AWARE_PROMOTION.py": "13/13 PASS",
+    "CHECK_V4243_SQLX_STRATEGY_GENERATION.py": "13/13 PASS",
+    "CHECK_V4242_REVISION_MEMORY_CONVERGENCE.py": "79/79 PASS",
+    "CHECK_V4241_AUTHORITATIVE_REPAIR.py": "35/35 PASS",
+    "CHECK_V4240_CHECKPOINT_UI_RECOVERY.py": "50/50 PASS",
+    "CHECK_V4237_COMPONENT_TRANSACTION_SANDBOX.py": "28/28 PASS",
+    "CHECK_V4236_FRESH_NATIVE_AUTHORITY.py": "31/31 PASS",
+    "CHECK_V4235_CANDIDATE_RUNTIME_PARITY.py": "33/33 PASS",
+    "total_assertions": "291/291 PASS"
+  },
+  "static_checks": {
+    "python_compileall": "PASS",
+    "json_files_validated": 51,
+    "dashboard_javascript_syntax": "PASS",
+    "active_engine_marker": "V42.45.0"
+  },
+  "limitations": [
+    "Cargo/Rust is not installed in the execution environment used to package this release, so the actual GearTrack cargo build cannot be executed here.",
+    "The real Windows Jarvis host remains the authority for Cargo/Tauri build, tests, runtime smoke, and final acceptance."
+  ]
+}

@@ -1,0 +1,13 @@
+Jarvis V42.56.0 focused regression summary
+
+CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py: 17/17 PASS
+CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py: 17/17 PASS
+CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py: 19/19 PASS
+CHECK_V4255_MODEL_PROTOCOL.py: 35/35 PASS
+CHECK_V4256_EVIDENCE_CLOSED_SCOPED_REPAIR.py: 5/5 PASS
+
+Python syntax/import checks: PASS
+Uploaded tools.rs failed-response replay: 3 proposed hunks -> 1 retained exact in-scope hunk; target functional debt 1 -> 0; working joined-row decoder preserved.
+Uploaded CSV target evidence replay: real same-language integration seam src/hooks/useTauriCommands.ts selected.
+
+CHECK_V4254_WORKFLOW_CONVERGENCE.py: exceeded sandbox execution timeout before producing an assertion result; not counted as a pass. This legacy fixture passed in the prior V42.55 package, and the V42.56 behavior is directly covered by the focused transaction/model-protocol tests above.

@@ -1,0 +1,96 @@
+{
+  "version": "42.57.0",
+  "engine": "EVIDENCE_EXPANDED_UNBOUNDED_STREAM_CONVERGENCE_FACTORY",
+  "created_at_utc": "2026-09-08T05:34:55.698908+00:00",
+  "source_archive": "Jarvis_V42_56_0_COMPLETE.zip",
+  "source_archive_sha256": "27fbbc21c2f0cb4b56215f25a205de8007edda5a236d221609a8f1da08390e41",
+  "distribution": "complete V42.56 Jarvis distribution plus V42.57 coordinated-scope and stream-wall changes",
+  "behavioral_changes": {
+    "evidence_proven_scope_expansion": true,
+    "runtime_entrypoint_owner_priority": true,
+    "forced_complete_source_on_scope_retry": true,
+    "related_source_files_max": 18,
+    "related_source_chars_max": 120000,
+    "functional_model_attempts_per_transaction": 4,
+    "active_qwen_absolute_stream_timeout_seconds": 0,
+    "useful_stream_may_run_past_eight_minutes": true,
+    "dead_stream_idle_timeout_preserved": true,
+    "cooperative_user_stop_preserved": true,
+    "compiler_functional_test_publish_gates_preserved": true
+  },
+  "test_results": {
+    "v4257": {
+      "passed": 6,
+      "failed": 0
+    },
+    "v4256": {
+      "passed": 5,
+      "failed": 0
+    },
+    "v4255": {
+      "passed": 35,
+      "failed": 0
+    },
+    "v4252": {
+      "passed": 19,
+      "failed": 0
+    },
+    "v4251": {
+      "passed": 17,
+      "failed": 0
+    },
+    "v4250": {
+      "passed": 17,
+      "failed": 0
+    },
+    "v427_compatibility": {
+      "passed": 16,
+      "failed": 0
+    },
+    "focused_total_passed": 115,
+    "focused_total_failed": 0,
+    "python_root_ui_syntax": "passed"
+  },
+  "geartrack_snapshot_replay": {
+    "source": "uploaded gen (2).zip snapshot",
+    "target": "checkout.rs",
+    "important_related_owners_present": [
+      "tools.rs",
+      "app.rs",
+      "lib.rs",
+      "main.rs"
+    ],
+    "observed_prior_stall": "model requested legitimate related runtime/provider files that could be omitted from context-fitted editable scope",
+    "v4257_resolution": "retry only when requested path is already in bounded dependency evidence, then force complete current source into next prompt"
+  },
+  "limits": [
+    "No live local Qwen server was available in this sandbox; timeout behavior is covered with controlled SSE/provider fixtures.",
+    "The GearTrack application itself was not modified or declared complete by this Jarvis package.",
+    "Dead-stream/read idle timeout remains intentionally enabled; only the absolute active-stream wall clock is removed."
+  ],
+  "changed_or_added_files": [
+    "jarvis_v4251_repair.py",
+    "jarvis_v4257_repair.py",
+    "local_qwen_project.py",
+    "multi_provider.py",
+    "CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py",
+    "CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py",
+    "CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py",
+    "CHECK_V4256_EVIDENCE_CLOSED_SCOPED_REPAIR.py",
+    "CHECK_V4257_EVIDENCE_EXPANDED_UNBOUNDED_STREAM.py",
+    "CHECK_V4257_EVIDENCE_EXPANDED_UNBOUNDED_STREAM.bat",
+    "CHECK_V427_HYBRID_WATCHDOG_RESCUE.py",
+    "JARVIS_ACTIVE_ENGINE.txt",
+    "JARVIS_V42_CAPABILITIES.json",
+    "V42_RUNTIME_POLICY.json",
+    "V42_57_0_README.txt",
+    "V42_57_0_TEST_OUTPUT.txt",
+    "V42_57_0_VALIDATION_REPORT.json"
+  ],
+  "package_policy": {
+    "preserve_all_original_archive_members": true,
+    "replace_only_intended_files": true,
+    "exclude_runtime_pycache_changes": true,
+    "verify_zip_integrity_before_delivery": true
+  }
+}

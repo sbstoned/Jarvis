@@ -1,0 +1,101 @@
+{
+  "release": "V42.8",
+  "engine": "contract-graph-reconciliation-specialist-takeover",
+  "generated_at_utc": "2026-08-31T20:53:33.302277Z",
+  "regressions": {
+    "V41.1_universal": {
+      "passed": 170,
+      "total": 170
+    },
+    "V41.2_react_vite": {
+      "passed": 14,
+      "total": 14
+    },
+    "V41.3_repair": {
+      "passed": 29,
+      "total": 29
+    },
+    "V41.3_failed_workspace_replay": {
+      "passed": 7,
+      "total": 7
+    },
+    "V42.0_capability_sandbox": {
+      "passed": 20,
+      "total": 20
+    },
+    "V42.1_tauri_cargo": {
+      "passed": 26,
+      "total": 26
+    },
+    "V42.2_component_boundary": {
+      "passed": 19,
+      "total": 19
+    },
+    "V42.3_progressive_convergence": {
+      "passed": 40,
+      "total": 40
+    },
+    "V42.4_provider_first": {
+      "passed": 31,
+      "total": 31
+    },
+    "V42.5_qwen38_selector": {
+      "passed": 25,
+      "total": 25
+    },
+    "V42.6_hybrid_router": {
+      "passed": 29,
+      "total": 29
+    },
+    "V42.7_watchdog_rescue": {
+      "passed": 19,
+      "total": 19
+    },
+    "V42.8_contract_graph": {
+      "passed": 31,
+      "total": 31
+    },
+    "total": {
+      "passed": 460,
+      "total": 460
+    }
+  },
+  "compile": {
+    "top_level_python_files": 20,
+    "errors": 0,
+    "ui_javascript_syntax": "PASS"
+  },
+  "registry": {
+    "skill_cards": 80,
+    "toolchain_adapters": 73
+  },
+  "geartrack_20260831_140748_replay": {
+    "bad_owner_before": {
+      "ui.ToolCondition": "src/contracts/category.ts",
+      "ui.CheckoutEventType": "src/contracts/checkout_event.ts"
+    },
+    "owner_after": {
+      "ui.ToolCondition": "src/contracts/tool_condition.ts",
+      "ui.CheckoutEventType": "src/contracts/checkout_event_type.ts"
+    },
+    "dedicated_providers_inserted": [
+      "src/contracts/tool_condition.ts",
+      "src/contracts/checkout_event_type.ts"
+    ],
+    "provider_health_after_deterministic_replay": "0 unresolved canonical providers",
+    "ts2688_tauri_plugin_type_roots": "deterministically removable while preserving vite/client",
+    "react_history_requirement_owner": "src/features/history.tsx"
+  },
+  "behavior": {
+    "accepted_state_provider_loop_detection": true,
+    "provider_loop_escalation_after_visits": 3,
+    "provider_loop_distinct_minimum": 2,
+    "auto_specialist_for_contract_graph": "new Qwen3.8 27B Aggressive Q2_K_P only",
+    "legacy_27b_auto_eligible": false,
+    "manual_model_selection_strict": true,
+    "deterministic_simple_contract_providers": true,
+    "idiomatic_cross_language_enum_equivalence": true,
+    "compatibility_reexports_after_owner_move": true,
+    "strict_zero_debt_publish_gate": true
+  }
+}

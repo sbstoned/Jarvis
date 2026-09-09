@@ -1,0 +1,136 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.env
+secrets/
+secret/
+credentials/
+credentials.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# API/config files that may contain secrets
+ai_providers.env
+ai_providers.local.env
+config.local.*
+settings.local.*
+secrets.json
+
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build/output
+dist/
+build/
+out/
+target/
+coverage/
+*.log
+
+# Jarvis runtime/private data
+generated/
+jarvis_backups/
+logs/
+memory/
+sessions/
+runtime/
+tmp/
+temp/
+
+# Models - NEVER commit local model weights
+*.gguf
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+models/
+
+# Additional private/local Jarvis data
+.jarvis_backups/
+*.zip
+*.7z
+*.rar
+*.bak
+*.backup
+
+# Jarvis generated project workspace
+generated_projects/*
+!generated_projects/.gitkeep
+!generated_projects/README.md
+
+# Jarvis chat uploads
+chat_uploads/*
+!chat_uploads/.gitkeep
+
+# Jarvis chat uploads
+chat_uploads/*
+!chat_uploads/.gitkeep
+
+# Jarvis internal prompts/artifacts
+.jarvis_artifacts/
+
+# Visual Studio local state
+.vs/
+
+# Local provider secrets
+ai_providers.env
+ai_providers.local.env
+
+# Runtime journals/state that may contain prompts, paths, job data, or machine state
+JARVIS_PROJECT_JOURNAL.jsonl
+JARVIS_PROJECT_JOURNAL.txt
+agent_jobs.json
+live_state.json
+restart_status.json
+dashboard_endpoint.json
+dashboard_layout.json
+voice_health.json
+qwen_startup_report*.json
+
+# Machine/local model selection state
+qwen_selected_profile.json
+qwen_runtime_profile.json
+nvidia_models_cache.json
+
+# .NET generated build intermediates
+**/obj/
+**/bin/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Downloaded local AI/TTS model weights
+tools/kokoro/*.onnx
+tools/kokoro/*.bin
+
+# Prebuilt/downloaded tool distributions
+tools/LibreHardwareMonitor/
+tools/JarvisHardwareSensors/
+
+# Downloaded Kokoro runtime/model assets
+tools/kokoro/

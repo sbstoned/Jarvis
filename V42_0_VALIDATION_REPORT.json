@@ -1,0 +1,94 @@
+{
+  "version": "V42.0.0",
+  "engine": "CAPABILITY_SANDBOX_CONVERGENCE_FACTORY",
+  "generated_at": "2026-08-30T20:54:52.308659+00:00",
+  "base": "Jarvis V41.3.2 complete project supplied by user",
+  "regressions": {
+    "V41.1 universal factory": {
+      "passed": 135,
+      "total": 135
+    },
+    "V41.2 React/Vite convergence": {
+      "passed": 14,
+      "total": 14
+    },
+    "V41.3 repair convergence": {
+      "passed": 29,
+      "total": 29
+    },
+    "V41.3 failed-workspace replay": {
+      "passed": 7,
+      "total": 7
+    },
+    "V42 capability/sandbox": {
+      "passed": 20,
+      "total": 20
+    },
+    "total": {
+      "passed": 205,
+      "total": 205
+    }
+  },
+  "python_compile": {
+    "files_checked": 12,
+    "errors": 0
+  },
+  "v42_features": {
+    "background_startup_capability_scan": true,
+    "capability_inventory": true,
+    "manifest_toolchain_readiness": true,
+    "controlled_command_broker": true,
+    "subprocess_shell_false": true,
+    "structured_command_evidence": true,
+    "mandatory_command_timeouts": true,
+    "destructive_host_command_blocking": true,
+    "project_local_pip_cache": true,
+    "project_local_npm_cache": true,
+    "project_local_cargo_target": true,
+    "project_local_gradle_home": true,
+    "project_local_nuget_packages": true,
+    "project_local_go_caches": true,
+    "optional_wsl_backend": true,
+    "optional_docker_backend": true,
+    "optional_lightweight_tool_bootstrap": true,
+    "windows_path_refresh_after_bootstrap": true,
+    "plan_coverage_rereview": true,
+    "plan_coverage_correction_rounds_default": 2,
+    "canonical_enum_entity_owner_tiebreak": true,
+    "nonowner_definition_contract_quarantine": true
+  },
+  "live_run_20260830_163239_review": {
+    "snapshot_files_planned": 20,
+    "snapshot_milestones": 2,
+    "deterministic_behavior_gaps_detected_by_v42": [
+      "csv_import_export",
+      "tests",
+      "checkout",
+      "search_filter",
+      "categories"
+    ],
+    "owner_issue_detected": "ConditionType/CheckoutActionType compatibility aliases in entities.rs could compete with enums.rs",
+    "v42_owner_result": {
+      "ConditionType": "src-tauri/src/domain/enums.rs",
+      "CheckoutActionType": "src-tauri/src/domain/enums.rs"
+    },
+    "startup_improvement": "V42 would trigger bounded plan-coverage correction before implementation rather than letting this under-covered plan run to final acceptance."
+  },
+  "important_limits": [
+    "Native controlled mode is not claimed to be a VM security boundary.",
+    "Docker/WSL execution is opt-in because Windows-native SDK projects often must run natively.",
+    "Large SDKs/engines such as Unreal/Unity/Visual Studio workloads are never silently auto-installed.",
+    "No full local Windows/Qwen generation was executed in this Linux packaging environment."
+  ],
+  "files_added": [
+    "jarvis_v42_runtime.py",
+    "CHECK_V420_CAPABILITY_SANDBOX.py",
+    "CHECK_V420_CAPABILITY_SANDBOX.bat",
+    "V42_CAPABILITY_SANDBOX_README.txt",
+    "V42_RUNTIME_POLICY.json",
+    "V42_CHECK_HOST.py",
+    "V42_CHECK_HOST.bat",
+    "V42_SETUP_DEV_TOOLS.ps1",
+    "V42_0_VALIDATION_REPORT.json"
+  ]
+}

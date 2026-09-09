@@ -1,0 +1,2 @@
+# Diagnostics and Repair
+Use compiler/test/runtime output as authoritative evidence. Classify failures by owner: dependency, config, missing file/symbol, type/API mismatch, test, runtime, environment. Read the current revision before edits. Prefer deterministic/mechanical fixes when the diagnostic proves them; otherwise make minimal targeted edits and rerun the exact failing command. Escalate to subsystem/global reconciliation when the same state repeats.

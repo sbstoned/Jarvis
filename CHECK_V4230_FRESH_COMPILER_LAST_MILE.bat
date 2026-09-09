@@ -1,0 +1,2 @@
+@echo off
+python CHECK_V4230_FRESH_COMPILER_LAST_MILE.py

@@ -1,0 +1,39 @@
+{
+  "version": "V42.65.0",
+  "engine": "FAST_CONNECTED_ENDGAME_RECOVERY_FACTORY",
+  "result": "PASS",
+  "focused_checks_passed": 163,
+  "regression_groups": {
+    "v4265_fast_connected_endgame_recovery": "21/21",
+    "v4261_volatile_shared_cache_isolation": "10/10",
+    "v4260_hardware_fit_27b_context": "7/7",
+    "v4259_adaptive_model_io": "11/11",
+    "v4258_connected_functional_clusters": "7/7",
+    "v4257_evidence_expanded_unbounded_stream": "6/6",
+    "v4256_evidence_closed_scoped_repair": "5/5",
+    "v4255_model_protocol": "35/35",
+    "v4253_job_lifecycle": "8/8",
+    "v4252_durable_functional_progress": "19/19",
+    "v4251_functional_transactions": "17/17",
+    "v4250_regression_safe_functional_promotion": "17/17"
+  },
+  "failure_reproduced": "At the recorded V42.61 two-blocker endgame, workflow-test attempt 1 returned malformed transaction JSON and was correctly retried. Attempt 2 produced a complete Rust workflow-test candidate, but candidate validation aborted before compile/test because the nested candidate clone copied live .jarvis_shared_build_cache/cache/npm/_cacache entries and Windows raised WinError 3 when cache blobs disappeared during the copy.",
+  "fix": [
+    "Preserve the fast V42.61/V42.58 connected-cluster scheduler rather than replacing it with one-owner batching.",
+    "Make every functional candidate validation clone reuse V42.61's source-only resume clone policy so volatile shared npm/cargo/build caches are excluded.",
+    "Keep ordinary functional repair transactions at four attempts; give workflow-test-only endgame transactions six bounded attempts.",
+    "Use compact evidence-bound workflow-test prompts and an 8,192-token default 27B workflow-test output cap.",
+    "Recover a real native test command only when it is proven by the current project/component graph; command recovery is not treated as test success.",
+    "Preserve an objectively better trial after an unexpected infrastructure interruption only when a fresh score strictly improves and protected-regression checks remain clean.",
+    "Keep final acceptance strict: required workflow tests must exist, execute, and pass before completion."
+  ],
+  "preserved": [
+    "V42.58 connected cross-file convergence",
+    "V42.59 adaptive model I/O",
+    "V42.60 40,960 live / 262,144 native 27B context separation",
+    "V42.61 volatile shared-cache isolation",
+    "unbounded useful active Qwen stream wall clock",
+    "rollback and protected-regression gates",
+    "language/framework/toolchain agnostic architecture"
+  ]
+}

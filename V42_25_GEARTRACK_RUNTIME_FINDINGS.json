@@ -1,0 +1,33 @@
+{
+  "version": "V42.25",
+  "snapshot": "src(6).zip from the V42.24 run",
+  "finding": "V42.24 was safe but stalled: the connected TypeScript cluster reached two attempts with last_result=no_safe_candidates while the accepted repository did not improve.",
+  "observed_cluster": [
+    "src/App.tsx",
+    "src/components/InventoryView.tsx",
+    "src/components/DashboardView.tsx",
+    "src/components/CheckoutHistoryView.tsx",
+    "src/hooks/useTools.ts",
+    "src/hooks/useFiltering.ts"
+  ],
+  "root_cause": "The V42.24 coordinated transaction still called the V42.16 single-file real-failure replay inside each provisional file candidate. A correct App.tsx change could be rejected because the whole project error set was unchanged before the hook/view edits were staged.",
+  "v4225_fix": "Defer only the single-file whole-project replay/delta during provisional cluster assembly; preserve base ownership, syntax, and semantic-role gates; measure and atomically commit the complete candidate set only when global TypeScript diagnostics decrease.",
+  "improved_target_order_on_snapshot": [
+    "src/App.tsx",
+    "src/hooks/useCheckouts.ts",
+    "src/components/InventoryView.tsx",
+    "src/hooks/useCSVImportExport.ts",
+    "src/hooks/useTools.ts",
+    "src/hooks/useTauriCommands.ts"
+  ],
+  "deterministic_burndown_files_on_snapshot": [
+    "src/vite-env.d.ts",
+    "src/App.tsx",
+    "src/components/DashboardView.tsx",
+    "src/components/InventoryView.tsx",
+    "src/hooks/useCheckouts.ts",
+    "src/hooks/useDashboardStats.ts",
+    "src/hooks/useFiltering.ts",
+    "src/hooks/useTauriCommands.ts"
+  ]
+}

@@ -1,0 +1,184 @@
+Jarvis V42.57.0 focused regression summary
+
+=== CHECK_V4257_EVIDENCE_EXPANDED_UNBOUNDED_STREAM.py ===
+test_active_release_and_no_absolute_stream_wall (__main__.V4257EvidenceExpanded.test_active_release_and_no_absolute_stream_wall) ... ok
+test_provider_accepts_useful_stream_past_old_eight_minute_wall (__main__.V4257EvidenceExpanded.test_provider_accepts_useful_stream_past_old_eight_minute_wall) ... ok
+test_real_model_candidate_retry_forces_previous_related_scope_request (__main__.V4257EvidenceExpanded.test_real_model_candidate_retry_forces_previous_related_scope_request) ... ok
+test_rejected_related_file_becomes_forced_complete_source_on_retry (__main__.V4257EvidenceExpanded.test_rejected_related_file_becomes_forced_complete_source_on_retry) ... ok
+test_runtime_owner_is_retained_as_high_value_related_evidence (__main__.V4257EvidenceExpanded.test_runtime_owner_is_retained_as_high_value_related_evidence) ... ok
+test_unproven_model_path_never_expands_scope (__main__.V4257EvidenceExpanded.test_unproven_model_path_never_expands_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.008s
+
+OK
+=== CHECK_V4256_EVIDENCE_CLOSED_SCOPED_REPAIR.py ===
+test_active_release (__main__.EvidenceClosedScopedRepair.test_active_release) ... ok
+test_real_integration_seam_outranks_cross_component_similarity (__main__.EvidenceClosedScopedRepair.test_real_integration_seam_outranks_cross_component_similarity) ... ok
+test_stale_zero_match_hunk_does_not_discard_exact_sibling (__main__.EvidenceClosedScopedRepair.test_stale_zero_match_hunk_does_not_discard_exact_sibling) ... ok
+test_structured_sql_scope_prunes_unrelated_working_query (__main__.EvidenceClosedScopedRepair.test_structured_sql_scope_prunes_unrelated_working_query) ... ok
+test_whole_behavior_targets_keep_coordinated_edit_freedom (__main__.EvidenceClosedScopedRepair.test_whole_behavior_targets_keep_coordinated_edit_freedom) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+OK
+=== CHECK_V4255_MODEL_PROTOCOL.py ===
+test_http_model_reply_repairs_real_service_and_persists_across_restart (__main__.FullProviderTransaction.test_http_model_reply_repairs_real_service_and_persists_across_restart) ... /usr/lib/python3.13/ast.py:50: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fe840b8a6b0>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/ast.py:50: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fe840b8a7a0>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/ast.py:50: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fe840b8a980>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/ast.py:50: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fe840b8af20>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_actual_call_keeps_requested_output_and_one_format (__main__.ModelProtocol.test_actual_call_keeps_requested_output_and_one_format) ... ok
+test_auto_watchdog_retains_one_peer_rescue (__main__.ModelProtocol.test_auto_watchdog_retains_one_peer_rescue) ... ok
+test_done_only_compatible_stream (__main__.ModelProtocol.test_done_only_compatible_stream) ... ok
+test_duplicate_exact_blocks_apply_once (__main__.ModelProtocol.test_duplicate_exact_blocks_apply_once) ... ok
+test_http_error_releases_active_stream (__main__.ModelProtocol.test_http_error_releases_active_stream) ... /usr/lib/python3.13/unittest/mock.py:2247: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fe8408b9210>
+  def __init__(self, name, parent):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/unittest/mock.py:2247: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fe8408b9120>
+  def __init__(self, name, parent):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/unittest/mock.py:2247: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fe8408b8d60>
+  def __init__(self, name, parent):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_incomplete_continuation_never_becomes_accepted_source (__main__.ModelProtocol.test_incomplete_continuation_never_becomes_accepted_source) ... ok
+test_invalid_json_is_not_silently_retried_by_hidden_layers (__main__.ModelProtocol.test_invalid_json_is_not_silently_retried_by_hidden_layers) ... ok
+test_json_fence_and_escaping (__main__.ModelProtocol.test_json_fence_and_escaping) ... ok
+test_manual_model_never_cross_rescues (__main__.ModelProtocol.test_manual_model_never_cross_rescues) ... ok
+test_new_file_continuation_preserves_partial_work_until_complete (__main__.ModelProtocol.test_new_file_continuation_preserves_partial_work_until_complete) ... ok
+test_overlapping_or_ambiguous_source_rejected (__main__.ModelProtocol.test_overlapping_or_ambiguous_source_rejected) ... ok
+test_oversized_atomic_source_fails_before_network (__main__.ModelProtocol.test_oversized_atomic_source_fails_before_network) ... ok
+test_sequential_blocks_cannot_accidentally_rewrite_inserted_text (__main__.ModelProtocol.test_sequential_blocks_cannot_accidentally_rewrite_inserted_text) ... ok
+test_small_manual_context_keeps_entire_selected_source (__main__.ModelProtocol.test_small_manual_context_keeps_entire_selected_source) ... ok
+test_stop_after_stream_prevents_returning_candidate (__main__.ModelProtocol.test_stop_after_stream_prevents_returning_candidate) ... ok
+test_stop_prevents_inference (__main__.ModelProtocol.test_stop_prevents_inference) ... ok
+test_stream_length_is_failure_even_if_json_happens_to_parse (__main__.ModelProtocol.test_stream_length_is_failure_even_if_json_happens_to_parse) ... ok
+test_unterminated_stream_cannot_be_accepted (__main__.ModelProtocol.test_unterminated_stream_cannot_be_accepted) ... ok
+test_child_planned_test_cannot_become_parent_target (__main__.NativeContractIdentity.test_child_planned_test_cannot_become_parent_target) ... ok
+test_custom_language_preserves_declared_test_extension (__main__.NativeContractIdentity.test_custom_language_preserves_declared_test_extension) ... ok
+test_declared_harness_language_precedes_application_language (__main__.NativeContractIdentity.test_declared_harness_language_precedes_application_language) ... ok
+test_declared_runners_select_native_formats (__main__.NativeContractIdentity.test_declared_runners_select_native_formats) ... ok
+test_duplicate_bad_queries_are_counted (__main__.NativeContractIdentity.test_duplicate_bad_queries_are_counted) ... ok
+test_execute_does_not_inherit_a_different_functions_fetch (__main__.NativeContractIdentity.test_execute_does_not_inherit_a_different_functions_fetch) ... ok
+test_import_line_shifts_keep_identity (__main__.NativeContractIdentity.test_import_line_shifts_keep_identity) ... ok
+test_js_test_remains_valid_for_typescript_vitest_project (__main__.NativeContractIdentity.test_js_test_remains_valid_for_typescript_vitest_project) ... ok
+test_missing_returning_debt_tracks_each_owning_function (__main__.NativeContractIdentity.test_missing_returning_debt_tracks_each_owning_function) ... ok
+test_new_column_table_or_owner_remains_regression (__main__.NativeContractIdentity.test_new_column_table_or_owner_remains_regression) ... ok
+test_returning_does_not_reintroduce_existing_wrong_column (__main__.NativeContractIdentity.test_returning_does_not_reintroduce_existing_wrong_column) ... ok
+test_returning_in_string_data_is_not_a_projection (__main__.NativeContractIdentity.test_returning_in_string_data_is_not_a_projection) ... ok
+test_rust_runner_overrides_incidental_javascript (__main__.NativeContractIdentity.test_rust_runner_overrides_incidental_javascript) ... ok
+test_rust_sql_identity_survives_returning_and_import_edits (__main__.NativeContractIdentity.test_rust_sql_identity_survives_returning_and_import_edits) ... ok
+test_sqlx_row_mutation_direct_literals_and_aliases (__main__.NativeContractIdentity.test_sqlx_row_mutation_direct_literals_and_aliases) ... ok
+test_wrong_language_test_cannot_clear_native_workflow_debt (__main__.NativeContractIdentity.test_wrong_language_test_cannot_clear_native_workflow_debt) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 11.646s
+
+OK
+=== CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py ===
+test_active_engine_and_guards (__main__.DurableProgress.test_active_engine_and_guards) ... ok
+test_additive_migration_columns_are_recognized (__main__.DurableProgress.test_additive_migration_columns_are_recognized) ... ok
+test_audit_state_preserves_functional_debt (__main__.DurableProgress.test_audit_state_preserves_functional_debt) ... ok
+test_compiler_improvement_may_reveal_functional_debt (__main__.DurableProgress.test_compiler_improvement_may_reveal_functional_debt) ... ok
+test_compiler_regression_cannot_buy_functional_progress (__main__.DurableProgress.test_compiler_regression_cannot_buy_functional_progress) ... ok
+test_discarded_trial_diagnostics_do_not_replace_retained_findings (__main__.DurableProgress.test_discarded_trial_diagnostics_do_not_replace_retained_findings) ... ok
+test_dynamic_sql_comments_and_documentation_are_ignored (__main__.DurableProgress.test_dynamic_sql_comments_and_documentation_are_ignored) ... ok
+test_functional_improvement_changes_equal_compiler_score (__main__.DurableProgress.test_functional_improvement_changes_equal_compiler_score) ... ok
+test_new_sql_failure_rejects_lower_total (__main__.DurableProgress.test_new_sql_failure_rejects_lower_total) ... ok
+test_other_dialects_are_not_forced_into_sqlite (__main__.DurableProgress.test_other_dialects_are_not_forced_into_sqlite) ... ok
+test_partial_improvement_survives_checkpoint_export_and_import (__main__.DurableProgress.test_partial_improvement_survives_checkpoint_export_and_import) ... /usr/lib/python3.13/unittest/mock.py:2247: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fa9a4a40c70>
+  def __init__(self, name, parent):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/unittest/mock.py:2247: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fa9a4a40f40>
+  def __init__(self, name, parent):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/unittest/mock.py:2247: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fa9a4a41030>
+  def __init__(self, name, parent):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_person_query_from_failed_trial_is_rejected (__main__.DurableProgress.test_person_query_from_failed_trial_is_rejected) ... ok
+test_real_resume_controller_preserves_first_sweep_and_completes_workflow (__main__.DurableProgress.test_real_resume_controller_preserves_first_sweep_and_completes_workflow) ... ok
+test_select_update_insert_and_returning_prepare (__main__.DurableProgress.test_select_update_insert_and_returning_prepare) ... ok
+test_sql_rejection_happens_before_component_rebuild (__main__.DurableProgress.test_sql_rejection_happens_before_component_rebuild) ... ok
+test_typescript_sqlite_queries_are_checked (__main__.DurableProgress.test_typescript_sqlite_queries_are_checked) ... ok
+test_unknown_validation_never_claims_complete (__main__.DurableProgress.test_unknown_validation_never_claims_complete) ... ok
+test_valid_joins_ctes_aliases_quotes_and_parameters (__main__.DurableProgress.test_valid_joins_ctes_aliases_quotes_and_parameters) ... ok
+test_validation_never_executes_application_mutations (__main__.DurableProgress.test_validation_never_executes_application_mutations) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 8.385s
+
+OK
+=== CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py ===
+test_active_engine_and_guards (__main__.FunctionalTransactions.test_active_engine_and_guards) ... ok
+test_c_compiler_and_executable_use_same_transaction_policy (__main__.FunctionalTransactions.test_c_compiler_and_executable_use_same_transaction_policy) ... ok
+test_comment_only_patch_rejected (__main__.FunctionalTransactions.test_comment_only_patch_rejected) ... ok
+test_commit_rolls_back_all_files_on_write_failure (__main__.FunctionalTransactions.test_commit_rolls_back_all_files_on_write_failure) ... ok
+test_compile_error_feedback_changes_next_candidate (__main__.FunctionalTransactions.test_compile_error_feedback_changes_next_candidate) ... ok
+test_concurrent_source_change_not_overwritten (__main__.FunctionalTransactions.test_concurrent_source_change_not_overwritten) ... ok
+test_dependency_change_reopens_identity_but_backups_do_not (__main__.FunctionalTransactions.test_dependency_change_reopens_identity_but_backups_do_not) ... ok
+test_exhausted_checkpoint_reopens_after_provider_change (__main__.FunctionalTransactions.test_exhausted_checkpoint_reopens_after_provider_change) ... ok
+test_failed_component_keeps_original_bytes (__main__.FunctionalTransactions.test_failed_component_keeps_original_bytes) ... ok
+test_javascript_workflow_uses_same_policy (__main__.FunctionalTransactions.test_javascript_workflow_uses_same_policy) ... ok
+test_manifest_supports_unlisted_language_extensions (__main__.FunctionalTransactions.test_manifest_supports_unlisted_language_extensions) ... ok
+test_multifile_sqlite_workflow_success_failure_and_restart (__main__.FunctionalTransactions.test_multifile_sqlite_workflow_success_failure_and_restart) ... ok
+test_new_functional_regression_rejected (__main__.FunctionalTransactions.test_new_functional_regression_rejected) ... ok
+test_out_of_scope_edits_rejected (__main__.FunctionalTransactions.test_out_of_scope_edits_rejected) ... ok
+test_related_source_excludes_metadata_and_backups (__main__.FunctionalTransactions.test_related_source_excludes_metadata_and_backups) ... ok
+test_round_does_not_starve_third_target (__main__.FunctionalTransactions.test_round_does_not_starve_third_target) ... ok
+test_test_debt_survives_repaired_bridge (__main__.FunctionalTransactions.test_test_debt_survives_repaired_bridge) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 2.674s
+
+OK
+=== CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py ===
+PASS active version
+PASS active engine
+PASS strategy generation
+PASS marker
+PASS disposable candidate advertised
+PASS green component regression forbidden
+PASS component regression repaired before functional debt
+PASS compile-red functional candidate rejected
+PASS compile-red candidate never touches accepted source
+PASS no functional delta rejected
+PASS no-delta source remains unchanged
+PASS green plus strict functional delta promoted
+PASS promoted bytes are candidate bytes
+PASS promotion marked authoritative
+PASS component validation kind recognized
+PASS functional mock is not compiler blocker
+PASS exact GearTrack String-vs-enum Option match repaired deterministically
+17/17 PASS
+=== CHECK_V427_HYBRID_WATCHDOG_RESCUE.py ===
+PASS: AUTO high-level requirements still use new 27B :: ('27b38q2', 'architecture/planning specialist')
+PASS: AUTO detailed component plan uses 9B serializer :: ('9b35', 'structured component-plan serializer')
+PASS: AUTO component plan retry stays on fast 9B :: ('9b35', 'structured component-plan serializer')
+PASS: AUTO architecture collision still uses new 27B :: ('27b38q2', 'V42.19 evidence-backed root-cause specialist')
+PASS: manual 9b35 component planning remains strict :: 9b35
+PASS: manual 27b38q2 component planning remains strict :: 27b38q2
+PASS: manual 27b component planning remains strict :: 27b
+PASS: manual 8b component planning remains strict :: 8b
+PASS: 27B plan hard wall disabled by current release
+PASS: 27B repair hard wall disabled by current release
+PASS: AUTO hard-watchdog rescue superseded by unbounded active stream
+PASS: manual model lock preserved without hard wall
+PASS: release identity preserves V42.7 watchdog behavior in V42.7+ :: V42.57.0
+PASS: release reports watchdog rescue
+PASS: release keeps legacy 27B out of AUTO
+PASS: release keeps zero-debt publication gate
+
+V42.7 hybrid watchdog rescue: 16/16 PASS
+=== PYTHON SYNTAX ===
+PASS py_compile root/ui

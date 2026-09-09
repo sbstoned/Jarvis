@@ -1,0 +1,49 @@
+{
+  "version": "V42.47.0",
+  "engine": "FUNCTIONAL_ACCEPTANCE_CONVERGENCE_FACTORY",
+  "repair_strategy_generation": "functional-acceptance-v5-runtime-seams-persistence-workflow-proof",
+  "reason_for_release": "V42.46 could publish a compile-green project whose real frontend/backend/persistence workflows were not wired.",
+  "exact_false_positive_regression": {
+    "input": "geartrack_completed_20260906_013025.zip",
+    "v4246_label": "completed",
+    "v4247_whole_project_clean": false,
+    "functional_blockers_detected": 13,
+    "categories": {
+      "functional_bridge": 1,
+      "functional_runtime_state": 1,
+      "functional_mock": 4,
+      "persistence_returning": 3,
+      "persistence_null_semantics": 1,
+      "persistence_schema": 1,
+      "persistence_row_shape": 1,
+      "functional_test_coverage": 1
+    }
+  },
+  "functional_acceptance": {
+    "compile_success_is_not_completion": true,
+    "runtime_seam_contracts": true,
+    "production_mock_rejection": true,
+    "persistence_schema_and_row_shape_contracts": true,
+    "meaningful_workflow_test_gate": true,
+    "issues_feed_normal_bounded_repair": true,
+    "dedicated_functional_repair_dispatch": true
+  },
+  "regression_suites": {
+    "CHECK_V4247_FUNCTIONAL_ACCEPTANCE.py": "16/16 PASS",
+    "CHECK_V4246_COMPILER_HINT_LAST_MILE.py": "12/12 PASS",
+    "CHECK_V4245_WARM_CACHE_COMPILER_GATE.py": "9/9 PASS",
+    "CHECK_V4244_PHASE_AWARE_PROMOTION.py": "13/13 PASS",
+    "CHECK_V4243_SQLX_STRATEGY_GENERATION.py": "13/13 PASS",
+    "CHECK_V4242_REVISION_MEMORY_CONVERGENCE.py": "79/79 PASS",
+    "CHECK_V4241_AUTHORITATIVE_REPAIR.py": "35/35 PASS",
+    "CHECK_V4240_CHECKPOINT_UI_RECOVERY.py": "50/50 PASS",
+    "CHECK_V4237_COMPONENT_TRANSACTION_SANDBOX.py": "28/28 PASS",
+    "CHECK_V4236_FRESH_NATIVE_AUTHORITY.py": "31/31 PASS",
+    "CHECK_V4235_CANDIDATE_RUNTIME_PARITY.py": "33/33 PASS",
+    "total_assertions": "319/319 PASS"
+  },
+  "limitations": [
+    "Static functional adapters intentionally emit only concrete high-confidence defects; stack-specific workflows not represented in source contracts still depend on generated/project-authored integration tests and runtime validation.",
+    "The packaging environment does not contain the user Windows Tauri toolchain, so the real project remains authoritative for native runtime execution."
+  ]
+}

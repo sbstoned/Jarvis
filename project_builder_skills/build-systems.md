@@ -1,0 +1,2 @@
+# Build Systems
+Treat the build as executable architecture. Keep source roots, manifests, generated-code steps, compiler configs and working directories coherent. Prefer native build-system discovery over guessed commands. A build failure is evidence: repair the smallest owning manifest/config/source boundary, rerun, and preserve unrelated green components. Never hide failure by disabling compilation or tests.

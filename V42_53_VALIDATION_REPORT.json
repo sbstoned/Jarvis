@@ -1,0 +1,51 @@
+{
+  "version": "42.53.0",
+  "scope": "Project attachment intake and handoff; prior universal repair and acceptance gates retained",
+  "passed_checks": 71,
+  "failed_checks": 0,
+  "skipped_checks": 0,
+  "suites": [
+    {
+      "command": "python CHECK_V4253_PROJECT_UPLOADS.py",
+      "checks": 18,
+      "exit_code": 0,
+      "result": "PASS, including the production JavaScript transport and dashboard actions against a real HTTP server"
+    },
+    {
+      "command": "python CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py",
+      "checks": 17,
+      "exit_code": 0,
+      "output": "PASS active version\nPASS active engine\nPASS strategy generation\nPASS marker\nPASS disposable candidate advertised\nPASS green component regression forbidden\nPASS component regression repaired before functional debt\nPASS compile-red functional candidate rejected\nPASS compile-red candidate never touches accepted source\nPASS no functional delta rejected\nPASS no-delta source remains unchanged\nPASS green plus strict functional delta promoted\nPASS promoted bytes are candidate bytes\nPASS promotion marked authoritative\nPASS component validation kind recognized\nPASS functional mock is not compiler blocker\nPASS exact GearTrack String-vs-enum Option match repaired deterministically\n17/17 PASS\n"
+    },
+    {
+      "command": "python CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py",
+      "checks": 17,
+      "exit_code": 0,
+      "output": "test_active_engine_and_guards (__main__.FunctionalTransactions.test_active_engine_and_guards) ... ok\ntest_c_compiler_and_executable_use_same_transaction_policy (__main__.FunctionalTransactions.test_c_compiler_and_executable_use_same_transaction_policy) ... ok\ntest_comment_only_patch_rejected (__main__.FunctionalTransactions.test_comment_only_patch_rejected) ... ok\ntest_commit_rolls_back_all_files_on_write_failure (__main__.FunctionalTransactions.test_commit_rolls_back_all_files_on_write_failure) ... ok\ntest_compile_error_feedback_changes_next_candidate (__main__.FunctionalTransactions.test_compile_error_feedback_changes_next_candidate) ... ok\ntest_concurrent_source_change_not_overwritten (__main__.FunctionalTransactions.test_concurrent_source_change_not_overwritten) ... ok\ntest_dependency_change_reopens_identity_but_backups_do_not (__main__.FunctionalTransactions.test_dependency_change_reopens_identity_but_backups_do_not) ... ok\ntest_exhausted_checkpoint_reopens_after_provider_change (__main__.FunctionalTransactions.test_exhausted_checkpoint_reopens_after_provider_change) ... ok\ntest_failed_component_keeps_original_bytes (__main__.FunctionalTransactions.test_failed_component_keeps_original_bytes) ... ok\ntest_javascript_workflow_uses_same_policy (__main__.FunctionalTransactions.test_javascript_workflow_uses_same_policy) ... ok\ntest_manifest_supports_unlisted_language_extensions (__main__.FunctionalTransactions.test_manifest_supports_unlisted_language_extensions) ... ok\ntest_multifile_sqlite_workflow_success_failure_and_restart (__main__.FunctionalTransactions.test_multifile_sqlite_workflow_success_failure_and_restart) ... ok\ntest_new_functional_regression_rejected (__main__.FunctionalTransactions.test_new_functional_regression_rejected) ... ok\ntest_out_of_scope_edits_rejected (__main__.FunctionalTransactions.test_out_of_scope_edits_rejected) ... ok\ntest_related_source_excludes_metadata_and_backups (__main__.FunctionalTransactions.test_related_source_excludes_metadata_and_backups) ... ok\ntest_round_does_not_starve_third_target (__main__.FunctionalTransactions.test_round_does_not_starve_third_target) ... ok\ntest_test_debt_survives_repaired_bridge (__main__.FunctionalTransactions.test_test_debt_survives_repaired_bridge) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.206s\n\nOK\n"
+    },
+    {
+      "command": "python CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py",
+      "checks": 19,
+      "exit_code": 0,
+      "output": "test_active_engine_and_guards (__main__.DurableProgress.test_active_engine_and_guards) ... ok\ntest_additive_migration_columns_are_recognized (__main__.DurableProgress.test_additive_migration_columns_are_recognized) ... ok\ntest_audit_state_preserves_functional_debt (__main__.DurableProgress.test_audit_state_preserves_functional_debt) ... ok\ntest_compiler_improvement_may_reveal_functional_debt (__main__.DurableProgress.test_compiler_improvement_may_reveal_functional_debt) ... ok\ntest_compiler_regression_cannot_buy_functional_progress (__main__.DurableProgress.test_compiler_regression_cannot_buy_functional_progress) ... ok\ntest_discarded_trial_diagnostics_do_not_replace_retained_findings (__main__.DurableProgress.test_discarded_trial_diagnostics_do_not_replace_retained_findings) ... ok\ntest_dynamic_sql_comments_and_documentation_are_ignored (__main__.DurableProgress.test_dynamic_sql_comments_and_documentation_are_ignored) ... ok\ntest_functional_improvement_changes_equal_compiler_score (__main__.DurableProgress.test_functional_improvement_changes_equal_compiler_score) ... ok\ntest_new_sql_failure_rejects_lower_total (__main__.DurableProgress.test_new_sql_failure_rejects_lower_total) ... ok\ntest_other_dialects_are_not_forced_into_sqlite (__main__.DurableProgress.test_other_dialects_are_not_forced_into_sqlite) ... ok\ntest_partial_improvement_survives_checkpoint_export_and_import (__main__.DurableProgress.test_partial_improvement_survives_checkpoint_export_and_import) ... ok\ntest_person_query_from_failed_trial_is_rejected (__main__.DurableProgress.test_person_query_from_failed_trial_is_rejected) ... ok\ntest_real_resume_controller_preserves_first_sweep_and_completes_workflow (__main__.DurableProgress.test_real_resume_controller_preserves_first_sweep_and_completes_workflow) ... ok\ntest_select_update_insert_and_returning_prepare (__main__.DurableProgress.test_select_update_insert_and_returning_prepare) ... ok\ntest_sql_rejection_happens_before_component_rebuild (__main__.DurableProgress.test_sql_rejection_happens_before_component_rebuild) ... ok\ntest_typescript_sqlite_queries_are_checked (__main__.DurableProgress.test_typescript_sqlite_queries_are_checked) ... ok\ntest_unknown_validation_never_claims_complete (__main__.DurableProgress.test_unknown_validation_never_claims_complete) ... ok\ntest_valid_joins_ctes_aliases_quotes_and_parameters (__main__.DurableProgress.test_valid_joins_ctes_aliases_quotes_and_parameters) ... ok\ntest_validation_never_executes_application_mutations (__main__.DurableProgress.test_validation_never_executes_application_mutations) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.406s\n\nOK\n"
+    }
+  ],
+  "additional_verification": [
+    "Previously supplied GearTrack.zip: 107 entries uploaded byte-for-byte, passed real dashboard/IPC handoff into existing-project routing, and 107 files imported; no new-generation invocation.",
+    "Actual interrupted HTTP request returned a structured error, persisted no partial chunk, and resumed successfully.",
+    "Lost chunk response retried without duplicate bytes; failed later chunk resumed from the saved 1 MiB offset.",
+    "Dashboard restart and interruption between final rename and metadata save recover the stored upload.",
+    "Missing, changed, incomplete, unsafe or invalid ZIPs do not start a new project.",
+    "Send/Enter during pending upload cannot queue a project; failed handoff retains the ZIP and command draft.",
+    "Busy/stopping project refuses a new repair and retains the uploaded ZIP.",
+    "Existing-project import preserves Kotlin and unknown-extension source along with the Python service.",
+    "Public sample-service write, invalid-input rejection, read and separate-process persistence check passed."
+  ],
+  "limitations": [
+    "The user's newest trial_03 ZIP was not attached in this turn. The older supplied GearTrack.zip and generated multi-language fixtures were tested.",
+    "The actual IPC handler and command router were executed without loading unrelated microphone and voice models. The expensive Qwen worker launch was a controlled fixture.",
+    "The production JavaScript ran with minimal DOM objects and real HTTP; a full Chromium installation was attempted but its browser download failed. Windows Chrome GUI behavior was not certified.",
+    "No live Qwen project-repair run or Windows/Tauri build was executed here. Successful upload is not final project acceptance."
+  ],
+  "packaging": "The complete ZIP preserves all original entries from V42.52 and replaces only the files listed in the archive verification report."
+}

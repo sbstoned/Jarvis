@@ -1,0 +1,75 @@
+JARVIS V36.0.0 VALIDATION REPORT
+================================
+Release candidate validation performed 2026-08-28.
+
+STATIC / REGRESSION SUITE
+-------------------------
+CHECK_V36_SOFTWARE_FACTORY.py: 55/55 PASSED
+
+Covered areas include:
+- V36 identity and feature flags
+- Existing V35.1 framework/toolchain regressions
+- V34.1 StockPilot transport-marker salvage
+- PageRank-style repository graph generation
+- import/dependency edge discovery
+- machine contract registry actual AST signatures
+- dynamic repo-map/contract context
+- InventoryView.COLUMNS class-attribute regression
+- StockPilot-style service/database arity mismatch
+- nested-project-root bound dependency signature checking
+- patch search/replace uniqueness
+- pre-commit Python/JSON validation
+- traceback/file-line failure localization
+- stack-specific skill loading
+- duplicate authoritative-provider detection
+- Vitest/Jest/React Scripts/Playwright CI-safe test commands
+- mixed Node + Rust/Tauri component discovery
+- V36 build-status identity
+- internal graph/contract exclusion from user project ZIPs
+- per-file repair checkpoints
+
+REAL VALIDATOR TEST - PYTHON
+----------------------------
+Synthetic project:
+- package/module source
+- real unittest
+- runnable entrypoint
+Result: PASS
+Observed gate sequence included clean Python environment, test execution, and startup output.
+
+REAL VALIDATOR TEST - NODE
+--------------------------
+Synthetic Node ESM project:
+- npm install
+- real build script (node --check)
+- Node built-in test runner
+Result: PASS
+Observed: 1 test, 1 pass, 0 fail.
+
+PATCH ENGINE END-TO-END TEST
+----------------------------
+Synthetic calculator source intentionally returned a-b for add(a,b).
+A mocked V36 patch-model response proposed one exact SEARCH/REPLACE edit.
+Jarvis candidate transaction accepted it, committed only the minimal edit, and created the pre-change checkpoint.
+Result: PASS.
+
+REQUIREMENTS COMPILER END-TO-END TEST
+-------------------------------------
+A mocked structured Requirements Engineer response was parsed, normalized, and persisted to JARVIS_V36_REQUIREMENTS.json.
+Result: PASS.
+
+REAL OLD-STOCKPILOT REGRESSION TEST
+-----------------------------------
+V36 repository/contract analysis was run against the uploaded old V34.1 StockPilot snapshot.
+The V36 bound-call checker deterministically found the important mismatch before runtime:
+- InventoryService.create_item calls DatabaseManager.insert_item with 1 positional argument
+- provider signature accepts 9
+It also detected additional service/database contract disagreements and did NOT reproduce the old InventoryView.COLUMNS false positive.
+Result: PASS.
+
+LIMITATIONS / HONEST HOST STATUS
+--------------------------------
+- Native iOS/Xcode, Unreal, Unity, and other unavailable host toolchains remain UNVERIFIED rather than falsely PASSING.
+- Docker clean-room validation is implemented but intentionally opt-in.
+- llama.cpp ngram-simple speculative decoding is implemented as an opt-in server-start flag and is not enabled by default; benchmark on the target Windows machine before making it permanent.
+- V36 uses dependency-free AST/heuristic multi-language repo mapping so the release does not require installing tree-sitter. Python uses real AST. Other languages use conservative language-aware symbol/import extraction. This can later be upgraded to tree-sitter without changing the graph/contract interfaces.

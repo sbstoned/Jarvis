@@ -1,0 +1,30 @@
+{
+  "version": "V42.26.0",
+  "engine": "COMPILER_PROOFED_DEPENDENCY_FIRST_CLUSTER_FACTORY",
+  "checkpoint_failure_analyzed": "geartrack_checkpoint_20260903_011548",
+  "root_causes_fixed": [
+    "final atomic cluster commit replayed an inherited per-file whole-project no-progress gate",
+    "cluster model execution repaired integration roots before imported dependencies",
+    "same-snapshot unused cleanup could delete a producer later required by a structural call fix",
+    "several exact TypeScript contract errors were unnecessarily delegated to Qwen"
+  ],
+  "checkpoint_diagnostic_fastfix_families": [
+    "TS6133 unused imports/parameters/helpers/locals",
+    "TS2554 missing hook arguments from actual signature",
+    "TS2345 wrong signature argument from in-scope producer",
+    "TS2339 missing command aliases",
+    "TS2345 response wrapper to React state data unwrapping",
+    "TS2304 missing React hook imports",
+    "TS2322 null to undefined and boolean property shape",
+    "TS2484 duplicate re-export",
+    "Tauri 2 invoke migration"
+  ],
+  "validation": {
+    "v4226_regression": "17/17 PASS",
+    "python_compile": "40/40 PASS",
+    "v4224_compatibility": "14/14 PASS",
+    "v4222_consumer_first": "21/21 PASS",
+    "rust_topology": "22/22 PASS"
+  },
+  "note": "Full GearTrack npm build was not executed in this sandbox because its npm package tarballs were not cached and external package download is unavailable here. The real Windows npm build remains the final integration authority."
+}

@@ -1,0 +1,13 @@
+{
+  "version": "V42.60.0",
+  "engine": "HARDWARE_FIT_NATIVE_CONTEXT_MODEL_IO_FACTORY",
+  "qwen38_27b_native_context_max": 262144,
+  "qwen38_27b_runtime_context_default": 40960,
+  "qwen38_27b_runtime_context_min": 16384,
+  "qwen38_27b_default_max_output_tokens": 20480,
+  "native_context_is_capability_not_forced_allocation": true,
+  "v4259_mtp_context_detection_preserved": true,
+  "v4258_connected_clusters_preserved": true,
+  "startup_modelpath_hotfix_preserved": true,
+  "language_framework_toolchain_agnostic": true
+}

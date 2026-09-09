@@ -1,0 +1,56 @@
+{
+  "version": "V42.64.0",
+  "engine": "DURABLE_FUNCTIONAL_PROMOTION_TEST_SUBSTRATE_RECONCILIATION_FACTORY",
+  "root_cause": {
+    "observed_checkpoint_remaining_functional_issues": 8,
+    "rejected_trial_proved_functional_improvement_to": 7,
+    "incorrect_rejection_reason": "legacy test_substrate gate reported React had no runnable native test command",
+    "evidence_reconciliation": "checkpoint package.json and persisted component graph contain runnable Vitest test command; Cargo provides cargo test for Rust",
+    "policy_conflict": "older soft-test layer can clear test_command while newer workflow acceptance requires real tests"
+  },
+  "fixes": [
+    "recover evidence-proven native test commands from current project/component graph",
+    "remove only factually false test_substrate findings after command restoration",
+    "during intermediate resume scoring, defer only test_substrate/test_quality deterministic debt when production functional debt remains",
+    "never defer compiler/syntax diagnostics",
+    "keep workflow-test debt strict for final acceptance",
+    "increase bounded resume sweeps to 8 so one-owner incremental progress is retained across enough owners",
+    "preserve V42.63 one-owner-first batching and V42.62 cache/crash-safe promotion"
+  ],
+  "geartrack_reproduction": {
+    "baseline_score": [
+      1,
+      1,
+      0,
+      8
+    ],
+    "candidate_score_after_single_owner_real_integration_fix": [
+      1,
+      1,
+      0,
+      7
+    ],
+    "false_test_substrate_after_fix": 0,
+    "final_workflow_test_gate_preserved": true
+  },
+  "regression_suites": {
+    "v4264": "PASS",
+    "v4263": "12/12 PASS",
+    "v4262": "11/11 PASS",
+    "v4261": "10/10 PASS",
+    "v4260": "7/7 PASS",
+    "v4259_adaptive": "11/11 PASS",
+    "v4259_startup": "PASS",
+    "v4258": "7/7 PASS",
+    "v4257": "6/6 PASS",
+    "v4256": "5/5 PASS",
+    "v4250": "17/17 PASS",
+    "v4251": "17/17 PASS",
+    "v4252": "19/19 PASS",
+    "v4253_lifecycle": "8/8 PASS",
+    "v4253_uploads": "19/19 PASS",
+    "v4255": "35/35 PASS"
+  },
+  "final_acceptance_weakened": false,
+  "universal_builder_preserved": true
+}

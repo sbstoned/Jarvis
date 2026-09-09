@@ -1,0 +1,1 @@
+Tkinter/ttk UI work must stay on the main thread. Treeview has no generic sort() method: implement heading callbacks that reorder rows. Search/filter handlers must actually query/filter data. Dialogs should validate before commit, return clear errors, and not own business persistence logic. GUI smoke tests should avoid requiring a visible display where possible.

@@ -1,0 +1,35 @@
+{
+  "version": "42.48.0",
+  "engine": "BOUNDED_FUNCTIONAL_CONVERGENCE_FACTORY",
+  "strategy_generation": "functional-acceptance-v6-live-source-bounded-repair",
+  "regression_assertions": {
+    "passed": 335,
+    "failed": 0
+  },
+  "exact_run65_replay": {
+    "v4247_reported_functional_issues": 41,
+    "v4248_live_functional_issues": 13,
+    "ghost_backup_issues_removed": 28,
+    "live_production_repair_groups": 8
+  },
+  "static_checks": {
+    "python_compile": "pass",
+    "json_files_validated": 61,
+    "dashboard_javascript": "pass"
+  },
+  "functional_convergence": {
+    "live_source_only": true,
+    "issues_grouped_by_file": true,
+    "groups_per_round": 2,
+    "attempts_per_group": 2,
+    "attempts_per_unchanged_revision": 6,
+    "backup_churn_cannot_reset_budget": true,
+    "legacy_unbounded_fallback_blocked_while_functional_debt_exists": true
+  },
+  "validation_timeout_policy": {
+    "cargo_build_test_floor_seconds": 600,
+    "cargo_fetch_check_floor_seconds": 300,
+    "timeout_without_source_diagnostics_is_infrastructure": true
+  },
+  "universal_builder_preserved": true
+}

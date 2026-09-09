@@ -1,0 +1,36 @@
+{
+  "version": "V42.44.0",
+  "engine": "PHASE_AWARE_COMPILER_PROMOTION_FACTORY",
+  "repair_strategy_generation": "sqlx-joined-struct-row-v2-phase-aware",
+  "status": "offline regression passed",
+  "regression_assertions": {
+    "total": 279,
+    "passed": 279,
+    "failed": 0,
+    "suites": {
+      "CHECK_V4244_PHASE_AWARE_PROMOTION.py": "13/13",
+      "CHECK_V4243_SQLX_STRATEGY_GENERATION.py": "13/13",
+      "CHECK_V4242_REVISION_MEMORY_CONVERGENCE.py": "79/79",
+      "CHECK_V4241_AUTHORITATIVE_REPAIR.py": "35/35",
+      "CHECK_V4240_CHECKPOINT_UI_RECOVERY.py": "47/47",
+      "CHECK_V4237_COMPONENT_TRANSACTION_SANDBOX.py": "28/28",
+      "CHECK_V4236_FRESH_NATIVE_AUTHORITY.py": "31/31",
+      "CHECK_V4235_CANDIDATE_RUNTIME_PARITY.py": "33/33"
+    }
+  },
+  "static_checks": {
+    "python_compileall": "pass",
+    "root_json_documents": "48/48 valid",
+    "dashboard_javascript_syntax": "pass",
+    "active_identity": "V42.44.0",
+    "active_engine_marker": "V42.44.0"
+  },
+  "observed_failure_addressed": {
+    "old_behavior": "deterministic SQLx candidate could clear compiler diagnostics but be discarded when the broader validator failed later with zero parseable compiler diagnostics",
+    "new_behavior": "parser-zero alone remains rejected; Jarvis runs a focused compile/build proof and promotes only when that proof is positive, then revalidates the downstream gate from the improved source revision",
+    "final_acceptance_unchanged": true
+  },
+  "environment_limitations": [
+    "The packaging environment does not provide Cargo/Rust, so the real GearTrack cargo build must still be executed by Jarvis on the user's Windows host."
+  ]
+}

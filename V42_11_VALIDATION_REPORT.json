@@ -1,0 +1,44 @@
+{
+  "release": "V42.11",
+  "engine": "robust-existing-project-zip-resume-import",
+  "base_release": "V42.10 endgame true whole-project convergence",
+  "regression_total": 530,
+  "regression_passed": 530,
+  "python_compileall": "PASS",
+  "dashboard_javascript_syntax": "PASS",
+  "skill_cards": 84,
+  "registered_toolchain_adapters": 73,
+  "auto_worker_profile": "9b35",
+  "auto_specialist_profile": "27b38q2",
+  "legacy_27b_auto_eligible": false,
+  "new_features": {
+    "robust_resume_zip_import": true,
+    "single_wrapper_root_stripping": true,
+    "resume_cache_pruning": true,
+    "windows_extended_path_fallback": true,
+    "zip_symlink_rejection": true,
+    "optional_diagnostic_mirror_tolerance": true,
+    "project_packager_prunes_jarvis_runtime_and_failures": true
+  },
+  "exact_project_20260831_204118_replay": {
+    "result": "PASS",
+    "checks": {
+      "package_json": true,
+      "category_rs": true,
+      "runtime_pruned": true,
+      "backups_pruned": true,
+      "malformed_outputs_pruned": true,
+      "wrapper_removed": true
+    },
+    "extraction_report": {
+      "source_zip": "project_20260831_204118.zip",
+      "wrapper_stripped": "project_20260831_204118",
+      "extracted": 69,
+      "skipped_rebuildable": 33,
+      "skipped_directories": 52,
+      "rejected_symlinks": 0,
+      "bytes_extracted": 510873,
+      "warnings": []
+    }
+  }
+}

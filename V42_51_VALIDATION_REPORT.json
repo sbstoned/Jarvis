@@ -1,0 +1,22 @@
+{
+  "version": "V42.51.0",
+  "checks_passed": 34,
+  "new_tests": 17,
+  "prior_promotion_checks": 17,
+  "live_qwen_run": false,
+  "windows_tauri_build": false,
+  "geartrack_complete": false,
+  "geartrack_source_findings": 12,
+  "tests": [
+    {
+      "command": "python CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py",
+      "exit_code": 0,
+      "output": "test_active_engine_and_guards (__main__.FunctionalTransactions.test_active_engine_and_guards) ... ok\ntest_c_compiler_and_executable_use_same_transaction_policy (__main__.FunctionalTransactions.test_c_compiler_and_executable_use_same_transaction_policy) ... ok\ntest_comment_only_patch_rejected (__main__.FunctionalTransactions.test_comment_only_patch_rejected) ... ok\ntest_commit_rolls_back_all_files_on_write_failure (__main__.FunctionalTransactions.test_commit_rolls_back_all_files_on_write_failure) ... ok\ntest_compile_error_feedback_changes_next_candidate (__main__.FunctionalTransactions.test_compile_error_feedback_changes_next_candidate) ... ok\ntest_concurrent_source_change_not_overwritten (__main__.FunctionalTransactions.test_concurrent_source_change_not_overwritten) ... ok\ntest_dependency_change_reopens_identity_but_backups_do_not (__main__.FunctionalTransactions.test_dependency_change_reopens_identity_but_backups_do_not) ... ok\ntest_exhausted_checkpoint_reopens_after_provider_change (__main__.FunctionalTransactions.test_exhausted_checkpoint_reopens_after_provider_change) ... ok\ntest_failed_component_keeps_original_bytes (__main__.FunctionalTransactions.test_failed_component_keeps_original_bytes) ... ok\ntest_javascript_workflow_uses_same_policy (__main__.FunctionalTransactions.test_javascript_workflow_uses_same_policy) ... ok\ntest_manifest_supports_unlisted_language_extensions (__main__.FunctionalTransactions.test_manifest_supports_unlisted_language_extensions) ... ok\ntest_multifile_sqlite_workflow_success_failure_and_restart (__main__.FunctionalTransactions.test_multifile_sqlite_workflow_success_failure_and_restart) ... ok\ntest_new_functional_regression_rejected (__main__.FunctionalTransactions.test_new_functional_regression_rejected) ... ok\ntest_out_of_scope_edits_rejected (__main__.FunctionalTransactions.test_out_of_scope_edits_rejected) ... ok\ntest_related_source_excludes_metadata_and_backups (__main__.FunctionalTransactions.test_related_source_excludes_metadata_and_backups) ... ok\ntest_round_does_not_starve_third_target (__main__.FunctionalTransactions.test_round_does_not_starve_third_target) ... ok\ntest_test_debt_survives_repaired_bridge (__main__.FunctionalTransactions.test_test_debt_survives_repaired_bridge) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.776s\n\nOK\n"
+    },
+    {
+      "command": "python CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py",
+      "exit_code": 0,
+      "output": "PASS active version\nPASS active engine\nPASS strategy generation\nPASS marker\nPASS disposable candidate advertised\nPASS green component regression forbidden\nPASS component regression repaired before functional debt\nPASS compile-red functional candidate rejected\nPASS compile-red candidate never touches accepted source\nPASS no functional delta rejected\nPASS no-delta source remains unchanged\nPASS green plus strict functional delta promoted\nPASS promoted bytes are candidate bytes\nPASS promotion marked authoritative\nPASS component validation kind recognized\nPASS functional mock is not compiler blocker\nPASS exact GearTrack String-vs-enum Option match repaired deterministically\n17/17 PASS\n"
+    }
+  ]
+}

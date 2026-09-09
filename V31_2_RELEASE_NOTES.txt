@@ -1,0 +1,21 @@
+JARVIS v2.74.1 - V31.2 DEFAULT QWEN3.5 RELEASE
+================================================
+
+Default local model:
+  Qwen3.5-9B HauhauCS Aggressive Q4_K_M
+
+Startup behavior:
+  Jarvis starts Qwen3.5 BEFORE the voice engine/dashboard. It no longer boots
+  Qwen3-8B first and switches afterward. AUTO also resolves to Qwen3.5 when installed.
+
+Context ladder:
+  1,010,000 YaRN x4 -> 524,288 YaRN x2 -> 262,144 native -> 131,072 native.
+  The successful live /props context is authoritative. No 40,960 fallback for Qwen3.5.
+
+UI/model-switch fix:
+  qwen_model_manager now monitors the live llama.cpp runtime while the PowerShell
+  launcher works. As soon as the requested model and a valid requested/fallback
+  context are verified, the model-switch operation completes instead of remaining
+  pinned at 1% while the launcher process is still winding down.
+
+The Qwen3-8B 40,960 profile remains available from the dropdown.

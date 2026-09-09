@@ -1,0 +1,34 @@
+{
+  "CHECK_V4229_LAST_MILE_CONSTRAINT_SOLVER.py": {
+    "returncode": 0,
+    "tail": "V42.29 regression: 23/23 PASS"
+  },
+  "CHECK_V4228_BEST_STATE_ENDGAME.py": {
+    "returncode": 0,
+    "tail": "V42.28 regression: 15/15 PASS\nV42.28 extended regression: 17/17 PASS"
+  },
+  "CHECK_V4227_PARSER_SAFE_STRUCTURAL_RECOVERY.py": {
+    "returncode": 0,
+    "tail": "V42.27 regression: 15/15 PASS"
+  },
+  "CHECK_V4226_COMPILER_PROOFED_TS_DOCTOR.py": {
+    "returncode": 0,
+    "tail": "V42.26 regression: 17/17 PASS"
+  },
+  "CHECK_V4225_SEMANTIC_EVENT_LOOP_SPILL.py": {
+    "returncode": 0,
+    "tail": "V42.25 regression: 24/24 PASS"
+  },
+  "CHECK_V4224_COMPILER_DIRECTED_MULTIFILE.py": {
+    "returncode": 0,
+    "tail": "V42.24 regression: 14/14 PASS"
+  },
+  "CHECK_V4222_CONSUMER_FIRST_COMPILER_OWNERSHIP.py": {
+    "returncode": 0,
+    "tail": "PASS cross-layer workaround field removed\nPASS consumer repair accepted\nPASS exact consumer repaired first\nPASS stable category provider not touched\nPASS green component validator first call succeeds\nPASS unchanged green component build reused\nPASS cache result marked\nRESULT 21 passed / 0 failed"
+  },
+  "CHECK_V4215_RUST_TOPOLOGY_RESUME_AUTHORITY.py": {
+    "returncode": 0,
+    "tail": "PASS crate models brace import resolves mod.rs\nPASS checkout graph does not point to flat models.rs\nPASS all current planned files accepted\nPASS phantom provider has no provider-health problem\nPASS runtime cleanup removes hallucinated models.rs\nPASS runtime cleanup preserves models/mod.rs\nPASS V42.15 report written\nRESULT 22/22 PASS"
+  }
+}

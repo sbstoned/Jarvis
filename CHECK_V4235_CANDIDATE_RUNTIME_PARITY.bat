@@ -1,0 +1,2 @@
+@echo off
+python CHECK_V4235_CANDIDATE_RUNTIME_PARITY.py

@@ -1,0 +1,47 @@
+JARVIS V36.2.0 UNIVERSAL SOFTWARE FACTORY - VALIDATION REPORT
+============================================================
+Release: V36.2.0
+Engine: UNIVERSAL_SOFTWARE_FACTORY
+
+REGRESSION RESULTS
+------------------
+V36 core software-factory suite:          55 / 55 PASS
+V36.1 real-run hardening suite:           27 / 27 PASS
+V36.2 planner/closure suite:               26 / 26 PASS
+TOTAL:                                   108 / 108 PASS
+
+ADDITIONAL EXECUTION TESTS
+--------------------------
+- Full Python compileall of the replacement source tree: PASS
+- Clean synthetic Python project through real validator:
+    clean .venv / compile / unittest / startup: PASS
+- Synthetic Node project through real validator:
+    npm dependency setup / build / node --test: PASS
+
+V36.2 REGRESSIONS INCLUDE
+-------------------------
+- frozen requirements from plain-line acceptance lists
+- non-vacuous source requirement ledger
+- 20/20 TaskForge-style acceptance lines retained
+- repair-behavior lines retained
+- JSONC comments/trailing commas accepted in tsconfig.json
+- strict JSON retained for package.json
+- malformed JSONC rejected
+- 11-file complex recovery manifest rejected
+- missing manifest depends_on provider detected
+- unplanned Python internal imports rejected
+- unplanned TypeScript relative imports rejected
+- parent-relative TypeScript imports normalized correctly
+- undeclared Node package import rejected
+- declared Node package import accepted
+- mocked chunked frontend/backend planner merges a complete graph
+- explicit React/FastAPI components preserved
+- frontend API type provider planned
+- backend database provider planned
+- closure-stage file additions merged
+- failed complex component planning aborts rather than using tiny recovery
+- live status identifies V36.2 chunked-hierarchical planner
+
+IMPORTANT
+---------
+These tests validate Jarvis's builder machinery. The definitive model+builder benchmark remains a full local Qwen generation using the same TaskForge prompt that exposed the V36.1 planner fallback.

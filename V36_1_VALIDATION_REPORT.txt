@@ -1,0 +1,43 @@
+JARVIS V36.1.0 UNIVERSAL SOFTWARE FACTORY - VALIDATION REPORT
+================================================================
+
+Release: V36.1.0
+Engine: UNIVERSAL_SOFTWARE_FACTORY
+Base: V36.0.0 + V35.1 real-run hardening
+
+REGRESSION RESULTS
+------------------
+Inherited V36 software-factory suite: 55 / 55 PASS
+TaskForge real-run regression suite:   27 / 27 PASS
+Combined regression coverage:          82 / 82 PASS
+
+REAL VALIDATOR SMOKE TESTS
+--------------------------
+Python clean-environment validation:
+- fresh venv creation: PASS
+- Python compile: PASS
+- unittest execution: PASS
+- startup smoke: PASS
+
+Node validation:
+- npm dependency setup: PASS
+- real npm build script: PASS
+- node --test execution: PASS
+
+TASKFORGE FAILURES NOW COVERED
+------------------------------
+- Explicit React/Vite frontend + Python/FastAPI backend cannot be collapsed to Expo.
+- Windows delivery target is preserved.
+- "Node.js installed" is not interpreted as a requested Node.js source file.
+- Malformed END FILE continuation markers are salvaged structurally.
+- Repeated Project/Task schema contracts are canonicalized.
+- POSIX-only touch/cat commands are removed from Windows build evidence.
+- Embedded SQLite CREATE TABLE syntax is checked before commit.
+- Async generators incorrectly used with "async with" are detected as contract defects.
+- User acceptance/test bullets are preserved through deterministic requirements coverage.
+- Multi-component recovery retains both frontend and backend stacks.
+- Live status identifies V36.1.0.
+
+ARCHIVE VALIDATION
+------------------
+Run CHECK_V361_ALL.bat after extraction to reproduce the deterministic regression suites.

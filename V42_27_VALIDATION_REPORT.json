@@ -1,0 +1,17 @@
+{
+  "version": "V42.27.0",
+  "engine": "PARSER_SAFE_COMPILER_DELTA_STRUCTURAL_RECOVERY_FACTORY",
+  "new_regression": "15/15 PASS",
+  "v4226_functional_compatibility": "17/17 PASS (release identity adjusted for current engine during compatibility run)",
+  "v4225_functional_compatibility": "24/24 PASS (release identity adjusted for current engine during compatibility run)",
+  "v4224_functional_compatibility": "14/14 PASS (release identity/engine adjusted for current engine during compatibility run)",
+  "rust_topology": "22/22 PASS",
+  "python_compile": "41/41 PASS",
+  "geartrack_regression": {
+    "file": "src/components/DashboardView.tsx",
+    "failure": "TS1128 Declaration or statement expected",
+    "observed_shape": "orphaned top-level helper body/return after a partial cleanup",
+    "deterministic_candidate": "preserves DashboardView export and removes the orphaned non-exported helper scaffold",
+    "acceptance": "real TypeScript compiler must prove target syntax diagnostics are zero"
+  }
+}

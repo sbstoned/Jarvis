@@ -1,0 +1,101 @@
+{
+  "release": "V42.7",
+  "engine": "hybrid-watchdog-rescue-role-specialized-planning",
+  "source_base": "Jarvis V42.6 complete project + V42.7 overlay",
+  "failure_replayed": "project_20260831_132131",
+  "failure_root_cause": "27B specialist at 6,144 live context was used for large strict-JSON component planning and hit the 6-minute hard watchdog twice.",
+  "changes": [
+    "AUTO keeps high-level architecture/root-cause/global reasoning on new Qwen3.8 27B Aggressive Q2_K_P.",
+    "AUTO routes detailed per-component strict JSON planning to Qwen3.5 9B.",
+    "AUTO retries a watchdog/context-limited call exactly once on the peer model.",
+    "Manual model selections remain strict and never cross-fallback.",
+    "27B plan/repair/audit/generate watchdogs are bounded but longer than V42.6.",
+    "All V42.3 progressive global convergence and V42.4 provider-first fast repair behavior is preserved."
+  ],
+  "regression_suites": [
+    {
+      "name": "CHECK_V411_UNIVERSAL_FACTORY.py",
+      "passed": 169,
+      "total": 169,
+      "returncode": 0
+    },
+    {
+      "name": "CHECK_V412_REACT_VITE_CONVERGENCE.py",
+      "passed": 14,
+      "total": 14,
+      "returncode": 0
+    },
+    {
+      "name": "CHECK_V413_FAILED_WORKSPACE_REPLAY.py",
+      "passed": 7,
+      "total": 7,
+      "returncode": 0
+    },
+    {
+      "name": "CHECK_V413_REPAIR_CONVERGENCE.py",
+      "passed": 29,
+      "total": 29,
+      "returncode": 0
+    },
+    {
+      "name": "CHECK_V420_CAPABILITY_SANDBOX.py",
+      "passed": 20,
+      "total": 20,
+      "returncode": 0
+    },
+    {
+      "name": "CHECK_V421_TAURI_CARGO_CONVERGENCE.py",
+      "passed": 26,
+      "total": 26,
+      "returncode": 0
+    },
+    {
+      "name": "CHECK_V422_COMPONENT_BOUNDARY_CONVERGENCE.py",
+      "passed": 19,
+      "total": 19,
+      "returncode": 0
+    },
+    {
+      "name": "CHECK_V423_PROGRESSIVE_GLOBAL_CONVERGENCE.py",
+      "passed": 40,
+      "total": 40,
+      "returncode": 0
+    },
+    {
+      "name": "CHECK_V424_PROVIDER_FIRST_FAST_CONVERGENCE.py",
+      "passed": 31,
+      "total": 31,
+      "returncode": 0
+    },
+    {
+      "name": "CHECK_V425_QWEN38_27B_SELECTOR.py",
+      "passed": 25,
+      "total": 25,
+      "returncode": 0
+    },
+    {
+      "name": "CHECK_V426_AUTO_HYBRID_MODEL_ROUTER.py",
+      "passed": 29,
+      "total": 29,
+      "returncode": 0
+    },
+    {
+      "name": "CHECK_V427_HYBRID_WATCHDOG_RESCUE.py",
+      "passed": 19,
+      "total": 19,
+      "returncode": 0
+    }
+  ],
+  "regression_total": {
+    "passed": 428,
+    "total": 428
+  },
+  "python_top_level": 19,
+  "python_compile_errors": 0,
+  "skills": 79,
+  "registered_toolchain_adapters": 73,
+  "ui_javascript_syntax": "PASS",
+  "zip_integrity": "PASS",
+  "zip_entries": 459,
+  "zip_bytes": 357956376
+}

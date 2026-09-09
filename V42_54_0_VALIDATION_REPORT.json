@@ -1,0 +1,93 @@
+{
+  "version": "42.54.0",
+  "dashboard_build_id": "v42.54.0-workflow-convergence",
+  "created_at_utc": "2026-09-08T01:37:27.294918+00:00",
+  "source_archive": "01-Jarvis_V42_53_2_COMPLETE.zip",
+  "source_archive_sha256": "35e1317f90ed66604ad01f706623de2e71522d8626423e01a38109ab12986fad",
+  "distribution": "complete uploaded distribution plus listed changes; not a generated application",
+  "test_results": {
+    "unittest_passed": 93,
+    "legacy_checks_passed": 17,
+    "total_passed": 110,
+    "failed": 0,
+    "python_sources_parsed": 82,
+    "dashboard_javascript_syntax": "passed"
+  },
+  "executed_workflows": [
+    "Real HTTP chunked ZIP upload, retry/resume, dashboard-to-IPC handoff and extraction",
+    "Production JavaScript Enter/send handlers, draft acknowledgement and job recovery",
+    "Real SQLite success, rejected invalid input, row-count invariants and restart persistence",
+    "Imported ZIP -> staged SQL repair -> create test -> run test -> clean functional audit",
+    "Real custom adapter build/test commands: missing tests fail, implemented test passes",
+    "Existing C compiler/executable and JavaScript service checks",
+    "Rejected candidate rollback, existing test protection and concurrent file creation",
+    "Source/command/environment-aware evidence and bounded unchanged-failure budget"
+  ],
+  "stopped_run_replay": {
+    "source": "uploaded .jarvis_build.zip",
+    "sql_messages_removed_from_findings": [
+      "Update failed",
+      "Delete failed"
+    ],
+    "real_query_errors_retained": [
+      "persons.current_holder_id",
+      "checkout_records.is_checked_out (two queries)"
+    ]
+  },
+  "limits": [
+    "Controlled model responses; no live Qwen inference run",
+    "Windows GUI/voice startup not executed on this Linux host",
+    "GearTrack desktop app was not completed or accepted in this change",
+    "Every generated project still requires its native build, tests, runtime and final acceptance gates"
+  ],
+  "changed_original_files": [
+    "CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py",
+    "CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py",
+    "CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py",
+    "JARVIS_ACTIVE_ENGINE.txt",
+    "JARVIS_V42_CAPABILITIES.json",
+    "V42_RUNTIME_POLICY.json",
+    "jarvis.py",
+    "jarvis_sql_contracts.py",
+    "jarvis_v4247_repair.py",
+    "jarvis_v4251_repair.py",
+    "jarvis_v4252_repair.py",
+    "local_qwen_project.py",
+    "ui/app.js",
+    "ui/dashboard.py"
+  ],
+  "added_files": [
+    "CHECK_V4254_WORKFLOW_CONVERGENCE.bat",
+    "CHECK_V4254_WORKFLOW_CONVERGENCE.py",
+    "V42_54_0_README.txt",
+    "V42_54_0_TEST_OUTPUT.txt",
+    "V42_54_0_VALIDATION_REPORT.json",
+    "jarvis_v4254_repair.py",
+    "jarvis_workflow_contracts.py"
+  ],
+  "package_policy": {
+    "preserve_all_original_archive_members": true,
+    "include_test_runtime_log_changes": false,
+    "zip_integrity_and_unchanged_member_crc_checked_before_delivery": true
+  },
+  "changed_source_sha256": {
+    "CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py": "64164310e926483eeabfb611e38844283dd20e08f1b0f8ef7c9958bddbb056cc",
+    "CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py": "ac2cdd38435329a46629bdcfa484b64b7deaa86f8bdbc03e299299ce1de11adb",
+    "CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py": "ffa18b93724cc82835f67cd370791cf1f6132dd3c23c79b9a08a625aae0745b9",
+    "CHECK_V4254_WORKFLOW_CONVERGENCE.bat": "85246d1ba6fc8d7d3128e9f8ee7064ca7cead9897c15aa042135508af78f6910",
+    "CHECK_V4254_WORKFLOW_CONVERGENCE.py": "c1eabdef9e781c52f0182c5f0fa8648475365bfe2d8372f6c24a4f994cd454ae",
+    "JARVIS_ACTIVE_ENGINE.txt": "b4e474c1245fa86633b3793ec80ea9d07e883ed924d88013053bf6ac94e1d83a",
+    "JARVIS_V42_CAPABILITIES.json": "ae442a049708f35085fa50e2a34c6a7f592e8eed42979221990c709e23641cb0",
+    "V42_RUNTIME_POLICY.json": "bb80d1693be393c4bb30c1f7d95535d54808f06a4318ad191bbfe275a9701f0a",
+    "jarvis.py": "9d5d41df543e22923b2ca36196cde8b115d1d14bebddee76f3d2b59c3b0e7e02",
+    "jarvis_sql_contracts.py": "a3a2a7a4c4e6e0d3e0dcf84f639493ed5a58fe37318d76a5eaaafb1d22153b2d",
+    "jarvis_v4247_repair.py": "feded236b64f309d4d912e6ef90a82eeaa069a005e1450cb63291a12c1c88323",
+    "jarvis_v4251_repair.py": "c7748ea75508210d6a7cdc9aebb91d271036f27700f175bf4a8f41579d2c7a87",
+    "jarvis_v4252_repair.py": "3fc36f4bec238a4bad83761828bc6326a175c4d82784ee26f7e3a02c4bb0b960",
+    "jarvis_v4254_repair.py": "fa12f7182fc22d80e0a71379011f750f9b3696c1c27e40e8683e2ad95f94de25",
+    "jarvis_workflow_contracts.py": "b59a121ad37c9873f086036976f6528a4b21edead28f37473d8bba03e6f71bf0",
+    "local_qwen_project.py": "be3848ece3cd0880cd275da1df61f45624ac28df3ba029d4a325891cce6ab2bb",
+    "ui/app.js": "b20681d5977f0df8d21682f5d346037ddf43060e91ff5d479f46391fd9f1d6c2",
+    "ui/dashboard.py": "8f71b5a618d182636c2a6ac8300d290643c05032b8fb730b802bf9ad4485cff4"
+  }
+}

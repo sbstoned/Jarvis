@@ -1,0 +1,46 @@
+{
+  "version": "42.52.0",
+  "rebuilt_at": "2026-09-07T20:48:01.303780+00:00",
+  "result": "53 checks passed; no skipped tests",
+  "suites": [
+    {
+      "command": "python CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py",
+      "passed": 17,
+      "failed": 0,
+      "exit_code": 0
+    },
+    {
+      "command": "python CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py",
+      "passed": 17,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0
+    },
+    {
+      "command": "python CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py",
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0
+    }
+  ],
+  "runtime": {
+    "python": "3.12.13 (main, Aug  7 2026, 02:25:39) [Clang 22.1.3 ]",
+    "sqlite": "3.53.1",
+    "platform": "linux"
+  },
+  "executed_workflows": [
+    "Actual two-sweep resume controller retains the first improvement and completes the second.",
+    "Actual checkpoint writer and safe ZIP importer retain the improved source and expose remaining functional debt.",
+    "Public Python service create/read/list workflow, invalid-input rejection, persisted row count and fresh-process read.",
+    "Disposable related-file transactions with real C compile/executable and JavaScript runtime checks.",
+    "Wrong-column SELECT, UPDATE, INSERT and RETURNING prepared by actual SQLite against an isolated schema."
+  ],
+  "limitations": [
+    "Qwen replies and repair-cycle edits in regression fixtures are controlled; no live Qwen generation was run.",
+    "No Windows GUI or Tauri application was launched on this Linux packaging host.",
+    "The uploaded GearTrack project is not certified as final or repaired by this Jarvis release archive.",
+    "SQLite preparation supplements native validation; it does not prove dynamic SQL, every dialect, migrations or business logic.",
+    "The universal controller preserves existing toolchain adapters; arbitrary projects still require their real final acceptance gates."
+  ]
+}

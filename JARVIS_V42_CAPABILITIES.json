@@ -1,0 +1,583 @@
+{
+  "version": "42.49.0",
+  "engine": "REVISION_SCOPED_CONVERGENCE_COMMAND_BROKER_V4242",
+  "generated_at": "2026-09-09T13:03:41",
+  "host": {
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "python": "3.13.15",
+    "cwd": "C:\\Users\\gunsh\\Jarvis"
+  },
+  "tools": {
+    "python": {
+      "available": true,
+      "path": "C:\\Users\\gunsh\\AppData\\Local\\Programs\\Python\\Python313\\python.EXE",
+      "version": ""
+    },
+    "pip": {
+      "available": true,
+      "path": "C:\\Users\\gunsh\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\pip.EXE",
+      "version": ""
+    },
+    "node": {
+      "available": true,
+      "path": "C:\\Program Files\\nodejs\\node.EXE",
+      "version": ""
+    },
+    "npm": {
+      "available": true,
+      "path": "C:\\Program Files\\nodejs\\npm.CMD",
+      "version": ""
+    },
+    "npx": {
+      "available": true,
+      "path": "C:\\Program Files\\nodejs\\npx.CMD",
+      "version": ""
+    },
+    "pnpm": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "yarn": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "bun": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "cargo": {
+      "available": true,
+      "path": "C:\\Users\\gunsh\\.cargo\\bin\\cargo.EXE",
+      "version": ""
+    },
+    "rustc": {
+      "available": true,
+      "path": "C:\\Users\\gunsh\\.cargo\\bin\\rustc.EXE",
+      "version": ""
+    },
+    "rustup": {
+      "available": true,
+      "path": "C:\\Users\\gunsh\\.cargo\\bin\\rustup.EXE",
+      "version": ""
+    },
+    "git": {
+      "available": true,
+      "path": "C:\\Program Files\\Git\\cmd\\git.EXE",
+      "version": ""
+    },
+    "cmake": {
+      "available": true,
+      "path": "C:\\Program Files\\CMake\\bin\\cmake.EXE",
+      "version": ""
+    },
+    "ctest": {
+      "available": true,
+      "path": "C:\\Program Files\\CMake\\bin\\ctest.EXE",
+      "version": ""
+    },
+    "ninja": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "make": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "clang": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "clang++": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "gcc": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "g++": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "cl": {
+      "available": true,
+      "path": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+      "version": ""
+    },
+    "dotnet": {
+      "available": true,
+      "path": "C:\\Program Files\\dotnet\\dotnet.EXE",
+      "version": ""
+    },
+    "msbuild": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "java": {
+      "available": true,
+      "path": "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path\\java.EXE",
+      "version": ""
+    },
+    "javac": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "gradle": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "maven": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "go": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "flutter": {
+      "available": true,
+      "path": "C:\\Users\\gunsh\\Downloads\\flutter_windows_3.44.5-stable\\flutter\\bin\\flutter.BAT",
+      "version": ""
+    },
+    "dart": {
+      "available": true,
+      "path": "C:\\Users\\gunsh\\Downloads\\flutter_windows_3.44.5-stable\\flutter\\bin\\dart.BAT",
+      "version": ""
+    },
+    "adb": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "sdkmanager": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "swift": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "xcodebuild": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "godot": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "unity": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "unrealbuildtool": {
+      "available": true,
+      "path": "C:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Binaries\\DotNET\\UnrealBuildTool\\UnrealBuildTool.exe",
+      "version": ""
+    },
+    "docker": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "wsl": {
+      "available": true,
+      "path": "C:\\WINDOWS\\system32\\wsl.EXE",
+      "version": ""
+    },
+    "sqlite3": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "psql": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "mysql": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "composer": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "php": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "ruby": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "bundle": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "zig": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "nim": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "nimble": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "odin": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "elixir": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "mix": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "erl": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "rebar3": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "ghc": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "cabal": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "ocaml": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "dune": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "sbt": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "lua": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "luac": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "perl": {
+      "available": true,
+      "path": "C:\\Program Files\\Git\\usr\\bin\\perl.EXE",
+      "version": ""
+    },
+    "rscript": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "julia": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "terraform": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "pio": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "idf.py": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "xmake": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "rg": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "fd": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "jq": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "curl": {
+      "available": true,
+      "path": "C:\\WINDOWS\\system32\\curl.EXE",
+      "version": ""
+    },
+    "7zip": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "winget": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "choco": {
+      "available": true,
+      "path": "C:\\ProgramData\\chocolatey\\bin\\choco.EXE",
+      "version": ""
+    },
+    "scoop": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "deno": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "corepack": {
+      "available": true,
+      "path": "C:\\Program Files\\nodejs\\corepack.CMD",
+      "version": ""
+    },
+    "pwsh": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "powershell": {
+      "available": true,
+      "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+      "version": ""
+    },
+    "bash": {
+      "available": true,
+      "path": "C:\\WINDOWS\\system32\\bash.EXE",
+      "version": ""
+    },
+    "kubectl": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "helm": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "podman": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "uv": {
+      "available": true,
+      "path": "C:\\Users\\gunsh\\AppData\\Local\\hermes\\bin\\uv.EXE",
+      "version": ""
+    },
+    "poetry": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "pytest": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "ruff": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "mypy": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "clojure": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "lein": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "bb": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "crystal": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "racket": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "raco": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "nvcc": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "gfortran": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "wasm-pack": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "wasm-bindgen": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "c compiler": {
+      "available": true,
+      "path": "",
+      "version": ""
+    },
+    "c++ compiler": {
+      "available": true,
+      "path": "",
+      "version": ""
+    },
+    "compiler": {
+      "available": true,
+      "path": "",
+      "version": ""
+    },
+    "android sdk": {
+      "available": true,
+      "path": "C:\\Users\\gunsh\\AppData\\Local\\Android\\Sdk",
+      "version": ""
+    },
+    "xcode": {
+      "available": false,
+      "path": "",
+      "version": ""
+    },
+    "unreal engine": {
+      "available": true,
+      "path": "C:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Binaries\\DotNET\\UnrealBuildTool\\UnrealBuildTool.exe",
+      "version": ""
+    },
+    "qt": {
+      "available": false,
+      "path": "",
+      "version": ""
+    }
+  },
+  "available_count": 30,
+  "known_count": 106,
+  "available": [
+    "android sdk",
+    "bash",
+    "c compiler",
+    "c++ compiler",
+    "cargo",
+    "choco",
+    "cl",
+    "cmake",
+    "compiler",
+    "corepack",
+    "ctest",
+    "curl",
+    "dart",
+    "dotnet",
+    "flutter",
+    "git",
+    "java",
+    "node",
+    "npm",
+    "npx",
+    "perl",
+    "pip",
+    "powershell",
+    "python",
+    "rustc",
+    "rustup",
+    "unreal engine",
+    "unrealbuildtool",
+    "uv",
+    "wsl"
+  ],
+  "sandbox_backends": {
+    "native_controlled": true,
+    "docker": false,
+    "wsl": true
+  }
+}

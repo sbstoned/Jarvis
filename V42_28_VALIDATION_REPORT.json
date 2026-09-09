@@ -1,0 +1,17 @@
+{
+  "version": "V42.28.0",
+  "engine": "BEST_VERIFIED_RESUME_SCORE_ENDGAME_CLOSURE_FACTORY",
+  "python_files_compiled": 42,
+  "python_compile_failures": [],
+  "new_regression": "17/17 PASS",
+  "compatibility": {
+    "V42.27 parser-safe functional suite": "15/15 PASS after current-version identity substitution",
+    "V42.26 compiler-proof functional suite": "17/17 PASS after current-version identity substitution",
+    "V42.25 semantic/event/loop/spill functional suite": "24/24 PASS after current-version identity substitution",
+    "V42.22 consumer-first suite": "21/21 PASS after current-version identity substitution",
+    "Rust topology suite": "22/22 PASS"
+  },
+  "core_fix": "resume scoring distinguishes TypeScript diagnostic depth/count so failed-but-improving trials are promoted",
+  "parser_safety": "syntax-clean semantic states outrank parser-blocked states",
+  "endgame": "one bounded deterministic compiler-proven cleanup for <=6 TS diagnostics before more model reasoning"
+}

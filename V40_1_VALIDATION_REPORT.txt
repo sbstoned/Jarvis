@@ -1,0 +1,46 @@
+JARVIS V40.1 UNIVERSAL MILESTONE CONVERGENCE FACTORY
+====================================================
+
+Base
+----
+Built from the user's current local_qwen_project.py lineage, retaining V39 milestone execution and V40 universal ownership/toolchain changes.
+
+Key V40.1 fixes
+----------------
+1. Minimal Foundation milestone: build/config/storage substrate only; feature UI is not dragged into Foundation.
+2. Build/config manifests no longer depend on application source for milestone ordering.
+3. Current milestone contract skeletons are not pre-materialized; missing files are generated whole.
+4. Skeleton/missing files use full generation; only real implemented files use targeted edits.
+5. Central commit/green gate wraps both generation and repair. Intermediate/rejected candidates are rolled back.
+6. Repairable bootstrap materialization cannot be counted as accepted/green by the milestone engine.
+7. Canonical domain contract objects are preserved in JARVIS_V33_ARCHITECTURE.json; feature flag uses a different key.
+8. Casual one-paragraph prompts are atomized into traceable source requirements.
+9. Failure reporting distinguishes planning, milestone implementation, build/test, acceptance, and packaging.
+10. Domain owner selection no longer guesses command/UI/utility consumers as model owners without explicit ownership.
+11. Architecture preflight requires a provider-shaped model/type/schema owner per component/language for used canonical domains.
+12. Existing V40 cross-language owner/consumer rules, path canonicalization, milestone KB, stale-edit protection, state-aware loop guard, binary-asset handling, generic toolchain validation, and local reference gates remain active.
+
+Regression validation
+---------------------
+Python py_compile: PASS
+V40.1 targeted regression suite: 24/24 PASS
+Old GearTrack architecture replay:
+  - package.json remains Foundation: PASS
+  - src/App.tsx excluded from Foundation: PASS
+  - Dashboard.tsx excluded from Foundation: PASS
+  - InventoryView.tsx excluded from Foundation: PASS
+  - src/main.tsx with App dependency deferred: PASS
+  - TS Tool canonical owner = src/types/inventory.ts: PASS
+  - consumer-shaped Rust command not guessed as Tool owner: PASS
+  - missing Rust canonical model owner detected during preflight: PASS
+  - canonical domain contract object preserved in architecture: PASS
+  - current milestone skeleton generation disabled: PASS
+  - repairable intermediate cannot become green: PASS
+  - rejected intermediate rolled back: PASS
+  - casual prompt preserves Dashboard includes overdue tools: PASS
+  - milestone failure reports milestone stage instead of architecture/preflight: PASS
+  - valid empty __init__.py / requirements.txt handling retained: PASS
+
+Note
+----
+This validation replays deterministic/orchestration failures. A real local-Qwen project run is still the end-to-end benchmark for model convergence and host toolchain availability.

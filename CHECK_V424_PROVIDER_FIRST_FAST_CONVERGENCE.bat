@@ -1,0 +1,3 @@
+@echo off
+python CHECK_V424_PROVIDER_FIRST_FAST_CONVERGENCE.py
+pause

@@ -1,0 +1,39 @@
+{
+  "version": "42.49.0",
+  "engine": "DEPENDENCY_ORDERED_FUNCTIONAL_CONVERGENCE_FACTORY",
+  "repair_strategy_generation": "functional-acceptance-v7-provider-first-patch-only-contract-graph",
+  "validation": {
+    "retained_regression_assertions": {
+      "passed": 351,
+      "total": 351
+    },
+    "python_files_ast_compiled": 68,
+    "json_files_validated_before_report": 62,
+    "dashboard_javascript_syntax": "PASS",
+    "exact_trial_functional_findings": 12,
+    "exact_trial_repair_groups": 8,
+    "exact_trial_runtime_entry": "src-tauri/src/main.rs",
+    "exact_trial_reachable_tauri_commands": [
+      "tools_create",
+      "tools_delete",
+      "tools_get_all",
+      "tools_update"
+    ]
+  },
+  "functional_repair_order": [
+    "provider/persistence",
+    "production integration",
+    "feature contract",
+    "runtime bridge/state",
+    "workflow proof"
+  ],
+  "safety_and_convergence": {
+    "patch_only_primary_functional_repairs": true,
+    "whole_file_continuation_disabled_in_primary_functional_path": true,
+    "target_and_issue_family_scoped_budget": true,
+    "unrelated_source_changes_do_not_reopen_exhausted_hard_target": true,
+    "runtime_bridge_deferred_until_lower_layers_clear": true,
+    "tests_repaired_last": true,
+    "universal_builder_core_preserved": true
+  }
+}

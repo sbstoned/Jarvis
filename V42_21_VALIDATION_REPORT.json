@@ -1,0 +1,29 @@
+{
+  "version": "V42.21.0",
+  "engine": "SEMANTIC_ROLE_ERROR_DELTA_RUNTIME_GATE_FACTORY",
+  "generated_at": "2026-09-02T18:12:34.174712+00:00",
+  "exact_geartrack_regression": {
+    "passed": 20,
+    "failed": 0
+  },
+  "python_compile": {
+    "files": 34,
+    "failed": 0
+  },
+  "compatibility": {
+    "V42.15_rust_topology": "22/22 PASS",
+    "V42.20": "46/48 functional checks pass; two expected old-version/runtime-identity assertions differ",
+    "V42.16": "23/24 functional checks pass; expected old-version identity assertion differs",
+    "V42.18": "42/43 functional checks pass; expected old-version identity assertion differs"
+  },
+  "features": [
+    "semantic file-role gate",
+    "React component identity preservation",
+    "real React entrypoint requirement",
+    "deterministic redundant TS export repair",
+    "deterministic missing React hook import repair",
+    "bounded TypeScript compiler error-delta gate",
+    "same-blocker model budget",
+    "V42.21 runtime identity"
+  ]
+}

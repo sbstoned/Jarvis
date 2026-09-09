@@ -1,0 +1,33 @@
+{
+  "version": "V42.6",
+  "feature": "AUTO hybrid Qwen model routing",
+  "auto_default": true,
+  "auto_worker": "9b35",
+  "auto_specialist": "27b38q2",
+  "auto_specialist_file": "Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-Q2_K_P.gguf",
+  "legacy_27b_auto_eligible": false,
+  "qwen8b_auto_eligible": false,
+  "manual_selection_strict": true,
+  "routing": {
+    "27b38q2": [
+      "requirements/architecture planning",
+      "architecture collisions",
+      "ambiguous diagnostics",
+      "dependency closure",
+      "canonical provider/root cause",
+      "subsystem reconciliation",
+      "repeated repair families",
+      "large coordinated repairs",
+      "global convergence/acceptance"
+    ],
+    "9b35": [
+      "routine file generation",
+      "straightforward first-pass leaf repair",
+      "small/local repetitive implementation"
+    ]
+  },
+  "regression_total": 409,
+  "regression_passed": 409,
+  "strict_publish_gate_preserved": true,
+  "shared_strategy_tools_skills": true
+}

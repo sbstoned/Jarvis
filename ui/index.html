@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JARVIS Command Center</title>
+  <link rel="stylesheet" href="styles.css?v=42.53.2-live-project-jobs">
+</head>
+<body data-voice-state="STANDBY">
+  <div class="scanlines"></div>
+  <aside class="sidebar">
+    <div class="brand"><div class="mini-core"><span></span></div><div><b>JARVIS OS</b><small>COMMAND CENTER v5.4</small></div></div>
+    <nav>
+      <button class="nav active" data-view="command">⌂ <span>Command Center</span></button>
+      <button class="nav" data-view="core">◉ <span>AI Core</span></button>
+      <button class="nav" data-view="agents">◇ <span>Agent Activity</span></button>
+      <button class="nav" data-view="tasks">☷ <span>Tasks & Missions</span></button>
+      <button class="nav" data-view="calendar">▣ <span>Calendar</span></button>
+      <button class="nav" data-view="email">✉ <span>Work Email</span></button>
+      <button class="nav" data-view="projects">⌘ <span>Projects</span></button>
+      <button class="nav" data-view="apps">◫ <span>Applications</span></button>
+      <button class="nav" data-view="memory">◎ <span>Memory</span></button>
+      <button class="nav" data-view="conversations">▤ <span>Conversations</span></button>
+      <button class="nav" data-view="browser">◎ <span>Browser & Research</span></button>
+      <button class="nav" data-view="git">⑂ <span>Git & Repositories</span></button>
+      <button class="nav" data-view="workspace">▱ <span>Files & Workspace</span></button>
+      <button class="nav" data-view="knowledge">◇ <span>Knowledge Base</span></button>
+      <button class="nav" data-view="skills">✧ <span>Tools & Skills</span></button>
+      <button class="nav" data-view="automation">⚡ <span>Automation</span></button>
+      <button class="nav" data-view="workflows">⌁ <span>Workflows</span></button>
+      <button class="nav" data-view="monitor">◌ <span>System Monitor</span></button>
+      <button class="nav" data-view="diagnostics">⊕ <span>Diagnostics</span></button>
+      <button class="nav" data-view="voice">🎙 <span>Voice Lab</span></button>
+      <button class="nav" data-view="gestures">✋ <span>Air Touch / Gesture Lab</span></button>
+      <button class="nav" data-view="controls">⚙ <span>Controls</span></button>
+    </nav>
+    <div class="voice-card"><span class="status-dot"></span><div><small>VOICE STATE</small><strong id="side-state">STANDBY</strong></div></div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="online"><span></span> SYSTEM ONLINE</div>
+      <h1>J A R V I S</h1>
+      <div class="telemetry"><span id="clock">--:--</span><span id="cpu">CPU --</span><span id="ram">RAM --</span><button id="reset-layout-btn" class="fullscreen-btn" title="Restore every panel to its default position and size">Reset Dashboard Layout</button><button id="fullscreen-btn" class="fullscreen-btn" title="Toggle fullscreen">⛶ FULLSCREEN</button></div>
+    </header>
+
+    <section id="command-view" class="view active command-layout">
+      <div id="conversation-panel" class="conversation panel">
+        <div class="panel-title chat-panel-title"><span>LIVE CONVERSATION</span><button id="chat-panel-reset" type="button" title="Restore the chat panel to a usable size and position">RESET CHAT</button></div>
+        <div id="chat-logs" class="chat-logs">
+          <div class="bubble jarvis">Jarvis command center is online.</div>
+        </div>
+        <div id="chat-command-status" role="status" aria-live="polite"></div>
+        <div id="chat-attachments" class="chat-attachments"></div><input id="chat-file-input" type="file" multiple hidden accept=".zip,.txt,.md,.json,.yaml,.yml,.toml,.ini,.cfg,.py,.js,.jsx,.ts,.tsx,.html,.css,.csv,.xml,.sql,.ps1,.bat,.cmd,.dart,.java,.cpp,.h,.cs,.go,.rs"><div class="command-input"><select id="provider-select" title="AI provider / local model"><option value="auto" selected>AUTO HYBRID — 9B FAST + NEW 27B Q2_K_P FOR HARD WORK (DEFAULT)</option><option value="qwen8b">QWEN3 8B — ABLITERATED Q4_K_M (8GB FAST / STRICT)</option><option value="qwen35">QWEN3.5 9B — HAUHAUCS AGGRESSIVE Q4_K_M (STRICT / FAST WORKER)</option><option value="qwen38q2">QWEN3.8 27B — HAUHAUCS AGGRESSIVE Q2_K_P (STRICT / 10.68GB)</option><option value="qwen">QWEN3.8 27B — OBLITERATED Q4_K_M (MANUAL STRICT / LEGACY)</option><option value="nvidia">NVIDIA — AUTO BEST</option><option value="gemini">GEMINI</option><option value="openai">OPENAI</option><option value="claude">CLAUDE</option></select><button id="stop-project-btn" class="stop-project-btn hidden" type="button" title="Stop the active project and save a resumable checkpoint">■ STOP + CHECKPOINT</button><button id="attach-btn" type="button" title="Attach project ZIP or source files">📎</button><input id="chat-input" aria-label="Type a command for Jarvis" placeholder="Type a command for Jarvis…"><button id="send-btn" type="button" title="Send">➤</button></div>
+        <button class="panel-resize-handle" type="button" aria-label="Resize chat panel" title="Drag to resize the chat panel"></button>
+      </div>
+
+      <div class="core-stage">
+        <div id="voice-label" class="voice-label">STANDBY</div>
+        <div id="jarvis-core" class="jarvis-core">
+          <div class="ring ring-a"></div><div class="ring ring-b"></div><div class="ring ring-c"></div><div class="ring ring-d"></div>
+          <div class="ring ring-e"></div><div class="ring ring-f"></div>
+          <div class="ticks"></div><div class="energy-arcs"></div><div class="core-scan"></div>
+          <div class="core-orb"><span>JARVIS</span><small>NEURAL CORE</small></div>
+          <div class="speech-wave" id="speech-wave"></div>
+        </div>
+        <div class="state-row"><span data-s="LISTENING">● LISTENING</span><span data-s="THINKING">● THINKING</span><span data-s="SPEAKING">● SPEAKING</span></div>
+      </div>
+
+      <div class="right-stack">
+        <div class="panel quick-panel"><div class="panel-title">QUICK LAUNCH</div><div id="quick-apps" class="app-grid"></div></div>
+        <div class="panel"><div class="panel-title">SYSTEM STATUS</div><div class="status-list"><div><span>Host</span><b id="status-host">—</b></div><div><span>User</span><b id="status-user">—</b></div><div><span>Python</span><b id="status-py">—</b></div><div><span>Work Mail</span><b>Not configured</b></div><div><span>Calendar</span><b>Outlook</b></div><div><span>IPC</span><b id="status-ipc">—</b></div></div></div>
+      </div>
+
+      <div class="bottom-grid">
+        <div class="panel"><div class="panel-title">ACTIVE AGENTS</div><div id="overview-agents" class="mini-list"></div></div>
+        <div class="panel"><div class="panel-title">TODAY / UPCOMING</div><div id="overview-calendar" class="mini-list"></div></div>
+        <div class="panel"><div class="panel-title">LATEST EMAIL</div><div id="overview-email" class="mini-list"></div></div>
+      </div>
+      <div class="hud-widget-grid">
+        <div class="panel hud-card system-monitor-card">
+          <div class="panel-title">SYSTEM MONITOR <span class="hud-live">● LIVE</span></div>
+          <div class="monitor-rings">
+            <div class="gauge-wrap">
+              <div class="gauge" id="cpu-gauge" style="--pct:0"><div><strong id="monitor-cpu">--%</strong><small>CPU</small></div></div>
+              <span class="temp-readout"><b id="cpu-temp">TEMP --</b><small id="cpu-telemetry-label">LIVE LOAD</small></span>
+            </div>
+            <div class="gauge-wrap">
+              <div class="gauge" id="ram-gauge" style="--pct:0"><div><strong id="monitor-ram">--%</strong><small>RAM</small></div></div>
+              <span class="temp-readout"><b id="ram-temp">TEMP --</b><small id="ram-telemetry-label">PHYSICAL MEMORY</small></span>
+            </div>
+            <div class="gauge-wrap">
+              <div class="gauge" id="disk-gauge" style="--pct:0"><div><strong id="monitor-disk">--%</strong><small>DISK</small></div></div>
+              <span class="temp-readout"><b id="disk-capacity">CAPACITY</b><small>SYSTEM DRIVE</small></span>
+            </div>
+          </div>
+          <div class="monitor-meta">
+            <span id="monitor-threads">0 threads</span>
+            <span id="monitor-network">NET ↑0 ↓0 MB</span>
+            <span id="gpu-temp">GPU TEMP --</span>
+            <span id="temperature-source">TEMP SENSOR: CHECKING</span>
+          </div>
+          <div class="hardware-detail-strip">
+            <span id="cpu-package-temp">CPU PKG --</span>
+            <span id="cpu-core-max-temp">CORE MAX --</span>
+            <span id="gpu-hotspot-temp">GPU HOTSPOT --</span>
+            <span id="storage-temp">STORAGE --</span>
+            <span id="fan-rpm">FANS --</span>
+          </div>
+        </div>
+
+        <div class="panel hud-card core-overview-card">
+          <div class="panel-title">AI CORE OVERVIEW</div>
+          <div class="core-overview">
+            <div><span>◉</span><b>Core</b><strong id="core-state-widget">STANDBY</strong></div>
+            <div><span>◈</span><b>Agents</b><strong id="core-agent-count">0 active</strong></div>
+            <div><span>⌘</span><b>Projects</b><strong id="core-project-count">0 managed</strong></div>
+            <div><span>◌</span><b>IPC</b><strong id="core-ipc-widget">ONLINE</strong></div>
+          </div>
+        </div>
+
+        <div class="panel hud-card mission-card">
+          <div class="panel-title">MISSION TIMELINE <button class="micro-action" onclick="openDetailDock('calendar')">VIEW ALL</button></div>
+          <div id="mission-timeline" class="mission-timeline"><div class="timeline-empty">No scheduled missions.</div></div>
+        </div>
+
+        <div class="panel hud-card intelligence-card">
+          <div class="panel-title">LIVE INTELLIGENCE <span class="hud-live">● LIVE</span></div>
+          <div id="intel-feed" class="intel-feed"><div class="intel-item">Jarvis command center online.</div></div>
+        </div>
+
+        <div class="panel hud-card provider-card">
+          <div class="panel-title">AI PROVIDERS</div>
+          <div id="provider-grid" class="provider-grid"></div>
+        </div>
+
+        <div class="panel hud-card quick-command-card">
+          <div class="panel-title">QUICK COMMANDS</div>
+          <div class="quick-command-list">
+            <button onclick="quickCommand('what is on my calendar today')">＋ Today&apos;s Schedule</button>
+            <button onclick="quickCommand('what are my agents doing')">◉ Agent Status</button>
+            <button onclick="quickCommand('what is my newest work email')">✉ Latest Email</button>
+            <button onclick="openDetailDock('apps')">▦ Application Center</button>
+            <button onclick="quickCommand('deploy an agent using OpenAI to inspect the Jarvis project for current bugs. Inspect the current files and current Git state only. Do not change anything.')">⌘ Inspect Jarvis</button>
+            <button class="self-improve-action" onclick="quickCommand('improve yourself by making one safe high-confidence local improvement to the current Jarvis project, test it, and do not commit or push')">✦ Improve Yourself</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="talk-strip">
+        <span class="talk-pulse"></span>
+        <div><small>TALK TO JARVIS</small><strong id="talk-strip-state">I&apos;m listening…</strong></div>
+        <span class="talk-wave"></span>
+      </div>
+
+      <div id="detail-dock" class="detail-dock panel">
+        <div class="panel-title dock-title-row">
+          <span id="dock-title">DETAILS</span>
+          <button id="dock-close" class="dock-close" title="Close panel">×</button>
+        </div>
+        <div id="dock-body" class="dock-body"></div>
+      </div>
+    </section>
+
+    <section id="agents-view" class="view"><h2>Agent Activity</h2><div id="agents-list" class="cards"></div></section>
+    <section id="calendar-view" class="view"><h2>Calendar</h2><div id="calendar-list" class="cards"></div></section>
+    <section id="email-view" class="view"><h2>Work Email</h2><div id="email-list" class="cards"></div></section>
+    <section id="projects-view" class="view"><h2>Projects</h2><div id="projects-list" class="cards"></div></section>
+    <section id="apps-view" class="view"><h2>Applications</h2><div id="apps-list" class="app-grid large"></div></section>
+    <section id="controls-view" class="view"><h2>System Controls</h2><div class="cards"><button class="control-card" data-action="ping">Diagnostics</button><button class="control-card" data-action="test_speech">Voice Test</button><button class="control-card" onclick="openWidget('calculator')">Calculator Widget</button><button class="control-card" onclick="openWidget('email')">Email Widget</button></div><div id="control-output"></div></section>
+  </main>
+
+  <div id="widget-layer" class="widget-layer hidden">
+    <div class="widget-shell">
+      <div class="widget-head"><span id="widget-title">Widget</span><button id="widget-close">×</button></div>
+      <div id="widget-content" class="widget-content"></div>
+    </div>
+  </div>
+
+  <script src="/project-upload.js?v=42.53"></script>
+  <script src="app.js?v=42.53.2-live-project-jobs"></script>
+  <script type="module" src="/airtouch/airtouch.js?v=2.59"></script>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+{
+  "version": "V42.12",
+  "engine": "attached-zip-resume-trial-isolation",
+  "status": "PASS",
+  "regression_checks": {
+    "passed": 551,
+    "total": 551
+  },
+  "top_level_python_compile": {
+    "files": 24,
+    "errors": 0
+  },
+  "javascript_syntax": {
+    "checked": 3,
+    "errors": 0
+  },
+  "actual_geartrack_resume_replay": "PASS",
+  "root_cause_fixed": [
+    "Resume extraction already pruned runtime caches, but dependency restore recreated .jarvis_runtime/cache/npm inside working.",
+    "Resume working-to-trial clone copied the live runtime cache and raced npm cache churn, producing WinError 3."
+  ],
+  "changes": [
+    "Resume trial/checkpoint clones exclude .jarvis_runtime, .jarvis_failures, node_modules, Cargo target, build/dist, language caches, and other rebuildable outputs.",
+    "Disposable candidate/test/smoke validation clones use the same runtime/cache isolation policy.",
+    "Resume clone retries once for transient Windows filesystem races but never suppresses persistent authored-source copy failures.",
+    "V42.11 safe ZIP extraction, whole-project audit, AUTO 9B/new-27B routing, and strict zero-debt final publication are preserved."
+  ],
+  "skill_cards": 84,
+  "registered_toolchain_adapters": 72,
+  "generated_at_utc": "2026-09-01T05:34:09.710352+00:00"
+}

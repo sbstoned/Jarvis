@@ -1,0 +1,67 @@
+{
+  "version": "42.47.0",
+  "engine": "MCP_CAPABILITY_REGISTRY_V4242",
+  "policy": {
+    "default": "read_only_until_task_authorizes_writes",
+    "secrets": "never_copy_secrets_into_prompts_logs_or_generated_projects",
+    "external_writes": "require_user_confirmation_when_consequential",
+    "worker_access": "grant_only_capabilities_required_by_the_assigned_task",
+    "health": "configured_servers_must_pass_a_preflight_before_assignment"
+  },
+  "capabilities": [
+    {
+      "id": "github",
+      "priority": 1,
+      "purpose": "Repository history, branches, pull requests, issues and CI evidence",
+      "write_policy": "read by default; confirm push, merge, release and destructive operations"
+    },
+    {
+      "id": "playwright",
+      "priority": 1,
+      "purpose": "Launch generated interfaces and capture DOM, console, network and screenshot evidence",
+      "write_policy": "local test actions allowed; external account changes require confirmation"
+    },
+    {
+      "id": "docker",
+      "priority": 1,
+      "purpose": "Reproducible isolated build and test toolchains",
+      "write_policy": "project-scoped containers and volumes only"
+    },
+    {
+      "id": "language_servers",
+      "priority": 1,
+      "purpose": "Definitions, references, diagnostics and safe multi-language refactoring",
+      "write_policy": "read-only queries by default; edits remain transactionally validated"
+    },
+    {
+      "id": "package_registries",
+      "priority": 2,
+      "purpose": "Authoritative npm, Cargo, PyPI, NuGet, Maven and SDK dependency metadata",
+      "write_policy": "read-only metadata; dependency changes require validator proof"
+    },
+    {
+      "id": "database_introspection",
+      "priority": 2,
+      "purpose": "Schema, migration and query validation for SQLite and server databases",
+      "write_policy": "local disposable databases by default; production writes require confirmation"
+    },
+    {
+      "id": "runtime_telemetry",
+      "priority": 2,
+      "purpose": "Sentry-compatible crash, stack and release evidence from deployed projects",
+      "write_policy": "read issues by default; configuration changes require confirmation"
+    },
+    {
+      "id": "cloudflare",
+      "priority": 3,
+      "purpose": "Optional deployment and runtime diagnostics after local acceptance passes",
+      "write_policy": "never deploy or change DNS without explicit confirmation"
+    },
+    {
+      "id": "figma",
+      "priority": 3,
+      "purpose": "Optional design context, component measurements and asset references",
+      "write_policy": "read-only by default"
+    }
+  ]
+}

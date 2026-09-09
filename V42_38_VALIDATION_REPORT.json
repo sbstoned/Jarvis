@@ -1,0 +1,67 @@
+{
+  "release": "V42.38.0",
+  "engine": "COMPONENT_SCOPED_TRANSPORT_CONVERGENCE_FACTORY",
+  "validated_at_utc": "2026-09-04",
+  "result": "PASS",
+  "captured_run_assessment": {
+    "input": ".jarvis_backups.zip",
+    "status": "frontend green; Rust stalled without accepted source progress",
+    "frontend_evidence": [
+      "npm run build passed after the validated Vite alias repair",
+      "Vitest ran 1 file and 1 test successfully"
+    ],
+    "rust_evidence": [
+      "Cargo still reported 75 errors and 8 warnings",
+      "No Rust source transaction had been accepted",
+      "V42.37 model transport failures targeted src-tauri/src/models/tool.rs twice and src-tauri/src/tools.rs once",
+      "An unrelated frontend test edit changed V42.37's whole-repository token and erased earlier Rust timeout state"
+    ]
+  },
+  "root_causes_fixed": [
+    "Whole-repository token reset a failing component's transport history after unrelated component edits",
+    "Elapsed-time cooldown made unchanged exhausted targets eligible forever at intervals",
+    "Transport-only attempts were eventually labeled as component semantic no-delta",
+    "Large component prompts increased local-model prefill and generation stall risk",
+    "Compiler-provided exact replacements were not consumed before model inference",
+    "A production-symbol linkage smoke could satisfy an explicitly requested behavioral-test requirement"
+  ],
+  "captured_geartrack_replay": {
+    "journal_reconstructed_transport_counts": {
+      "src-tauri/src/models/tool.rs": 2,
+      "src-tauri/src/tools.rs": 1
+    },
+    "deterministic_repairs_detected": [
+      "Two rustc exact replacements removing invalid String construction inside unwrap_or calls in src-tauri/src/tools.rs",
+      "Compiler-proven sqlx::FromRow derive for Tool in src-tauri/src/models/tool.rs"
+    ],
+    "promotion_rule": "fresh isolated Cargo validation must pass or strictly reduce the component diagnostic count"
+  },
+  "acceptance": {
+    "focused_v4238": "24/24",
+    "v4237_compatibility": "28/28",
+    "v4236_compatibility": "31/31",
+    "v4235_compatibility": "33/33",
+    "command_broker": "20/20",
+    "evergreen_and_current_suites": 18,
+    "checks_passed": 595,
+    "checks_failed": 0,
+    "python_files_compiled": 52,
+    "critical_json_files_parsed": true
+  },
+  "v4238_invariants": {
+    "component_source_token_excludes_nested_components": true,
+    "journal_transport_reconstruction": true,
+    "unrelated_edits_reset_transport_budget": false,
+    "elapsed_time_resets_transport_budget": false,
+    "default_transport_attempts_per_target_component_revision": 2,
+    "transport_only_consumes_semantic_budget": false,
+    "compiler_hints_run_before_model": true,
+    "component_prompt_character_cap": 10000,
+    "component_patch_output_token_cap": 900,
+    "explicit_tests_accept_linkage_only_smoke": false
+  },
+  "host_limitations": [
+    "The validation host did not execute the user's Windows GearTrack Cargo build or local Qwen endpoints",
+    "The exact captured compiler and journal evidence was replayed through deterministic component, transaction, timeout, and acceptance fixtures"
+  ]
+}

@@ -1,0 +1,3 @@
+@echo off
+python CHECK_V4215_RUST_TOPOLOGY_RESUME_AUTHORITY.py
+pause

@@ -1,0 +1,108 @@
+{
+  "version": "V42.62.0",
+  "engine": "UNIFIED_CANDIDATE_ISOLATION_WORKFLOW_RECOVERY_FACTORY",
+  "validated_at": "2026-09-09T15:10:29.592940+00:00",
+  "result": "PASS",
+  "focused_checks_passed": 171,
+  "new_regression_tests": 18,
+  "regression_groups": {
+    "transactions_durable_progress_workflow_protocol_clusters_adaptive_io_v4262": "137/137",
+    "regression_safe_promotion": "17/17",
+    "resume_cache_isolation": "10/10",
+    "hardware_fit_context": "7/7"
+  },
+  "compiled_changed_python_files": [
+    "CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py",
+    "CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py",
+    "CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py",
+    "CHECK_V4254_WORKFLOW_CONVERGENCE.py",
+    "CHECK_V4256_EVIDENCE_CLOSED_SCOPED_REPAIR.py",
+    "CHECK_V4257_EVIDENCE_EXPANDED_UNBOUNDED_STREAM.py",
+    "CHECK_V4258_CONNECTED_FUNCTIONAL_CLUSTERS.py",
+    "CHECK_V4259_ADAPTIVE_MODEL_IO.py",
+    "CHECK_V4261_VOLATILE_SHARED_CACHE_ISOLATION.py",
+    "CHECK_V4262_CANDIDATE_WORKFLOW_RECOVERY.py",
+    "jarvis_model_protocol.py",
+    "jarvis_v4251_repair.py",
+    "jarvis_v4254_repair.py",
+    "jarvis_v4259_repair.py",
+    "jarvis_v4261_repair.py",
+    "jarvis_v4262_repair.py",
+    "jarvis_workspace_copy.py",
+    "local_qwen_project.py"
+  ],
+  "reproduction": {
+    "baseline": "Active disposable clone traversed .jarvis_shared_build_cache/npm/_cacache and failed on a missing entry.",
+    "patched": "Active candidate and compiler-cluster clones preserved authored source and excluded cache traversal."
+  },
+  "proofs": [
+    "Root, nested and case-variant owned caches excluded across the shared source-copy boundary.",
+    "Persistent authored copy failures remain strict and partial candidate data is cleaned.",
+    "Transient clone retry consumes one model generation only; persistent clone failure consumes zero.",
+    "Infrastructure-blocked convergence resumes on the same source after filesystem recovery.",
+    "Malformed JSON rejected; strict raw test retry passed real build, subprocess tests and persisted-state checks.",
+    "Contradictory workflow assertions failed real validation and were never promoted.",
+    "At-cap output truncation retries remain bounded and do not accept truncated source.",
+    "Stop handling, dependency projection and exact production-edit JSON contract retained."
+  ],
+  "fixture_updates": [
+    "Release assertions updated to V42.62.0.",
+    "Legacy workflow fixture recognizes the current ISSUE OWNER FILES prompt field.",
+    "Adaptive-I/O checks honor the existing hardware-fit output cap and bounded same-cap retry."
+  ],
+  "base_archive_sha256": "9cddfbbb6d6c1913a5b0e479d5ebe75f156354515dbf1c7298b1bafe4d5dfdbb",
+  "modified_original_files": [
+    "CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py",
+    "CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py",
+    "CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py",
+    "CHECK_V4254_WORKFLOW_CONVERGENCE.py",
+    "CHECK_V4256_EVIDENCE_CLOSED_SCOPED_REPAIR.py",
+    "CHECK_V4257_EVIDENCE_EXPANDED_UNBOUNDED_STREAM.py",
+    "CHECK_V4258_CONNECTED_FUNCTIONAL_CLUSTERS.py",
+    "CHECK_V4259_ADAPTIVE_MODEL_IO.py",
+    "CHECK_V4261_VOLATILE_SHARED_CACHE_ISOLATION.py",
+    "JARVIS_ACTIVE_ENGINE.txt",
+    "jarvis_model_protocol.py",
+    "jarvis_v4251_repair.py",
+    "jarvis_v4254_repair.py",
+    "jarvis_v4259_repair.py",
+    "jarvis_v4261_repair.py",
+    "local_qwen_project.py"
+  ],
+  "new_files": [
+    "jarvis_workspace_copy.py",
+    "jarvis_v4262_repair.py",
+    "CHECK_V4262_CANDIDATE_WORKFLOW_RECOVERY.py",
+    "CHECK_V4262_CANDIDATE_WORKFLOW_RECOVERY.bat",
+    "V42_62_0_README.txt",
+    "V42_62_0_CHANGED_FILES.txt",
+    "V42_62_0_VALIDATION_REPORT.json"
+  ],
+  "changed_source_sha256": {
+    "CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py": "2720b06dc38b823efb3f5374d78ba6cc31c8e42c99b678d9e7523ebb8be7092d",
+    "CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py": "47cccc6cfa72faf37644f30fdc5a77e1380be216c5ccab3cd10c8b9237aee4cc",
+    "CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py": "0a9fc2abc6c418f6f0f3f9c9f709d8f52a5a80e83707f157477fed1a052e1281",
+    "CHECK_V4254_WORKFLOW_CONVERGENCE.py": "04e320051cd4a59d72c12818a5c0f9d8fc08da6b2d78811cb89d9696ea417210",
+    "CHECK_V4256_EVIDENCE_CLOSED_SCOPED_REPAIR.py": "8c929500a9cc3c24a15f038fb1bc26cd9755cb6fc59ec27f95cb233dbc5e63b3",
+    "CHECK_V4257_EVIDENCE_EXPANDED_UNBOUNDED_STREAM.py": "73fbe71a6dc5f5e7d2c664833dd227a1a47a084ce8b0e2d13e7eac6e480fb57e",
+    "CHECK_V4258_CONNECTED_FUNCTIONAL_CLUSTERS.py": "477c39593c849eac3584c5719c85cb46f0aa65a5ed86bf50962ef237b2717030",
+    "CHECK_V4259_ADAPTIVE_MODEL_IO.py": "9aea2414b579640b9c763e859841313d5087915d52f6b9c5bd4fc1efbb94404d",
+    "CHECK_V4261_VOLATILE_SHARED_CACHE_ISOLATION.py": "c3a8770f016c7a0646c45b28e72493299bc09f4b0d81356660345fff63b8ee8c",
+    "CHECK_V4262_CANDIDATE_WORKFLOW_RECOVERY.py": "7cfdfc1c38d1d04ab4bf8ed9162835d1657492e5481ef14259994b8840e8e7f2",
+    "jarvis_model_protocol.py": "386890cf47697ae10ce2c24537479613cd49f2388cf4ec0cac92fd8afe70e259",
+    "jarvis_v4251_repair.py": "144bcd35852ed007772ede2e1173b5eaaa2ca75076d6981c916c66000fbcf3ca",
+    "jarvis_v4254_repair.py": "ebc52cf7b0e083e2d8256e73cb1fc93581d82859c1441c4831ed5118e768f890",
+    "jarvis_v4259_repair.py": "150fe8fc41b4016274a7be4069b4da9ed8c51969b7e25090f4c8da2dd8b74f44",
+    "jarvis_v4261_repair.py": "f81c382755e6220ef0bc52a8c0ede7249a994cc39725fc8303360d38c9046819",
+    "jarvis_v4262_repair.py": "471f3f847f56a9c7501c8df58ee245724edda1bd2e09108fc473200b8942f403",
+    "jarvis_workspace_copy.py": "ae36ce11d0b5f05a176d511364e355926ea4eb37078cbaf3c4e9ad986dd3e82c",
+    "local_qwen_project.py": "a990a10928850aeba78149dab196041e115a8106e29eadf012e39df04c72fe9b"
+  },
+  "scope_limits": [
+    "Controlled model response fixtures; no live Qwen generation.",
+    "Linux/Python 3.12 execution with cache-race/locking fault injection; Windows startup not executed.",
+    "No Rust compiler or React application execution for the user project.",
+    "Only the Jarvis engine ZIP was attached; the last two project issues require a resumed checkpoint run.",
+    "No universal success guarantee; required toolchains and project-specific final acceptance still apply."
+  ]
+}

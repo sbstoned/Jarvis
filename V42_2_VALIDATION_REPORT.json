@@ -1,0 +1,67 @@
+{
+  "version": "V42.2.0",
+  "engine": "UNIVERSAL_COMPONENT_BOUNDARY_CONVERGENCE_FACTORY",
+  "regression": "project_20260830_183449",
+  "checks": {
+    "V41.1_universal": {
+      "passed": 135,
+      "total": 135
+    },
+    "V41.2_react_vite": {
+      "passed": 14,
+      "total": 14
+    },
+    "V41.3_repair": {
+      "passed": 29,
+      "total": 29
+    },
+    "V41.3_failed_workspace_replay": {
+      "passed": 7,
+      "total": 7
+    },
+    "V42.0_capability_sandbox": {
+      "passed": 20,
+      "total": 20
+    },
+    "V42.1_tauri_cargo": {
+      "passed": 26,
+      "total": 26
+    },
+    "V42.2_component_boundary": {
+      "passed": 19,
+      "total": 19
+    }
+  },
+  "total": {
+    "passed": 250,
+    "total": 250
+  },
+  "python_compile": {
+    "files": 14,
+    "errors": 0
+  },
+  "toolchain_adapters": 59,
+  "skill_cards": 58,
+  "exact_failure": {
+    "original_build_script": "tsc -p src-tauri/tsconfig.json && vite build --outDir dist",
+    "repaired_build_script": "tsc -p tsconfig.json && vite build --outDir dist",
+    "root_tsconfig_planned": true,
+    "foreign_src_tauri_tsconfig_invented": false,
+    "ts5058_eliminated_in_replay": true,
+    "next_hidden_self_import_caught_precommit": true,
+    "typescript_compiler_after_replay_repairs": "PASS",
+    "vite_replay_note": "Not claimed: attached node_modules is Windows-native and lacks Linux Rollup optional binary."
+  },
+  "features": {
+    "component_command_boundary_gate": true,
+    "build_substrate_closure": true,
+    "registry_driven_command_path_rules": true,
+    "deterministic_config_reference_repair": true,
+    "direct_self_reference_gate": true,
+    "final_plan_coverage_barrier": true,
+    "capability_discovery": true,
+    "controlled_command_broker": true,
+    "native_controlled_sandbox": true,
+    "optional_wsl_docker_backends": true
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "version": "V42.46.0",
+  "engine": "COMPILER_HINT_LAST_MILE_FACTORY",
+  "repair_strategy_generation": "rust-compiler-hints-v4-sqlx-path-display-warm-cache",
+  "source_release": "Jarvis_V42_45_0_COMPLETE.zip",
+  "observed_run": {
+    "source_checkpoint": "geartrack_checkpoint_20260905_145511.zip",
+    "v4245_sqlx_repair_committed": true,
+    "compiler_diagnostics_before": 7,
+    "compiler_diagnostics_after_sqlx": 2,
+    "new_primary_site": "src-tauri/src/app.rs:7",
+    "new_error_code": "E0277",
+    "new_root_cause": "PathBuf used with Display formatting; rustc recommends .display()",
+    "model_fallback_received_no_usable_patch_bytes": true,
+    "run_was_user_stopped": true
+  },
+  "fixes": {
+    "generic_rust_path_display_compiler_hint_repair": true,
+    "requires_exact_compiler_owned_source_line": true,
+    "requires_rustc_display_recommendation": true,
+    "requires_path_shaped_local_source_evidence": true,
+    "sqlx_joined_struct_row_repair_preserved": true,
+    "warm_cargo_target_candidate_compile_gate_preserved": true,
+    "expected_known_compiler_sequence": "7 -> 2 -> 0",
+    "final_acceptance_still_strict": true,
+    "bounded_empty_transport_fallback": true,
+    "default_worker_patch_timeout_seconds": 120,
+    "default_specialist_patch_timeout_seconds": 240,
+    "default_transport_failures_per_state_before_cooldown": 1,
+    "strategy_generation_reopens_older_revision_once": true
+  },
+  "limitations": [
+    "Cargo/Rust is not installed in the packaging environment, so the actual GearTrack Cargo build cannot be executed here.",
+    "The real Windows Jarvis host remains authoritative for the 7 -> 2 -> 0 compiler result and all subsequent tests/runtime/final acceptance."
+  ],
+  "regression_suites": {
+    "CHECK_V4246_COMPILER_HINT_LAST_MILE.py": "12/12 PASS",
+    "CHECK_V4245_WARM_CACHE_COMPILER_GATE.py": "9/9 PASS",
+    "CHECK_V4244_PHASE_AWARE_PROMOTION.py": "13/13 PASS",
+    "CHECK_V4243_SQLX_STRATEGY_GENERATION.py": "13/13 PASS",
+    "CHECK_V4242_REVISION_MEMORY_CONVERGENCE.py": "79/79 PASS",
+    "CHECK_V4241_AUTHORITATIVE_REPAIR.py": "35/35 PASS",
+    "CHECK_V4240_CHECKPOINT_UI_RECOVERY.py": "50/50 PASS",
+    "CHECK_V4237_COMPONENT_TRANSACTION_SANDBOX.py": "28/28 PASS",
+    "CHECK_V4236_FRESH_NATIVE_AUTHORITY.py": "31/31 PASS",
+    "CHECK_V4235_CANDIDATE_RUNTIME_PARITY.py": "33/33 PASS",
+    "total_assertions": "303/303 PASS"
+  },
+  "exact_checkpoint_replay": {
+    "geartrack_145511_sqlx_stage": "PASS",
+    "v4245_accepted_pathbuf_stage": "PASS",
+    "known_deterministic_compile_sequence": "7 -> 2 -> 0 (0 requires real Windows Cargo proof)"
+  },
+  "static_checks": {
+    "python_compileall": "PASS",
+    "json_files_validated": 60,
+    "dashboard_javascript_syntax": "PASS",
+    "active_engine_marker": "V42.46.0"
+  }
+}

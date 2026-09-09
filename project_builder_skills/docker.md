@@ -1,0 +1,2 @@
+# Docker / Containers
+Use containers when they improve reproducibility, not as a forced substitute for native platform SDKs. Pin meaningful base/runtime versions, use multi-stage builds when appropriate, keep build context small, persist only intended data, and expose health/readiness behavior where relevant. Validate Dockerfile/Compose configuration and run project tests outside or inside the container as architecture requires.

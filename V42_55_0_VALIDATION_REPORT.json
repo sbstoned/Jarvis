@@ -1,0 +1,102 @@
+{
+  "version": "42.55.0",
+  "dashboard_build_id": "v42.55.0-exact-model-protocol",
+  "created_at_utc": "2026-09-08T03:13:56.584479+00:00",
+  "source_archive": "01-Jarvis_V42_54_0_COMPLETE.zip",
+  "source_archive_sha256": "79550adfac41d157c3058af0065fd95fc10b2ff924a38b713b173d030a9353aa",
+  "distribution": "complete uploaded Jarvis distribution plus listed changes",
+  "test_results": {
+    "unittest_passed": 128,
+    "legacy_checks_passed": 17,
+    "total_passed": 145,
+    "failed": 0,
+    "python_sources_parsed": 85,
+    "dashboard_javascript_syntax": "passed"
+  },
+  "executed_workflows": [
+    "Production model router/call/provider over real local HTTP/SSE with controlled model replies",
+    "Model response -> JSON/exact patch -> disposable candidate -> registered native build/test -> commit",
+    "SQLite save, invalid-input rejection without added rows, read after process restart",
+    "Token-truncated file -> bounded continuation -> complete source -> Python execution",
+    "Stream truncation, abrupt EOF, malformed JSON, HTTP failure and cancellation handling",
+    "Existing actual HTTP chunked ZIP upload, lost-response retry and dashboard IPC handoff",
+    "Production Enter/send handlers, acknowledgement, draft retention and stale-job cleanup",
+    "Existing SQLite, C and JavaScript feature workflows, rollback and checkpoint persistence"
+  ],
+  "stopped_run_replay": {
+    "source": "latest uploaded run snapshots",
+    "scope": "in-memory static replay, no Rust toolchain available",
+    "before_issues": 14,
+    "after_issues": 13,
+    "new_debt": [],
+    "wrong_column_queries_still_blocking": [
+      "no such column: current_holder_id",
+      "no such column: is_checked_out",
+      "no such column: is_checked_out"
+    ],
+    "test_targets": [
+      "tests/application.integration.test.ts",
+      "src-tauri/tests/application.rs"
+    ],
+    "candidate": "add missing INSERT RETURNING projection; preserve all other source",
+    "final_acceptance": false
+  },
+  "limits": [
+    "Controlled model output, not live Qwen inference",
+    "Windows GUI/voice startup not executed on Linux",
+    "Rust/Cargo unavailable; SQL adapter regressions and snapshot replay are static/SQLite checks",
+    "GearTrack remains unfinished; every generated project requires native build/test/runtime and final acceptance"
+  ],
+  "changed_original_files": [
+    "CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py",
+    "CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py",
+    "CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py",
+    "JARVIS_ACTIVE_ENGINE.txt",
+    "JARVIS_V42_CAPABILITIES.json",
+    "V42_RUNTIME_POLICY.json",
+    "jarvis.py",
+    "jarvis_sql_contracts.py",
+    "jarvis_v4247_repair.py",
+    "jarvis_v4251_repair.py",
+    "jarvis_workflow_contracts.py",
+    "local_qwen_project.py",
+    "multi_provider.py",
+    "ui/app.js",
+    "ui/dashboard.py"
+  ],
+  "added_files": [
+    "CHECK_V4255_MODEL_PROTOCOL.bat",
+    "CHECK_V4255_MODEL_PROTOCOL.py",
+    "V42_55_0_README.txt",
+    "V42_55_0_TEST_OUTPUT.txt",
+    "V42_55_0_VALIDATION_REPORT.json",
+    "jarvis_model_protocol.py",
+    "jarvis_v4255_repair.py"
+  ],
+  "package_policy": {
+    "preserve_all_original_archive_members": true,
+    "include_test_runtime_log_changes": false,
+    "zip_integrity_and_unchanged_member_crc_checked_before_delivery": true
+  },
+  "changed_source_sha256": {
+    "CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py": "6fac15825a8f6e04162d04b4a325998b1171c8d9fd653b47f515268842cbd58c",
+    "CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py": "4cca6b2d2ed89ac5367b28c8037318b70a35d807303ec78b0ae933ce3350af1b",
+    "CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py": "adf4d4c8acd1518e97002c3ee24bd7939df7569863f4316f7a4637f515a62062",
+    "CHECK_V4255_MODEL_PROTOCOL.bat": "3e1d55bf4f3441941bbbd2d3ae12157a66f900e201e5946ed50f6aa1cfa7b1ff",
+    "CHECK_V4255_MODEL_PROTOCOL.py": "9ef43c6e1044d53a745255a87bc30a976d9be142f0611459bcfe0c7e75866633",
+    "JARVIS_ACTIVE_ENGINE.txt": "d6c6140b04057a4d68111aa4150ca32122ebe4dd530ffe307ead880c7031dea7",
+    "JARVIS_V42_CAPABILITIES.json": "8905ea2ceeff75c8215817f26e76dba90998387d94dc4a6d1ebdb9f721b544aa",
+    "V42_RUNTIME_POLICY.json": "dfcc60b9a7e4fd744b2b553eb3deb9bd235514ed9d2032e82571f1a1ceef02db",
+    "jarvis.py": "3d4b5fa50fa12f5051ad9a59a47b07b95a732078a0a0ca7b8a65c26b519b9e7e",
+    "jarvis_model_protocol.py": "647571c1a970d76e9fe5077edd011f161d9ed4223d1415fe858d0719d435c451",
+    "jarvis_sql_contracts.py": "b0a2417e1d97f763cc32de3b7bde20d8ee60e27ea6ae43b4b15e59652d626cae",
+    "jarvis_v4247_repair.py": "adf1b65b39d062c48fe7fb06237a0f4145fd58534d82bbe9a5e8312457795472",
+    "jarvis_v4251_repair.py": "c2eb4486697e5e6f4d65b21e40fe263fd808f4c6aa211e20995ef53eb7812a2a",
+    "jarvis_v4255_repair.py": "dfa3cd3069860a4716d7969df4f096b0342498c3c8679fd228613eda77ddf570",
+    "jarvis_workflow_contracts.py": "bd675fc647a14749d49d8a2f913983a5a80e4f03c622c91f16115ef929a413f3",
+    "local_qwen_project.py": "a8ba3b2e1371573d5e306b1e0c640736788757cc5c59c0b73ba41398e1fb8481",
+    "multi_provider.py": "277a06e9790832ab0558ad50fa4c7701e36015d4697f5e5e61b1e24b611330d8",
+    "ui/app.js": "65a505ffa3571fdb3f6920562670c90b9c6db35f6361c1c2af8041074661e071",
+    "ui/dashboard.py": "17e71b4a6b7ae4225f839f402cc175c458eaf06a065f9fb1c744122acb128c83"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": "V42.29.0",
+  "engine": "LAST_MILE_CONSTRAINT_SOLVER_ACCEPTANCE_CLOSURE_FACTORY",
+  "new_regression": "23/23 PASS",
+  "v4228_best_state_compatibility": "17/17 PASS",
+  "v4227_parser_safe_compatibility": "15/15 PASS",
+  "v4226_compiler_proof_compatibility": "17/17 PASS",
+  "v4225_semantic_event_loop_compatibility": "24/24 PASS",
+  "v4224_multifile_compatibility": "14/14 PASS",
+  "v4222_consumer_first_compatibility": "21/21 PASS",
+  "rust_topology_compatibility": "22/22 PASS",
+  "python_compile": "42/42 PASS",
+  "exact_geartrack_eight_error_shape": "PASS",
+  "notes": [
+    "Exact GearTrack 8-error pattern was replayed against the deterministic helpers.",
+    "Full npm dependency installation was not available in this sandbox; the user's Windows npm/Tauri build remains the authoritative integration test.",
+    "No TypeScript ignore directives or compiler-option weakening were introduced."
+  ]
+}

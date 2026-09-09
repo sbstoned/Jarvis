@@ -1,0 +1,28 @@
+{
+  "version": "V42.20.0",
+  "source_regression": "GearTrack stopped V42.19 run, 2026-09-02",
+  "observed": {
+    "react_component_ok": false,
+    "react_failure": "V36 COMPONENT FAILED [react | react | .]:\nCommand failed (1): C:\\Program Files\\nodejs\\npm.CMD install --no-audit --no-fund\n'\\\"C:\\Program Files\\nodejs\\npm.CMD\\\"' is not recognized as an internal or external command,\noperable program or batch file.",
+    "rust_component_ok": true,
+    "rust_evidence": "\nCompiling geartrack v0.1.0 (C:\\Users\\gunsh\\Jarvis\\generated_projects\\c7dc4f73438040a295a0fe155bb10009_project_20260831_204118_resume_20260902_085104\\trial_01\\src-tauri)\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 15.66s\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\n   Compiling geartrack v0.1.0 (C:\\Users\\gunsh\\Jarvis\\generated_projects\\c7dc4f73438040a295a0fe155bb10009_project_20260831_204118_resume_20260902_085104\\trial_01\\src-tauri)\n    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.87s\n     Running unittests src\\lib.rs (C:\\Users\\gunsh\\Jarvis\\generated_projects\\c7dc4f73438040a295a0fe155bb10009_project_20260831_204118_resume_20260902_085104\\trial_01\\.jarvis_runtime\\cargo-target\\debug\\deps\\geartrack-cba25ff40471d89f.exe)\n     Running unittests src\\main.rs (C:\\Users\\gunsh\\Jarvis\\generated_projects\\c7dc4f73438040a295a0fe155bb10009_project_20260831_204118_resume_20260902_085104\\trial_01\\.jarvis_runtime\\cargo-target\\debug\\deps\\geartrack-ea00200e40209ab0.exe)\n   Doc-tests geartrack\nRust application remained alive through smoke interval.\n",
+    "audit_issue_count": 10,
+    "planner_acceptance_rows": [
+      "tests/acceptance.test.tsx",
+      "src-tauri/tests/acceptance_2.rs"
+    ],
+    "latest_acceptance_2_problem": "Generated Rust test used Diesel/crate-local imports while production Cargo.toml uses SQLx and integration tests require the library crate namespace."
+  },
+  "fixed_by": [
+    "constrained Windows batch-shim CALL argv wrapper",
+    "infrastructure-vs-source classification",
+    "soft planner test debt retirement at authoritative audit",
+    "prior Jarvis-generated optional acceptance test retirement/quarantine",
+    "shared resume build cache",
+    "Cargo incremental/debug suppression for validation",
+    "accepted-trial rebuildable cache pruning",
+    "terminal shared-cache cleanup",
+    "tighter whole-project/model wall budgets"
+  ],
+  "v4220_regression_suite": "48/48 PASS"
+}

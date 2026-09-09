@@ -1,0 +1,74 @@
+{
+  "release": "V42.39.0",
+  "engine": "DETERMINISTIC_FIRST_TERMINAL_CONVERGENCE_FACTORY",
+  "validated_at_utc": "2026-09-04",
+  "result": "PASS",
+  "captured_run": {
+    "input": ".jarvis_build.zip",
+    "sha256": "cf2f26acdbf40e97e1044d432ce4fc649a910d8b83e5a7583bb42b543134916c",
+    "frontend": "Vite production build passed; Vitest 1/1 passed",
+    "native": "Cargo failed with 75 errors and 8 warnings",
+    "old_transport_state": {
+      "src-tauri/src/models/tool.rs": 3,
+      "src-tauri/src/tools.rs": 2,
+      "blocked_component_token": "760e2053dbae6acbefbde0a2"
+    },
+    "old_last_event": "v428_specialist_contract_audit"
+  },
+  "root_cause": "V42.38 checked exhausted model transport eligibility before deterministic compiler candidates, so exact rustc repairs were skipped and the outer convergence path could enter another specialist audit.",
+  "captured_geartrack_replay": {
+    "real_targets_selected": [
+      "src-tauri/src/models/tool.rs",
+      "src-tauri/src/tools.rs"
+    ],
+    "deterministic_edits_detected": [
+      "add compiler-proven sqlx::FromRow derive to Tool",
+      "apply rustc exact replacement at tools.rs line 44",
+      "apply rustc exact replacement at tools.rs line 86"
+    ],
+    "simulated_validator_delta": "75 -> 57",
+    "transaction_committed": true,
+    "model_calls": 0,
+    "stale_transport_block_after_commit": false
+  },
+  "new_invariants": {
+    "deterministic_preflight_before_model_budget": true,
+    "combined_then_isolated_component_validation": true,
+    "promotion_requires_component_pass_or_strict_diagnostic_reduction": true,
+    "candidate_fingerprint_prevents_identical_no_delta_reentry": true,
+    "only_unchanged_transport_block_is_terminal": true,
+    "specialist_suppressed_after_terminal_block": true,
+    "project_repair_memory_refreshed_after_full_audit": true,
+    "resolved_issue_history_retained": true,
+    "model_prompt_receives_compact_relevant_history": true,
+    "current_evidence_overrides_memory": true,
+    "human_failure_report_generated": true,
+    "append_only_full_pass_trace_generated": true,
+    "recognized_credentials_redacted": true
+  },
+  "acceptance": {
+    "suites_passed": 19,
+    "suites_failed": 0,
+    "checks_passed": 617,
+    "checks_failed": 0,
+    "focused_v4239": "22/22",
+    "v4238_compatibility": "24/24",
+    "v4237_compatibility": "28/28",
+    "v4236_compatibility": "31/31",
+    "v4235_compatibility": "33/33",
+    "runtime_command_broker": "20/20",
+    "python_files_compiled": 54,
+    "json_files_parsed": 53,
+    "critical_json_files_parsed": true
+  },
+  "generated_project_diagnostics": [
+    "JARVIS_V4239_PROJECT_REPAIR_MEMORY.json",
+    "JARVIS_V4239_FULL_PASS_TRACE.jsonl",
+    "JARVIS_V4239_FAILURE_REPORT.md",
+    "JARVIS_V4239_CONVERGENCE_HALT.json when terminally blocked"
+  ],
+  "host_limitations": [
+    "This Linux validation host did not execute the user's Windows Cargo/Tauri binary or local Qwen endpoints.",
+    "The exact captured source, audit, component token, transport counts, and compiler suggestions were replayed through the real V42.39 target selection and transaction code with a controlled strict-improvement validator."
+  ]
+}

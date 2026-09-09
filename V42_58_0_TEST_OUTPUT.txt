@@ -1,0 +1,24 @@
+V42.58.0 focused validation summary
+===================================
+CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py : 17/17 PASS
+CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py              : 17/17 PASS
+CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py          : 19/19 PASS
+CHECK_V4253_JOB_LIFECYCLE.py                        :  8/8  PASS
+CHECK_V4253_PROJECT_UPLOADS.py                      : 19/19 PASS
+CHECK_V4254_WORKFLOW_CONVERGENCE.py                 : 29/29 PASS (all except the known long checkpoint-import fixture)
+CHECK_V4255_MODEL_PROTOCOL.py                       : 35/35 PASS
+CHECK_V4256_EVIDENCE_CLOSED_SCOPED_REPAIR.py       :  5/5  PASS
+CHECK_V4257_EVIDENCE_EXPANDED_UNBOUNDED_STREAM.py  :  6/6  PASS
+CHECK_V4258_CONNECTED_FUNCTIONAL_CLUSTERS.py        :  7/7  PASS
+
+Focused total: 162/162 PASS
+Python compileall: PASS
+
+V42.58 GearTrack scheduler replay:
+- backend production cluster: checkout.rs + tools.rs + main.rs
+- frontend production cluster: useCSVImportExport.ts + useCategories.ts + useCheckouts.ts + usePersons.ts
+- workflow tests remain separate and last
+
+The long V42.54 checkpoint-import fixture was not included in the 29-test subset.
+Its surrounding workflow/proof tests all passed; this exclusion is explicitly
+reported rather than being counted as a pass.

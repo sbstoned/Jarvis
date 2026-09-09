@@ -1,0 +1,53 @@
+JARVIS V37 - RESEARCH BASIS
+===========================
+
+V37 was shaped by the failed V36.2 TaskForge run plus current public coding-agent research and implementations.
+
+Most important external findings:
+
+1. little-coder / Qwen3.5-9B
+   https://github.com/itayinbarr/little-coder
+   https://github.com/itayinbarr/little-coder/blob/main/docs/benchmark-baseline-aider.md
+   https://github.com/itayinbarr/little-coder/blob/main/docs/benchmark-reproduction.md
+
+   Public matched-model benchmark: Qwen3.5 9.7B Q4_K_M at 32,768 context averaged 45.56% with little-coder versus 19.11% with vanilla Aider on the same 225-exercise Aider Polyglot suite. The model weights were the same; scaffold behavior was the major variable.
+
+   Load-bearing ideas applied in V37:
+   - Read before edit.
+   - Do not let an edit failure escape into an uncontrolled whole-file rewrite.
+   - Bounded working context rather than filling the native context window.
+   - Bounded reasoning/deliberation only after failure.
+   - Small per-turn skill/context injection.
+   - Workspace/repository discovery.
+   - Checkpoint before mutation.
+   - Loop/repeated-candidate detection.
+   - Bounded continuation/turn behavior.
+
+2. SWE-agent Agent-Computer Interface
+   https://github.com/SWE-agent/SWE-agent/blob/main/docs/background/aci.md
+
+   Useful findings applied in V37:
+   - Lint/syntax validation at edit time; reject invalid edits before commit.
+   - Small focused file views rather than giant file dumps.
+   - Succinct search/repository evidence.
+
+3. Aider
+   https://github.com/Aider-AI/aider/blob/main/aider/website/docs/repomap.md
+   https://github.com/Aider-AI/aider/blob/main/aider/website/docs/more/edit-formats.md
+   https://github.com/Aider-AI/aider/blob/main/aider/website/docs/usage/modes.md
+
+   Useful ideas applied in V37:
+   - Repository map containing important symbols/signatures.
+   - Search/replace patch editing rather than whole-file rewrites.
+   - Architect/editor separation; V37 approximates this with a tiny diagnosis pass only after the first failed repair, followed by a separate patch-only editor call.
+
+V36.2 TASKFORGE FAILURE ROOT CAUSE
+==================================
+The failed TaskForge diagnostic showed Qwen had actually produced a substantial multi-component architecture. Jarvis rejected it for false dependency-closure errors:
+- node_modules was interpreted as a planned source file.
+- sqlite3 / package dependencies were treated as source DAG nodes.
+- Python module/symbol notation such as backend/app.routes.projects:project_router was treated as a literal file path.
+
+V37 now owns those semantics deterministically. External packages/tools never need source-file providers, while Python package/module/symbol notation is resolved to actual planned repository files when possible.
+
+The same failure also revealed that a transport-flattened user prompt could collapse into one truncated UR-001 requirement. V37 freezes a flattening-tolerant source ledger before model summarization and preserves each extracted user requirement independently.

@@ -1,0 +1,140 @@
+{
+  "version": "V42.1.0",
+  "engine": "CAPABILITY_SANDBOX_CARGO_CONVERGENCE_FACTORY",
+  "source_factory": "Jarvis_V42_0_CAPABILITY_SANDBOX_FACTORY_COMPLETE.zip",
+  "regression_workspace": "project_20260830_171300.zip",
+  "root_causes": [
+    "Tauri 2 dependency requested removed legacy core feature shell-open.",
+    "Reviewed architecture placed TypeScript implementation files under src-tauri/src, the Rust crate source root.",
+    "Wrong-root model paths destabilized canonical Rust domain ownership and triggered unnecessary self-healing providers."
+  ],
+  "fixes": {
+    "cargo_exact_invalid_feature_repair": true,
+    "tauri2_static_legacy_feature_hardening": true,
+    "known_sqlx_build_resolution_repair": true,
+    "semantic_cargo_failure_signatures": true,
+    "tauri_root_language_plan_sanitizer": true,
+    "rust_snake_case_path_normalization": true,
+    "sqlx_migration_root_normalization": true,
+    "stable_exact_domain_owner_preference": true,
+    "rust_root_language_commit_gate": true,
+    "deterministic_model_module_hub": true,
+    "legacy_capability_sandbox_preserved": true
+  },
+  "exact_workspace_replay": {
+    "path_rewrites": {
+      "src-tauri/src/db/migrations/00001_create_tools_and_categories.sql": "src-tauri/migrations/00001_create_tools_and_categories.sql",
+      "src-tauri/src/db/migrations/00002_create_checkout_events.sql": "src-tauri/migrations/00002_create_checkout_events.sql",
+      "src-tauri/src/models/Tool.ts": "src-tauri/src/models/tool.rs",
+      "src-tauri/src/models/Category.ts": "src-tauri/src/models/category.rs",
+      "src-tauri/src/models/CheckoutEvent.ts": "src-tauri/src/models/checkout_event.rs"
+    },
+    "tauri_core_domain_owners": [
+      {
+        "scope": "tauri-core",
+        "symbol": "Category",
+        "kind": "entity",
+        "provider": "src-tauri/src/models/category.rs",
+        "required_fields": [
+          "id",
+          "name"
+        ],
+        "enum_values": []
+      },
+      {
+        "scope": "tauri-core",
+        "symbol": "CheckoutEvent",
+        "kind": "entity",
+        "provider": "src-tauri/src/models/checkout_event.rs",
+        "required_fields": [
+          "id",
+          "tool_id",
+          "user_name",
+          "timestamp"
+        ],
+        "enum_values": []
+      },
+      {
+        "scope": "tauri-core",
+        "symbol": "Tool",
+        "kind": "entity",
+        "provider": "src-tauri/src/models/tool.rs",
+        "required_fields": [
+          "id",
+          "name",
+          "category_id",
+          "condition",
+          "location"
+        ],
+        "enum_values": []
+      },
+      {
+        "scope": "tauri-core",
+        "symbol": "ToolCondition",
+        "kind": "enum",
+        "provider": "src-tauri/src/models/tool_condition.rs",
+        "required_fields": [],
+        "enum_values": [
+          "Good",
+          "Fair",
+          "Needs Maintenance",
+          "Broken"
+        ]
+      }
+    ],
+    "foundation_files": [
+      "src/main.tsx",
+      "src/vite-env.d.ts",
+      "index.html",
+      "package.json",
+      "tsconfig.json",
+      "vite.config.ts",
+      "src-tauri/Cargo.toml",
+      "src-tauri/src/lib.rs",
+      "src-tauri/src/main.rs",
+      "src-tauri/build.rs",
+      "src-tauri/tauri.conf.json",
+      "tsconfig.node.json"
+    ],
+    "cargo_shell_open_removed": true,
+    "cargo_custom_protocol_preserved": true,
+    "cargo_sqlx_build_absent": true
+  },
+  "tests": {
+    "V41.1 universal factory": {
+      "passed": 135,
+      "total": 135
+    },
+    "V41.2 React/Vite convergence": {
+      "passed": 14,
+      "total": 14
+    },
+    "V41.3 repair convergence": {
+      "passed": 29,
+      "total": 29
+    },
+    "V41.3 failed-workspace replay": {
+      "passed": 7,
+      "total": 7
+    },
+    "V42.0 capability/sandbox": {
+      "passed": 20,
+      "total": 20
+    },
+    "V42.1 Tauri/Cargo convergence": {
+      "passed": 26,
+      "total": 26
+    },
+    "total": {
+      "passed": 231,
+      "total": 231
+    }
+  },
+  "python_compile": {
+    "files": 13,
+    "errors": 0
+  },
+  "notes": [
+    "Real host Cargo/npm/compiler gates remain authoritative; no build gate was disabled."
+  ]
+}

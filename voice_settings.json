@@ -1,0 +1,11 @@
+{
+  "provider": "kokoro",
+  "kokoro_voice": "bm_daniel",
+  "piper_voice": "en_US-lessac-medium",
+  "elevenlabs_voice_id": "",
+  "fallback_order": [
+    "kokoro",
+    "piper",
+    "elevenlabs"
+  ]
+}

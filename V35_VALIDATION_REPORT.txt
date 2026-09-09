@@ -1,0 +1,41 @@
+JARVIS V35 UNIVERSAL COMPLETION ENGINE - VALIDATION REPORT
+==========================================================
+Release: V35.0.4
+Base: Jarvis v2.74.1 Qwen3.5-9B V34.1 Universal Builder
+
+STATIC VALIDATION
+-----------------
+PASS - local_qwen_project.py compiles with Python py_compile.
+PASS - Full included Python tree compiles with compileall.
+
+BUILDER SELF-TEST
+-----------------
+PASS - V35 engine loads.
+PASS - Tauri toolchain recognition.
+PASS - SvelteKit toolchain recognition.
+PASS - Godot/GDScript toolchain recognition.
+PASS - React Native toolchain recognition.
+PASS - Unreal Engine 5 toolchain recognition.
+PASS - Generic desktop request is not treated as an explicit Python stack lock.
+PASS - No-op build/test scripts are rejected.
+PASS - Mixed repository discovers Node component.
+PASS - Mixed repository discovers nested Rust/Cargo component.
+Result: 10/10 passed.
+
+ADDITIONAL COMPLETION TESTS
+---------------------------
+PASS - Clean Python validation creates a fresh venv, compiles, runs tests, and starts the entrypoint.
+PASS - Generated BUILD_PROJECT.bat does not invent a test command when no tests exist.
+PASS - Generated Python SETUP_AND_RUN.bat uses a project-local .venv.
+PASS - Host-limited/unavailable toolchains do not count as COMPLETE in strict mode.
+PASS - Planner parser preserves hierarchical component graph.
+PASS - Planner parser preserves executable acceptance tests.
+PASS - Static web run command is normalized to Windows start semantics.
+
+MIXED TOOLCHAIN BEHAVIOR
+------------------------
+A synthetic Node + Rust repository was detected as two independent components. The sandbox has npm but not Cargo; V35 validated the Node component and then correctly failed/unverified the Rust component instead of returning early after Node. This demonstrates the V34.1 single-toolchain early-return problem is removed.
+
+RELEASE POLICY
+--------------
+V35 only marks a generated project COMPLETED when every required discovered component can pass its applicable dependency/build/test/runtime/acceptance gates on the generation host. Missing host-specific toolchains are reported as UNVERIFIED_HOST_TOOLCHAIN rather than false success.

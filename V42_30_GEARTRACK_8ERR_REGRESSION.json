@@ -1,0 +1,47 @@
+{
+  "checkpoint": "geartrack_checkpoint_20260903_183651.zip",
+  "input_diagnostics": 8,
+  "input_files": [
+    "src/App.tsx",
+    "src/hooks/useCSVImportExport.ts",
+    "src/hooks/useTools.ts"
+  ],
+  "checks": {
+    "dashboard_metrics_wired": true,
+    "inventory_props_wired": true,
+    "history_props_wired": true,
+    "update_tool_alias_reconciled": true,
+    "delete_tool_alias_reconciled": true,
+    "csv_boolean_preserved": true,
+    "csv_partial_removed": true,
+    "csv_full_parser_present": true
+  },
+  "changed_files": [
+    "src/hooks/useCSVImportExport.ts",
+    "src/hooks/useTools.ts",
+    "src/App.tsx"
+  ],
+  "reasons": {
+    "src/hooks/useCSVImportExport.ts": [
+      "TS2345 reconstruct typed CSV parser parseCSVLine from CSVRow + header contract",
+      "remove dead helper parseField",
+      "TS2322 interface-proven boolean preservation for is_checked_out"
+    ],
+    "src/hooks/useTools.ts": [
+      "TS2339 provider-verified alias updateTool as updateToolCommand",
+      "TS2339 provider-verified alias deleteTool as deleteToolCommand"
+    ],
+    "src/App.tsx": [
+      "import useCategories",
+      "import usePersons",
+      "import useTools",
+      "import useCheckouts",
+      "import useDashboardStats",
+      "wire DashboardView props",
+      "wire InventoryView props",
+      "wire CheckoutHistoryView props",
+      "move module JSX config into component scope"
+    ]
+  },
+  "all_checks_pass": true
+}

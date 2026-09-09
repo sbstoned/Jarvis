@@ -1,0 +1,22 @@
+{
+  "version": "V42.31.0",
+  "engine": "END_TO_END_BUILD_GRAPH_FUNCTIONAL_CLOSURE_FACTORY",
+  "source_file": "local_qwen_project_V42_31.py",
+  "bytes": 2089777,
+  "lines": 39165,
+  "sha256": "1496a283be1f800f8a9a0915f0ef88b1cd2c2d52ee1cdfd0011e64a5697dde0b",
+  "regression": "19/19 PASS",
+  "python_compile": "PASS",
+  "geartrack_checkpoint_fixture": "geartrack_checkpoint_20260903_183651.zip",
+  "key_changes": [
+    "robust 8-error source-shape last-mile closure before broad model repair",
+    "filesystem-derived Rust module reachability before Cargo can be considered green",
+    "Tauri frontend invoke -> Rust command -> invoke_handler contract acceptance gate",
+    "database initialization/manage lifecycle acceptance gate for persistent Tauri apps",
+    "mock/simulated production flow gate",
+    "selected-view navigation acceptance gate for generated React shells",
+    "complex persistent app integration-test gate after production integration is connected",
+    "best-state scoring treats post-compile integration debt as later than compiler debt",
+    "V42.30 fresh compiler activation and earlier safeguards preserved"
+  ]
+}

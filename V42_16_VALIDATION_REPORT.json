@@ -1,0 +1,32 @@
+{
+  "version": "V42.16.0",
+  "engine": "UNIVERSAL_TRANSACTIONAL_COMPILE_GATE_FACTORY",
+  "created_at_utc": "2026-09-01T17:20:56.192723+00:00",
+  "regression_suites": 21,
+  "regression_checks_passed": 656,
+  "regression_checks_failed": 0,
+  "v4216_checks": "24/24 PASS",
+  "python_top_level_files": 28,
+  "python_compileall": "PASS",
+  "javascript_syntax": "PASS",
+  "registered_toolchain_adapters": 73,
+  "skill_cards": 90,
+  "exact_user_failure_replay": {
+    "source": "uploaded app.zip/lib.rs",
+    "observed_content": "terminal find command in Rust lib.rs",
+    "v4216_result": "REJECTED BEFORE COMMIT",
+    "error": "V42.16 source transport gate rejects shell/terminal command in .rs source"
+  },
+  "features": {
+    "strict_all_language_source_syntax_gate": true,
+    "non_python_real_failure_replay": true,
+    "production_before_test_repair": true,
+    "atomic_multifile_direct_edits": true,
+    "whole_project_language_parser_audit": true,
+    "accepted_revision_required_after_transaction": true,
+    "auto_worker": "9b35",
+    "auto_specialist": "27b38q2",
+    "legacy_27b_auto_eligible": false,
+    "strict_zero_debt_publish_gate": true
+  }
+}

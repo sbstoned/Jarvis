@@ -1,0 +1,3 @@
+@echo off
+python CHECK_V4224_COMPILER_DIRECTED_MULTIFILE.py
+pause

@@ -1,0 +1,136 @@
+{
+  "version": "V42.9",
+  "engine": "quarantined-root-cause-continuous-ide-whole-project-audit",
+  "continuous_ide_diagnostics": true,
+  "whole_project_audit": true,
+  "same_provider_quarantine_after_failures": 2,
+  "auto_specialist": "new Qwen3.8 27B Aggressive Q2_K_P",
+  "auto_worker": "Qwen3.5 9B",
+  "audit_prunes_dependency_build_cache_trees": true,
+  "regression_total": {
+    "passed": 481,
+    "checks": 481,
+    "all_pass": true
+  },
+  "regression_suites": [
+    {
+      "file": "CHECK_V411_UNIVERSAL_FACTORY.py",
+      "returncode": 0,
+      "passed": 173,
+      "checks": 173,
+      "summary": "173 / 173 PASS"
+    },
+    {
+      "file": "CHECK_V412_REACT_VITE_CONVERGENCE.py",
+      "returncode": 0,
+      "passed": 14,
+      "checks": 14,
+      "summary": "RESULT: 14/14 PASS"
+    },
+    {
+      "file": "CHECK_V413_FAILED_WORKSPACE_REPLAY.py",
+      "returncode": 0,
+      "passed": 7,
+      "checks": 7,
+      "summary": "RESULT: 7/7 PASS"
+    },
+    {
+      "file": "CHECK_V413_REPAIR_CONVERGENCE.py",
+      "returncode": 0,
+      "passed": 29,
+      "checks": 29,
+      "summary": "RESULT: 29/29 PASS"
+    },
+    {
+      "file": "CHECK_V420_CAPABILITY_SANDBOX.py",
+      "returncode": 0,
+      "passed": 20,
+      "checks": 20,
+      "summary": "RESULT: 20/20 PASS"
+    },
+    {
+      "file": "CHECK_V421_TAURI_CARGO_CONVERGENCE.py",
+      "returncode": 0,
+      "passed": 26,
+      "checks": 26,
+      "summary": "RESULT: 26/26 PASS"
+    },
+    {
+      "file": "CHECK_V422_COMPONENT_BOUNDARY_CONVERGENCE.py",
+      "returncode": 0,
+      "passed": 19,
+      "checks": 19,
+      "summary": "RESULT: 19/19 PASS"
+    },
+    {
+      "file": "CHECK_V423_PROGRESSIVE_GLOBAL_CONVERGENCE.py",
+      "returncode": 0,
+      "passed": 40,
+      "checks": 40,
+      "summary": "RESULT: 40/40 PASS"
+    },
+    {
+      "file": "CHECK_V424_PROVIDER_FIRST_FAST_CONVERGENCE.py",
+      "returncode": 0,
+      "passed": 31,
+      "checks": 31,
+      "summary": "RESULT: 31/31 PASS"
+    },
+    {
+      "file": "CHECK_V425_QWEN38_27B_SELECTOR.py",
+      "returncode": 0,
+      "passed": 25,
+      "checks": 25,
+      "summary": "RESULT: 25/25 PASS"
+    },
+    {
+      "file": "CHECK_V426_AUTO_HYBRID_MODEL_ROUTER.py",
+      "returncode": 0,
+      "passed": 29,
+      "checks": 29,
+      "summary": "V42.6 hybrid router: 29/29 PASS"
+    },
+    {
+      "file": "CHECK_V427_HYBRID_WATCHDOG_RESCUE.py",
+      "returncode": 0,
+      "passed": 19,
+      "checks": 19,
+      "summary": "V42.7 hybrid watchdog rescue: 19/19 PASS"
+    },
+    {
+      "file": "CHECK_V428_CONTRACT_GRAPH_RECONCILIATION.py",
+      "returncode": 0,
+      "passed": 31,
+      "checks": 31,
+      "summary": "V42.8 contract graph reconciliation: 31/31 PASS"
+    },
+    {
+      "file": "CHECK_V429_WHOLE_PROJECT_AUDIT.py",
+      "returncode": 0,
+      "passed": 18,
+      "checks": 18,
+      "summary": "RESULT 18/18 PASS"
+    }
+  ],
+  "python_compile": {
+    "files_checked": 21,
+    "errors": []
+  },
+  "javascript_syntax": [
+    {
+      "file": "ui/app.js",
+      "checked": true,
+      "ok": true,
+      "output": ""
+    }
+  ],
+  "skill_cards": 83,
+  "registry_adapters": 72,
+  "failed_workspace_replay": {
+    "workspace": "project_20260831_140748 diagnostic snapshot",
+    "static_audit_seconds_observed": 1.86,
+    "issues_collected": 69,
+    "note": "run_components=False; dependency/build caches pruned"
+  },
+  "publish_policy": "strict zero unresolved debt + real build/test/runtime validation before ZIP"
+}

@@ -1,0 +1,3 @@
+@echo off
+python CHECK_V4213_BOUNDED_SPECIALIST_PROGRESS.py
+pause

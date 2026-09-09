@@ -1,0 +1,131 @@
+{
+  "version": "V42.10",
+  "engine": "endgame-self-accepting-tests-true-whole-project-convergence",
+  "regression": {
+    "passed": 505,
+    "total": 505,
+    "all_scripts_ok": true,
+    "suites": [
+      {
+        "file": "CHECK_V411_UNIVERSAL_FACTORY.py",
+        "ok": true,
+        "passed": 174,
+        "total": 174
+      },
+      {
+        "file": "CHECK_V412_REACT_VITE_CONVERGENCE.py",
+        "ok": true,
+        "passed": 14,
+        "total": 14
+      },
+      {
+        "file": "CHECK_V413_FAILED_WORKSPACE_REPLAY.py",
+        "ok": true,
+        "passed": 7,
+        "total": 7
+      },
+      {
+        "file": "CHECK_V413_REPAIR_CONVERGENCE.py",
+        "ok": true,
+        "passed": 29,
+        "total": 29
+      },
+      {
+        "file": "CHECK_V420_CAPABILITY_SANDBOX.py",
+        "ok": true,
+        "passed": 20,
+        "total": 20
+      },
+      {
+        "file": "CHECK_V4210_ENDGAME_CONVERGENCE.py",
+        "ok": true,
+        "passed": 23,
+        "total": 23
+      },
+      {
+        "file": "CHECK_V421_TAURI_CARGO_CONVERGENCE.py",
+        "ok": true,
+        "passed": 26,
+        "total": 26
+      },
+      {
+        "file": "CHECK_V422_COMPONENT_BOUNDARY_CONVERGENCE.py",
+        "ok": true,
+        "passed": 19,
+        "total": 19
+      },
+      {
+        "file": "CHECK_V423_PROGRESSIVE_GLOBAL_CONVERGENCE.py",
+        "ok": true,
+        "passed": 40,
+        "total": 40
+      },
+      {
+        "file": "CHECK_V424_PROVIDER_FIRST_FAST_CONVERGENCE.py",
+        "ok": true,
+        "passed": 31,
+        "total": 31
+      },
+      {
+        "file": "CHECK_V425_QWEN38_27B_SELECTOR.py",
+        "ok": true,
+        "passed": 25,
+        "total": 25
+      },
+      {
+        "file": "CHECK_V426_AUTO_HYBRID_MODEL_ROUTER.py",
+        "ok": true,
+        "passed": 29,
+        "total": 29
+      },
+      {
+        "file": "CHECK_V427_HYBRID_WATCHDOG_RESCUE.py",
+        "ok": true,
+        "passed": 19,
+        "total": 19
+      },
+      {
+        "file": "CHECK_V428_CONTRACT_GRAPH_RECONCILIATION.py",
+        "ok": true,
+        "passed": 31,
+        "total": 31
+      },
+      {
+        "file": "CHECK_V429_WHOLE_PROJECT_AUDIT.py",
+        "ok": true,
+        "passed": 18,
+        "total": 18
+      }
+    ]
+  },
+  "python_compile": {
+    "files": 22,
+    "errors": []
+  },
+  "skill_cards": 84,
+  "registry_toolchain_entries": 72,
+  "exact_204118_replay": {
+    "accepted_snapshot_files": 45,
+    "static_issues_before": 10,
+    "static_issues_after_deterministic_endgame_closure": 0
+  },
+  "features": {
+    "requirement_owner_self_acceptance": true,
+    "provider_safe_test_generation": true,
+    "test_runner_substrate_closure": true,
+    "deterministic_tsconfig_node": true,
+    "deterministic_contract_barrels": true,
+    "rust_module_reachability": true,
+    "cargo_message_format_allowed": true,
+    "local_typescript_compiler_only": true,
+    "test_quality_gate": true,
+    "every_component_whole_project_audit": true,
+    "strict_zero_debt_publish_gate": true,
+    "auto_worker": "9b35",
+    "auto_specialist": "27b38q2",
+    "legacy_27b_auto_eligible": false
+  },
+  "limitations": [
+    "Full Windows npm/Vite/Cargo execution cannot be proven in this Linux packaging environment; Windows host run remains authoritative."
+  ]
+}

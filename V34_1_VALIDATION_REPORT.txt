@@ -1,0 +1,47 @@
+JARVIS V34.1 UNIVERSAL BUILDER - VALIDATION REPORT
+==================================================
+
+Core Python compile: PASS
+Dashboard JavaScript syntax: PASS
+
+Bootstrap regression test: PASS
+- Simulated strict architecture failure.
+- Simulated empty/malformed Qwen source output.
+- Simulated the old README-only bootstrap condition.
+- V34.1 materialized conventional source/build structure instead of returning
+  "Bootstrap did not produce real project source files / no source files recovered".
+- Recovery source carries JARVIS_V34_RECOVERY_SEED and is a hard incomplete defect.
+
+Recovery adapter smoke coverage: PASS
+- Python desktop
+- static web
+- React
+- C++/CMake
+- Rust
+- Go
+- .NET
+- Android/Gradle
+- Flutter
+- SwiftPM
+- native iOS project structure
+- Unreal
+- Unity
+- PHP/Composer
+- Ruby/Bundler
+- generic/uncommon language path (Zig example)
+
+Native validator execution smoke tests in build environment: PASS
+- CMake configure/build
+- Go module download/test
+- Swift Package resolve/build
+
+Static policy checks: PASS
+- default project file limit = 160
+- hard project file ceiling = 1000 (configurable)
+- project_type is free-form; old python|web|node|cpp planner bias removed
+- npm dependency provisioning before build/test
+- Android Gradle validation path present
+- SwiftPM and xcodebuild host-aware paths present
+- Unreal checked before generic C++/CMake
+- Unity treated as engine project rather than ordinary .NET
+- safe generic command allowlist present

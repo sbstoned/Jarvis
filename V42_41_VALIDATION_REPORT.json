@@ -1,0 +1,51 @@
+{
+  "version": "42.41.0",
+  "engine": "AUTHORITATIVE_REPAIR_CONTROLLER_FACTORY",
+  "result": "PASS",
+  "regression_checks": {
+    "V42.0 capability and sandbox": "20/20 PASS",
+    "V42.35 candidate runtime parity": "33/33 PASS",
+    "V42.36 fresh native authority": "31/31 PASS",
+    "V42.37 component transaction sandbox": "28/28 PASS",
+    "V42.40 checkpoint and dashboard compatibility": "47/47 PASS",
+    "V42.41 authoritative repair controller": "34/34 PASS",
+    "current_release_total": "193/193 PASS"
+  },
+  "static_validation": {
+    "python_compileall": "PASS",
+    "javascript_node_check": "PASS",
+    "root_json_parse": "PASS",
+    "input_binary_asset_hash_preservation": "PASS",
+    "secret_literal_filename_scan": "PASS"
+  },
+  "production_path_proof": {
+    "audit_round_resolves_current_controller_at_call_time": "PASS",
+    "real_repair_resolves_current_controller_at_call_time": "PASS",
+    "journal_and_projection_use_active_engine_identity": "PASS",
+    "same_revision_deterministic_reentry_suppressed": "PASS",
+    "same_revision_model_reentry_suppressed": "PASS"
+  },
+  "recorded_failure_replay": {
+    "geartrack_sqlx_from_row_root_cause": "PASS",
+    "geartrack_string_enum_contract_root_cause": "PASS",
+    "geartrack_nullable_string_bind_root_cause": "PASS",
+    "cargo_config_and_rust_source_atomic_transaction": "PASS",
+    "failed_validator_with_zero_parsed_diagnostics_rejected": "PASS"
+  },
+  "runtime_limits": {
+    "windows_dashboard_launch": "SOURCE-VERIFIED; Windows GUI unavailable on validation host",
+    "local_qwen_live_generation": "NOT RUN; user's llama.cpp model server unavailable on validation host",
+    "real_geartrack_cargo_build": "NOT RUN; Rust toolchain unavailable on validation host",
+    "historical_exact-version_tests": "NOT CURRENT RELEASE AUTHORITY; several intentionally assert superseded V42.4-V42.30 behavior and one requires an external checkpoint fixture"
+  },
+  "verified_changes": [
+    "V42.37 audit and real-repair closures dynamically dispatch the currently registered repair controller",
+    "V42.41 owns native failures through one authoritative controller",
+    "compiler-directed Rust and Cargo edits remain disposable until exact component diagnostics decrease",
+    "failed validation with zero parseable diagnostics cannot be mistaken for source improvement",
+    "local-Qwen watchdogs extend only for useful streamed tokens and retain an absolute bound",
+    "unchanged compiler and model strategies are persisted and suppressed at the same repository revision",
+    "project-local repair ledger, JSONL trace, and human-readable status report are written on the live path",
+    "STOP + CHECKPOINT and resizable dashboard chat behavior remain compatible"
+  ]
+}

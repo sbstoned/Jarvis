@@ -1,0 +1,32 @@
+JARVIS V35.1.0 VALIDATION REPORT
+================================
+
+Release base: V35.0.4 Universal Completion Engine
+Patch target: local_qwen_project.py
+
+RESULTS
+-------
+- Python syntax compile of local_qwen_project.py: PASS
+- Extended deterministic regression suite: 34/34 PASS
+- Legacy END FILE transport salvage: PASS
+- BEGIN/END legacy envelope salvage: PASS
+- Duplicate InventoryService provider detection: PASS
+- Unrelated duplicate helper-name non-collision: PASS
+- Mixed Node + Rust component discovery: PASS
+- InventoryView.COLUMNS class-constant false-positive regression: PASS
+- StockPilot-shaped DatabaseManager.insert_item arity drift detection: PASS
+- V35.1 live status identity/count derivation: PASS
+- 262144 context-capacity status field test: PASS
+- Vitest noninteractive strategy: PASS
+- Jest noninteractive strategy: PASS
+- React Scripts noninteractive strategy: PASS
+- Playwright noninteractive strategy: PASS
+- Mocha CI strategy: PASS
+- Hierarchical nested component ownership: PASS
+- Evidence-first runtime repair ordering: PASS
+- Clean Python real validation (fresh venv + compile + unittest + startup): PASS
+- Real Node validation (npm install + build + node --test): PASS
+
+IMPORTANT SCOPE
+---------------
+These tests verify the Jarvis builder/validator machinery. They do not claim that a local 9B Qwen will successfully generate every possible large application. The strongest benchmark remains running the same real project prompt through V34.1 and V35.1 and comparing final acceptance results.

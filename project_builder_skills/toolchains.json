@@ -1,0 +1,1382 @@
+{
+  "version": "42.3.0",
+  "registered_count": 72,
+  "adapters": {
+    "python": {
+      "language": "python",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "python",
+      "package_manager": "pip",
+      "required_tools": [
+        "python"
+      ],
+      "dependency_command": "python -m pip install -r requirements.txt",
+      "build_command": "python -m compileall .",
+      "test_command": "python -m unittest discover -s tests",
+      "run_command": "python main.py",
+      "markers": [
+        "pyproject.toml",
+        "requirements.txt"
+      ]
+    },
+    "python_desktop": {
+      "language": "python",
+      "platform": "desktop",
+      "framework": "tkinter",
+      "build_system": "python",
+      "package_manager": "pip",
+      "required_tools": [
+        "python"
+      ],
+      "dependency_command": "python -m pip install -r requirements.txt",
+      "build_command": "python -m compileall .",
+      "test_command": "python -m unittest discover -s tests",
+      "run_command": "python main.py",
+      "markers": []
+    },
+    "static_web": {
+      "language": "html/css/javascript",
+      "platform": "web",
+      "framework": "vanilla",
+      "build_system": "none",
+      "package_manager": "none",
+      "required_tools": [],
+      "dependency_command": "",
+      "build_command": "",
+      "test_command": "",
+      "run_command": "index.html",
+      "markers": [
+        "index.html"
+      ]
+    },
+    "node": {
+      "language": "javascript/typescript",
+      "platform": "cross-platform",
+      "framework": "node",
+      "build_system": "npm",
+      "package_manager": "npm",
+      "required_tools": [
+        "node",
+        "npm"
+      ],
+      "dependency_command": "npm install",
+      "build_command": "npm run build",
+      "test_command": "npm test",
+      "run_command": "npm start",
+      "markers": [
+        "package.json"
+      ]
+    },
+    "react": {
+      "language": "typescript/javascript",
+      "platform": "web",
+      "framework": "react",
+      "build_system": "vite",
+      "package_manager": "npm",
+      "required_tools": [
+        "node",
+        "npm"
+      ],
+      "dependency_command": "npm install",
+      "build_command": "npm run build",
+      "test_command": "npm test",
+      "run_command": "npm run dev",
+      "markers": [
+        "package.json"
+      ]
+    },
+    "vite": {
+      "language": "typescript/javascript",
+      "platform": "web",
+      "framework": "vite",
+      "build_system": "vite",
+      "package_manager": "npm",
+      "required_tools": [
+        "node",
+        "npm"
+      ],
+      "dependency_command": "npm install",
+      "build_command": "npm run build",
+      "test_command": "npm test",
+      "run_command": "npm run dev",
+      "markers": [
+        "package.json"
+      ]
+    },
+    "nextjs": {
+      "language": "typescript/javascript",
+      "platform": "web",
+      "framework": "next.js",
+      "build_system": "next",
+      "package_manager": "npm",
+      "required_tools": [
+        "node",
+        "npm"
+      ],
+      "dependency_command": "npm install",
+      "build_command": "npm run build",
+      "test_command": "npm test",
+      "run_command": "npm run dev",
+      "markers": [
+        "package.json"
+      ]
+    },
+    "vue": {
+      "language": "typescript/javascript",
+      "platform": "web",
+      "framework": "vue",
+      "build_system": "vite",
+      "package_manager": "npm",
+      "required_tools": [
+        "node",
+        "npm"
+      ],
+      "dependency_command": "npm install",
+      "build_command": "npm run build",
+      "test_command": "npm test",
+      "run_command": "npm run dev",
+      "markers": [
+        "package.json"
+      ]
+    },
+    "angular": {
+      "language": "typescript",
+      "platform": "web",
+      "framework": "angular",
+      "build_system": "angular-cli",
+      "package_manager": "npm",
+      "required_tools": [
+        "node",
+        "npm"
+      ],
+      "dependency_command": "npm install",
+      "build_command": "npm run build",
+      "test_command": "npm test -- --watch=false",
+      "run_command": "npm start",
+      "markers": [
+        "angular.json",
+        "package.json"
+      ]
+    },
+    "sveltekit": {
+      "language": "typescript/javascript",
+      "platform": "web",
+      "framework": "sveltekit",
+      "build_system": "vite",
+      "package_manager": "npm",
+      "required_tools": [
+        "node",
+        "npm"
+      ],
+      "dependency_command": "npm install",
+      "build_command": "npm run build",
+      "test_command": "npm test",
+      "run_command": "npm run dev",
+      "markers": [
+        "svelte.config.js",
+        "package.json"
+      ]
+    },
+    "electron": {
+      "language": "javascript/typescript",
+      "platform": "desktop",
+      "framework": "electron",
+      "build_system": "npm",
+      "package_manager": "npm",
+      "required_tools": [
+        "node",
+        "npm"
+      ],
+      "dependency_command": "npm install",
+      "build_command": "npm run build",
+      "test_command": "npm test",
+      "run_command": "npm start",
+      "markers": [
+        "package.json"
+      ]
+    },
+    "react_native": {
+      "language": "typescript/javascript + kotlin/swift",
+      "platform": "mobile",
+      "framework": "react native",
+      "build_system": "metro + gradle/xcode",
+      "package_manager": "npm",
+      "required_tools": [
+        "node",
+        "npm"
+      ],
+      "dependency_command": "npm install",
+      "build_command": "",
+      "test_command": "npm test",
+      "run_command": "npm start",
+      "markers": [
+        "package.json"
+      ]
+    },
+    "expo": {
+      "language": "typescript/javascript",
+      "platform": "mobile",
+      "framework": "expo/react native",
+      "build_system": "expo",
+      "package_manager": "npm",
+      "required_tools": [
+        "node",
+        "npm"
+      ],
+      "dependency_command": "npm install",
+      "build_command": "npx expo export",
+      "test_command": "npm test",
+      "run_command": "npx expo start",
+      "markers": [
+        "app.json",
+        "package.json"
+      ]
+    },
+    "tauri": {
+      "language": "rust + typescript/javascript",
+      "platform": "desktop",
+      "framework": "tauri",
+      "build_system": "cargo + npm",
+      "package_manager": "cargo + npm",
+      "required_tools": [
+        "cargo",
+        "rustc",
+        "node",
+        "npm"
+      ],
+      "dependency_command": "npm install",
+      "build_command": "npm run tauri build",
+      "test_command": "cargo test",
+      "run_command": "npm run tauri dev",
+      "markers": [
+        "src-tauri/Cargo.toml",
+        "package.json"
+      ],
+      "compatibility_notes": [
+        "Tauri major versions must be coherent across Rust core/build crate, CLI, and plugins.",
+        "Tauri 2 uses plugins/capabilities for APIs removed from Tauri 1 core feature flags.",
+        "Frontend JS/TS source belongs outside src-tauri/src; native source under src-tauri/src is Rust."
+      ]
+    },
+    "rust": {
+      "language": "rust",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "cargo",
+      "package_manager": "cargo",
+      "required_tools": [
+        "cargo",
+        "rustc"
+      ],
+      "dependency_command": "cargo fetch",
+      "build_command": "cargo build",
+      "test_command": "cargo test",
+      "run_command": "cargo run",
+      "markers": [
+        "Cargo.toml"
+      ]
+    },
+    "c_make": {
+      "language": "c",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "make",
+      "package_manager": "",
+      "required_tools": [
+        "make",
+        "C compiler"
+      ],
+      "dependency_command": "",
+      "build_command": "make",
+      "test_command": "make test",
+      "run_command": "",
+      "markers": [
+        "Makefile"
+      ]
+    },
+    "cpp_cmake": {
+      "language": "c++",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "cmake",
+      "package_manager": "",
+      "required_tools": [
+        "cmake",
+        "C++ compiler"
+      ],
+      "dependency_command": "cmake -S . -B .jarvis_build",
+      "build_command": "cmake --build .jarvis_build --config Release",
+      "test_command": "ctest --test-dir .jarvis_build -C Release --output-on-failure",
+      "run_command": "",
+      "markers": [
+        "CMakeLists.txt"
+      ]
+    },
+    "cpp_make": {
+      "language": "c++",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "make",
+      "package_manager": "",
+      "required_tools": [
+        "make",
+        "C++ compiler"
+      ],
+      "dependency_command": "",
+      "build_command": "make",
+      "test_command": "make test",
+      "run_command": "",
+      "markers": [
+        "Makefile"
+      ]
+    },
+    "meson": {
+      "language": "c/c++",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "meson",
+      "package_manager": "",
+      "required_tools": [
+        "meson",
+        "ninja",
+        "compiler"
+      ],
+      "dependency_command": "meson setup .jarvis_build",
+      "build_command": "meson compile -C .jarvis_build",
+      "test_command": "meson test -C .jarvis_build --print-errorlogs",
+      "run_command": "",
+      "markers": [
+        "meson.build"
+      ]
+    },
+    "qt_cmake": {
+      "language": "c++",
+      "platform": "desktop",
+      "framework": "Qt",
+      "build_system": "cmake",
+      "package_manager": "",
+      "required_tools": [
+        "cmake",
+        "Qt",
+        "C++ compiler"
+      ],
+      "dependency_command": "cmake -S . -B .jarvis_build",
+      "build_command": "cmake --build .jarvis_build --config Release",
+      "test_command": "ctest --test-dir .jarvis_build -C Release --output-on-failure",
+      "run_command": "",
+      "markers": [
+        "CMakeLists.txt"
+      ]
+    },
+    "go": {
+      "language": "go",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "go",
+      "package_manager": "go modules",
+      "required_tools": [
+        "go"
+      ],
+      "dependency_command": "go mod download",
+      "build_command": "go build ./...",
+      "test_command": "go test ./...",
+      "run_command": "go run .",
+      "markers": [
+        "go.mod"
+      ]
+    },
+    "dotnet": {
+      "language": "c#",
+      "platform": "cross-platform",
+      "framework": ".NET",
+      "build_system": "dotnet",
+      "package_manager": "nuget",
+      "required_tools": [
+        "dotnet"
+      ],
+      "dependency_command": "dotnet restore",
+      "build_command": "dotnet build --no-restore",
+      "test_command": "dotnet test --no-build",
+      "run_command": "dotnet run",
+      "markers": [
+        "*.csproj",
+        "*.sln"
+      ]
+    },
+    "wpf": {
+      "language": "c#",
+      "platform": "windows",
+      "framework": "WPF/.NET",
+      "build_system": "dotnet",
+      "package_manager": "nuget",
+      "required_tools": [
+        "dotnet"
+      ],
+      "dependency_command": "dotnet restore",
+      "build_command": "dotnet build --no-restore",
+      "test_command": "dotnet test --no-build",
+      "run_command": "dotnet run",
+      "markers": [
+        "*.csproj"
+      ]
+    },
+    "winforms": {
+      "language": "c#",
+      "platform": "windows",
+      "framework": "WinForms/.NET",
+      "build_system": "dotnet",
+      "package_manager": "nuget",
+      "required_tools": [
+        "dotnet"
+      ],
+      "dependency_command": "dotnet restore",
+      "build_command": "dotnet build --no-restore",
+      "test_command": "dotnet test --no-build",
+      "run_command": "dotnet run",
+      "markers": [
+        "*.csproj"
+      ]
+    },
+    "java_gradle": {
+      "language": "java",
+      "platform": "jvm",
+      "framework": "",
+      "build_system": "gradle",
+      "package_manager": "gradle",
+      "required_tools": [
+        "java",
+        "gradle/gradlew"
+      ],
+      "dependency_command": "",
+      "build_command": "gradlew build",
+      "test_command": "gradlew test",
+      "run_command": "gradlew run",
+      "markers": [
+        "build.gradle",
+        "build.gradle.kts"
+      ]
+    },
+    "java_maven": {
+      "language": "java",
+      "platform": "jvm",
+      "framework": "",
+      "build_system": "maven",
+      "package_manager": "maven",
+      "required_tools": [
+        "java",
+        "maven"
+      ],
+      "dependency_command": "",
+      "build_command": "mvn package -B",
+      "test_command": "mvn test -B",
+      "run_command": "",
+      "markers": [
+        "pom.xml"
+      ]
+    },
+    "kotlin_gradle": {
+      "language": "kotlin",
+      "platform": "jvm",
+      "framework": "",
+      "build_system": "gradle",
+      "package_manager": "gradle",
+      "required_tools": [
+        "java",
+        "gradle/gradlew"
+      ],
+      "dependency_command": "",
+      "build_command": "gradlew build",
+      "test_command": "gradlew test",
+      "run_command": "gradlew run",
+      "markers": [
+        "build.gradle.kts"
+      ]
+    },
+    "android_gradle": {
+      "language": "kotlin/java",
+      "platform": "android",
+      "framework": "Android",
+      "build_system": "gradle",
+      "package_manager": "gradle",
+      "required_tools": [
+        "java",
+        "android sdk",
+        "gradle/gradlew"
+      ],
+      "dependency_command": "",
+      "build_command": "gradlew assembleDebug",
+      "test_command": "gradlew testDebugUnitTest",
+      "run_command": "",
+      "markers": [
+        "AndroidManifest.xml"
+      ]
+    },
+    "flutter": {
+      "language": "dart",
+      "platform": "mobile/cross-platform",
+      "framework": "flutter",
+      "build_system": "flutter",
+      "package_manager": "pub",
+      "required_tools": [
+        "flutter"
+      ],
+      "dependency_command": "flutter pub get",
+      "build_command": "flutter build",
+      "test_command": "flutter test",
+      "run_command": "flutter run",
+      "markers": [
+        "pubspec.yaml"
+      ]
+    },
+    "dart": {
+      "language": "dart",
+      "platform": "cross-platform",
+      "framework": "dart",
+      "build_system": "dart",
+      "package_manager": "pub",
+      "required_tools": [
+        "dart"
+      ],
+      "dependency_command": "dart pub get",
+      "build_command": "dart analyze",
+      "test_command": "dart test",
+      "run_command": "dart run",
+      "markers": [
+        "pubspec.yaml"
+      ]
+    },
+    "swiftpm": {
+      "language": "swift",
+      "platform": "cross-platform/apple",
+      "framework": "Swift Package",
+      "build_system": "swiftpm",
+      "package_manager": "swiftpm",
+      "required_tools": [
+        "swift"
+      ],
+      "dependency_command": "swift package resolve",
+      "build_command": "swift build",
+      "test_command": "swift test",
+      "run_command": "swift run",
+      "markers": [
+        "Package.swift"
+      ]
+    },
+    "ios_xcode": {
+      "language": "swift/objc",
+      "platform": "ios",
+      "framework": "SwiftUI/UIKit",
+      "build_system": "xcode",
+      "package_manager": "swiftpm/xcode",
+      "required_tools": [
+        "xcodebuild",
+        "Xcode"
+      ],
+      "dependency_command": "",
+      "build_command": "xcodebuild",
+      "test_command": "xcodebuild test",
+      "run_command": "",
+      "markers": [
+        "*.xcodeproj",
+        "*.xcworkspace"
+      ]
+    },
+    "macos_xcode": {
+      "language": "swift/objc",
+      "platform": "macos",
+      "framework": "SwiftUI/AppKit",
+      "build_system": "xcode",
+      "package_manager": "swiftpm/xcode",
+      "required_tools": [
+        "xcodebuild",
+        "Xcode"
+      ],
+      "dependency_command": "",
+      "build_command": "xcodebuild",
+      "test_command": "xcodebuild test",
+      "run_command": "",
+      "markers": [
+        "*.xcodeproj",
+        "*.xcworkspace"
+      ]
+    },
+    "unreal": {
+      "language": "c++",
+      "platform": "cross-platform",
+      "framework": "Unreal Engine",
+      "build_system": "UnrealBuildTool",
+      "package_manager": "",
+      "required_tools": [
+        "Unreal Engine",
+        "UnrealBuildTool"
+      ],
+      "dependency_command": "",
+      "build_command": "UnrealBuildTool",
+      "test_command": "",
+      "run_command": "",
+      "markers": [
+        "*.uproject",
+        "*.Target.cs",
+        "*.Build.cs"
+      ]
+    },
+    "unity": {
+      "language": "c#",
+      "platform": "cross-platform",
+      "framework": "Unity",
+      "build_system": "Unity batchmode",
+      "package_manager": "Unity Package Manager",
+      "required_tools": [
+        "Unity"
+      ],
+      "dependency_command": "",
+      "build_command": "Unity -batchmode",
+      "test_command": "Unity Test Framework",
+      "run_command": "",
+      "markers": [
+        "ProjectSettings/ProjectVersion.txt"
+      ]
+    },
+    "godot": {
+      "language": "gdscript/c#",
+      "platform": "cross-platform",
+      "framework": "Godot",
+      "build_system": "godot",
+      "package_manager": "",
+      "required_tools": [
+        "godot"
+      ],
+      "dependency_command": "",
+      "build_command": "godot --headless --path . --editor --quit",
+      "test_command": "",
+      "run_command": "godot --path .",
+      "markers": [
+        "project.godot"
+      ]
+    },
+    "zig": {
+      "language": "zig",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "zig",
+      "package_manager": "",
+      "required_tools": [
+        "zig"
+      ],
+      "dependency_command": "",
+      "build_command": "zig build",
+      "test_command": "zig build test",
+      "run_command": "zig build run",
+      "markers": [
+        "build.zig"
+      ]
+    },
+    "nim": {
+      "language": "nim",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "nimble",
+      "package_manager": "nimble",
+      "required_tools": [
+        "nim",
+        "nimble"
+      ],
+      "dependency_command": "nimble install -y",
+      "build_command": "nimble build",
+      "test_command": "nimble test",
+      "run_command": "nimble run",
+      "markers": [
+        "*.nimble"
+      ]
+    },
+    "odin": {
+      "language": "odin",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "odin",
+      "package_manager": "",
+      "required_tools": [
+        "odin"
+      ],
+      "dependency_command": "",
+      "build_command": "odin build .",
+      "test_command": "odin test .",
+      "run_command": "odin run .",
+      "markers": [
+        "*.odin"
+      ]
+    },
+    "elixir_mix": {
+      "language": "elixir",
+      "platform": "cross-platform",
+      "framework": "Phoenix/Mix",
+      "build_system": "mix",
+      "package_manager": "hex",
+      "required_tools": [
+        "elixir",
+        "mix"
+      ],
+      "dependency_command": "mix deps.get",
+      "build_command": "mix compile",
+      "test_command": "mix test",
+      "run_command": "mix run",
+      "markers": [
+        "mix.exs"
+      ]
+    },
+    "erlang_rebar3": {
+      "language": "erlang",
+      "platform": "cross-platform",
+      "framework": "OTP",
+      "build_system": "rebar3",
+      "package_manager": "hex",
+      "required_tools": [
+        "erl",
+        "rebar3"
+      ],
+      "dependency_command": "rebar3 get-deps",
+      "build_command": "rebar3 compile",
+      "test_command": "rebar3 eunit",
+      "run_command": "",
+      "markers": [
+        "rebar.config"
+      ]
+    },
+    "haskell_cabal": {
+      "language": "haskell",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "cabal",
+      "package_manager": "cabal",
+      "required_tools": [
+        "ghc",
+        "cabal"
+      ],
+      "dependency_command": "cabal update",
+      "build_command": "cabal build all",
+      "test_command": "cabal test all",
+      "run_command": "cabal run",
+      "markers": [
+        "*.cabal",
+        "cabal.project"
+      ]
+    },
+    "ocaml_dune": {
+      "language": "ocaml",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "dune",
+      "package_manager": "opam",
+      "required_tools": [
+        "ocaml",
+        "dune"
+      ],
+      "dependency_command": "",
+      "build_command": "dune build",
+      "test_command": "dune runtest",
+      "run_command": "dune exec",
+      "markers": [
+        "dune-project"
+      ]
+    },
+    "scala_sbt": {
+      "language": "scala",
+      "platform": "jvm",
+      "framework": "",
+      "build_system": "sbt",
+      "package_manager": "sbt",
+      "required_tools": [
+        "java",
+        "sbt"
+      ],
+      "dependency_command": "",
+      "build_command": "sbt compile",
+      "test_command": "sbt test",
+      "run_command": "sbt run",
+      "markers": [
+        "build.sbt"
+      ]
+    },
+    "lua": {
+      "language": "lua",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "lua",
+      "package_manager": "",
+      "required_tools": [
+        "lua",
+        "luac"
+      ],
+      "dependency_command": "",
+      "build_command": "luac -p main.lua",
+      "test_command": "",
+      "run_command": "lua main.lua",
+      "markers": [
+        "*.lua"
+      ]
+    },
+    "perl": {
+      "language": "perl",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "perl",
+      "package_manager": "cpan",
+      "required_tools": [
+        "perl"
+      ],
+      "dependency_command": "",
+      "build_command": "perl -c main.pl",
+      "test_command": "",
+      "run_command": "perl main.pl",
+      "markers": [
+        "*.pl"
+      ]
+    },
+    "r": {
+      "language": "r",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "R",
+      "package_manager": "renv",
+      "required_tools": [
+        "Rscript"
+      ],
+      "dependency_command": "",
+      "build_command": "Rscript -e \"parse(file='main.R')\"",
+      "test_command": "",
+      "run_command": "Rscript main.R",
+      "markers": [
+        "*.R"
+      ]
+    },
+    "julia": {
+      "language": "julia",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "julia",
+      "package_manager": "Pkg",
+      "required_tools": [
+        "julia"
+      ],
+      "dependency_command": "julia --project=. -e \"using Pkg; Pkg.instantiate()\"",
+      "build_command": "julia --project=. -e \"using Pkg; Pkg.precompile()\"",
+      "test_command": "julia --project=. -e \"using Pkg; Pkg.test()\"",
+      "run_command": "julia --project=.",
+      "markers": [
+        "Project.toml"
+      ]
+    },
+    "ruby_bundler": {
+      "language": "ruby",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "ruby",
+      "package_manager": "bundler",
+      "required_tools": [
+        "ruby",
+        "bundle"
+      ],
+      "dependency_command": "bundle install",
+      "build_command": "",
+      "test_command": "bundle exec rake test",
+      "run_command": "ruby app.rb",
+      "markers": [
+        "Gemfile"
+      ]
+    },
+    "rails": {
+      "language": "ruby",
+      "platform": "web/server",
+      "framework": "Rails",
+      "build_system": "rails",
+      "package_manager": "bundler",
+      "required_tools": [
+        "ruby",
+        "bundle"
+      ],
+      "dependency_command": "bundle install",
+      "build_command": "bundle exec rails zeitwerk:check",
+      "test_command": "bundle exec rails test",
+      "run_command": "bundle exec rails server",
+      "markers": [
+        "Gemfile",
+        "config/application.rb"
+      ]
+    },
+    "php_composer": {
+      "language": "php",
+      "platform": "web/server",
+      "framework": "",
+      "build_system": "php",
+      "package_manager": "composer",
+      "required_tools": [
+        "php",
+        "composer"
+      ],
+      "dependency_command": "composer install --no-interaction",
+      "build_command": "composer validate",
+      "test_command": "composer test",
+      "run_command": "php -S 127.0.0.1:8000 -t public",
+      "markers": [
+        "composer.json"
+      ]
+    },
+    "sql_generic": {
+      "language": "sql",
+      "platform": "database",
+      "framework": "SQL",
+      "build_system": "database-native",
+      "package_manager": "",
+      "required_tools": [],
+      "dependency_command": "",
+      "build_command": "",
+      "test_command": "",
+      "run_command": "",
+      "markers": [
+        "*.sql"
+      ]
+    },
+    "sqlite": {
+      "language": "sql",
+      "platform": "database",
+      "framework": "SQLite",
+      "build_system": "sqlite3",
+      "package_manager": "",
+      "required_tools": [
+        "sqlite3"
+      ],
+      "dependency_command": "",
+      "build_command": "",
+      "test_command": "",
+      "run_command": "sqlite3",
+      "markers": [
+        "*.sqlite",
+        "*.db"
+      ]
+    },
+    "postgres": {
+      "language": "sql",
+      "platform": "database/server",
+      "framework": "PostgreSQL",
+      "build_system": "postgres",
+      "package_manager": "",
+      "required_tools": [
+        "psql"
+      ],
+      "dependency_command": "",
+      "build_command": "",
+      "test_command": "",
+      "run_command": "psql",
+      "markers": [
+        "*.sql"
+      ]
+    },
+    "mysql": {
+      "language": "sql",
+      "platform": "database/server",
+      "framework": "MySQL",
+      "build_system": "mysql",
+      "package_manager": "",
+      "required_tools": [
+        "mysql"
+      ],
+      "dependency_command": "",
+      "build_command": "",
+      "test_command": "",
+      "run_command": "mysql",
+      "markers": [
+        "*.sql"
+      ]
+    },
+    "terraform": {
+      "language": "hcl",
+      "platform": "infrastructure",
+      "framework": "Terraform",
+      "build_system": "terraform",
+      "package_manager": "terraform registry",
+      "required_tools": [
+        "terraform"
+      ],
+      "dependency_command": "terraform init -backend=false",
+      "build_command": "terraform validate",
+      "test_command": "terraform test",
+      "run_command": "",
+      "markers": [
+        "*.tf"
+      ]
+    },
+    "platformio": {
+      "language": "c/c++",
+      "platform": "embedded",
+      "framework": "PlatformIO",
+      "build_system": "platformio",
+      "package_manager": "platformio",
+      "required_tools": [
+        "pio"
+      ],
+      "dependency_command": "pio pkg install",
+      "build_command": "pio run",
+      "test_command": "pio test",
+      "run_command": "pio run -t upload",
+      "markers": [
+        "platformio.ini"
+      ]
+    },
+    "esp_idf": {
+      "language": "c/c++",
+      "platform": "embedded",
+      "framework": "ESP-IDF",
+      "build_system": "idf.py",
+      "package_manager": "idf component manager",
+      "required_tools": [
+        "idf.py"
+      ],
+      "dependency_command": "",
+      "build_command": "idf.py build",
+      "test_command": "",
+      "run_command": "idf.py flash",
+      "markers": [
+        "CMakeLists.txt",
+        "sdkconfig"
+      ]
+    },
+    "xmake": {
+      "language": "c/c++",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "xmake",
+      "package_manager": "xrepo",
+      "required_tools": [
+        "xmake"
+      ],
+      "dependency_command": "xmake f -m release",
+      "build_command": "xmake",
+      "test_command": "xmake test",
+      "run_command": "xmake run",
+      "markers": [
+        "xmake.lua"
+      ]
+    },
+    "deno": {
+      "language": "typescript/javascript",
+      "platform": "cross-platform",
+      "framework": "Deno",
+      "build_system": "deno",
+      "package_manager": "deno",
+      "required_tools": [
+        "deno"
+      ],
+      "dependency_command": "deno cache .",
+      "build_command": "deno check .",
+      "test_command": "deno test",
+      "run_command": "deno run main.ts",
+      "markers": [
+        "deno.json",
+        "deno.jsonc"
+      ]
+    },
+    "bun": {
+      "language": "typescript/javascript",
+      "platform": "cross-platform",
+      "framework": "Bun",
+      "build_system": "bun",
+      "package_manager": "bun",
+      "required_tools": [
+        "bun"
+      ],
+      "dependency_command": "bun install",
+      "build_command": "bun run build",
+      "test_command": "bun test",
+      "run_command": "bun run start",
+      "markers": [
+        "package.json",
+        "bun.lock",
+        "bun.lockb"
+      ]
+    },
+    "powershell": {
+      "language": "powershell",
+      "platform": "windows/cross-platform",
+      "framework": "PowerShell",
+      "build_system": "powershell",
+      "package_manager": "PSResourceGet/PowerShellGet",
+      "required_tools": [
+        "pwsh"
+      ],
+      "dependency_command": "",
+      "build_command": "pwsh -NoProfile -File ./build.ps1",
+      "test_command": "pwsh -NoProfile -Command Invoke-Pester",
+      "run_command": "pwsh -NoProfile -File ./main.ps1",
+      "markers": [
+        "*.ps1",
+        "*.psd1",
+        "*.psm1"
+      ]
+    },
+    "shell_bash": {
+      "language": "shell",
+      "platform": "unix/cross-platform",
+      "framework": "Bash",
+      "build_system": "shell",
+      "package_manager": "",
+      "required_tools": [
+        "bash"
+      ],
+      "dependency_command": "",
+      "build_command": "bash -n main.sh",
+      "test_command": "bash tests/run.sh",
+      "run_command": "bash main.sh",
+      "markers": [
+        "*.sh"
+      ]
+    },
+    "docker_compose": {
+      "language": "multi",
+      "platform": "containers",
+      "framework": "Docker Compose",
+      "build_system": "docker",
+      "package_manager": "docker",
+      "required_tools": [
+        "docker"
+      ],
+      "dependency_command": "docker compose pull",
+      "build_command": "docker compose build",
+      "test_command": "docker compose config",
+      "run_command": "docker compose up",
+      "markers": [
+        "compose.yaml",
+        "compose.yml",
+        "docker-compose.yml",
+        "Dockerfile"
+      ]
+    },
+    "kubernetes_helm": {
+      "language": "yaml/templates",
+      "platform": "kubernetes",
+      "framework": "Helm",
+      "build_system": "helm",
+      "package_manager": "helm",
+      "required_tools": [
+        "helm",
+        "kubectl"
+      ],
+      "dependency_command": "helm dependency build",
+      "build_command": "helm lint .",
+      "test_command": "helm template .",
+      "run_command": "",
+      "markers": [
+        "Chart.yaml",
+        "values.yaml"
+      ]
+    },
+    "clojure": {
+      "language": "clojure",
+      "platform": "jvm",
+      "framework": "Clojure",
+      "build_system": "clojure-cli",
+      "package_manager": "deps.edn",
+      "required_tools": [
+        "clojure",
+        "java"
+      ],
+      "dependency_command": "clojure -P",
+      "build_command": "clojure -T:build uber",
+      "test_command": "clojure -M:test",
+      "run_command": "clojure -M -m app.core",
+      "markers": [
+        "deps.edn",
+        "project.clj"
+      ]
+    },
+    "fsharp": {
+      "language": "f#",
+      "platform": "cross-platform",
+      "framework": ".NET",
+      "build_system": "dotnet",
+      "package_manager": "nuget",
+      "required_tools": [
+        "dotnet"
+      ],
+      "dependency_command": "dotnet restore",
+      "build_command": "dotnet build --no-restore",
+      "test_command": "dotnet test --no-build",
+      "run_command": "dotnet run",
+      "markers": [
+        "*.fsproj",
+        "*.sln"
+      ]
+    },
+    "crystal": {
+      "language": "crystal",
+      "platform": "cross-platform",
+      "framework": "Crystal",
+      "build_system": "shards/crystal",
+      "package_manager": "shards",
+      "required_tools": [
+        "crystal"
+      ],
+      "dependency_command": "shards install",
+      "build_command": "crystal build src/main.cr",
+      "test_command": "crystal spec",
+      "run_command": "crystal run src/main.cr",
+      "markers": [
+        "shard.yml",
+        "*.cr"
+      ]
+    },
+    "racket": {
+      "language": "racket",
+      "platform": "cross-platform",
+      "framework": "Racket",
+      "build_system": "raco",
+      "package_manager": "raco pkg",
+      "required_tools": [
+        "racket",
+        "raco"
+      ],
+      "dependency_command": "raco pkg install --auto --skip-installed .",
+      "build_command": "raco make main.rkt",
+      "test_command": "raco test .",
+      "run_command": "racket main.rkt",
+      "markers": [
+        "info.rkt",
+        "*.rkt"
+      ]
+    },
+    "fortran_cmake": {
+      "language": "fortran",
+      "platform": "cross-platform",
+      "framework": "",
+      "build_system": "cmake",
+      "package_manager": "",
+      "required_tools": [
+        "cmake",
+        "gfortran"
+      ],
+      "dependency_command": "cmake -S . -B build",
+      "build_command": "cmake --build build",
+      "test_command": "ctest --test-dir build --output-on-failure",
+      "run_command": "",
+      "markers": [
+        "CMakeLists.txt",
+        "*.f90",
+        "*.f95"
+      ]
+    },
+    "cuda_cmake": {
+      "language": "c++/cuda",
+      "platform": "nvidia gpu",
+      "framework": "CUDA",
+      "build_system": "cmake",
+      "package_manager": "",
+      "required_tools": [
+        "cmake",
+        "nvcc"
+      ],
+      "dependency_command": "cmake -S . -B build",
+      "build_command": "cmake --build build",
+      "test_command": "ctest --test-dir build --output-on-failure",
+      "run_command": "",
+      "markers": [
+        "CMakeLists.txt",
+        "*.cu",
+        "*.cuh"
+      ]
+    },
+    "wasm_rust": {
+      "language": "rust/webassembly",
+      "platform": "web/cross-platform",
+      "framework": "WebAssembly",
+      "build_system": "cargo/wasm-pack",
+      "package_manager": "cargo",
+      "required_tools": [
+        "cargo",
+        "rustc",
+        "wasm-pack"
+      ],
+      "dependency_command": "cargo fetch",
+      "build_command": "wasm-pack build",
+      "test_command": "wasm-pack test --headless --chrome",
+      "run_command": "",
+      "markers": [
+        "Cargo.toml"
+      ]
+    }
+  },
+  "command_path_rules": {
+    "tsc": [
+      "-p",
+      "--project"
+    ],
+    "vite": [
+      "-c",
+      "--config"
+    ],
+    "vitest": [
+      "--config"
+    ],
+    "jest": [
+      "-c",
+      "--config"
+    ],
+    "eslint": [
+      "-c",
+      "--config"
+    ],
+    "pytest": [
+      "-c",
+      "--config-file"
+    ],
+    "cargo": [
+      "--manifest-path"
+    ],
+    "mvn": [
+      "-f",
+      "--file"
+    ],
+    "mvnw": [
+      "-f",
+      "--file"
+    ],
+    "gradle": [
+      "-b",
+      "--build-file",
+      "-c",
+      "--settings-file"
+    ],
+    "gradlew": [
+      "-b",
+      "--build-file",
+      "-c",
+      "--settings-file"
+    ],
+    "dotnet": [
+      "--project"
+    ],
+    "composer": [
+      "--working-dir"
+    ],
+    "deno": [
+      "--config"
+    ],
+    "helm": [
+      "-f",
+      "--values"
+    ],
+    "kubectl": [
+      "--kubeconfig"
+    ],
+    "clojure": [
+      "-Sdeps"
+    ],
+    "raco": [
+      "--config"
+    ]
+  },
+  "component_boundary_policy": {
+    "version": 1,
+    "rule": "Build/test commands may consume component-owned configuration or explicitly planned shared configuration only.",
+    "repair": "When a conventional config reference is invalid, prefer the canonical config at the current component root; never fabricate a config inside a foreign component merely to satisfy a bad command."
+  }
+}

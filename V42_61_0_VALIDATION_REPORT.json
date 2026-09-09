@@ -1,0 +1,27 @@
+{
+  "version": "V42.61.0",
+  "engine": "VOLATILE_SHARED_CACHE_ISOLATED_RESUME_FACTORY",
+  "result": "PASS",
+  "focused_checks_passed": 142,
+  "regression_groups": {
+    "v4261_volatile_shared_cache_isolation": "10/10",
+    "v4260_hardware_fit_27b_context": "7/7",
+    "v4259_adaptive_model_io": "11/11",
+    "v4258_connected_functional_clusters": "7/7",
+    "v4257_evidence_expanded_unbounded_stream": "6/6",
+    "v4256_evidence_closed_scoped_repair": "5/5",
+    "v4255_model_protocol": "35/35",
+    "v4253_job_lifecycle": "8/8",
+    "v4252_durable_functional_progress": "19/19",
+    "v4251_functional_transactions": "17/17",
+    "v4250_regression_safe_functional_promotion": "17/17"
+  },
+  "failure_reproduced": "Windows resume/trial clone raced .jarvis_shared_build_cache/cache/npm/_cacache and raised WinError 3 for disappearing cache blobs.",
+  "fix": [
+    "Skip .jarvis_shared_build_cache during resume ZIP extraction.",
+    "Skip .jarvis_shared_build_cache during disposable trial/checkpoint source clones.",
+    "Prune nested .jarvis_shared_build_cache before accepted-trial commit and before ZIP packaging.",
+    "Keep authored source copy failures strict.",
+    "Preserve V42.60 hardware-fit 27B runtime context and V42.58/59 connected convergence/model I/O behavior."
+  ]
+}

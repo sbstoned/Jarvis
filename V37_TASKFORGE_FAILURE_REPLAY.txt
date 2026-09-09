@@ -1,0 +1,34 @@
+V37 TASKFORGE FAILURE REPLAY
+============================
+Source diagnostic: user's V36.2 run project_20260828_211324
+
+Observed V36.2 result:
+  Qwen could not produce a project ZIP.
+  Bootstrap recovery exhausted without any materializable source.
+
+Actual upstream cause found in the diagnostic:
+  Qwen had generated a substantial multi-component TaskForge architecture.
+  Jarvis rejected it because V36.2 treated package/tool/module metadata as literal source-file dependency paths.
+
+Representative false failures:
+  frontend/package.json -> frontend/node_modules
+  backend/main.py -> backend/app:App
+  backend/app/__init__.py -> backend/app.routes:routes
+  backend/app/routes/__init__.py -> backend/app.routes.projects:project_router
+  backend/app/services/projects.py -> backend/app.repositories.projects:projects
+
+V37 replay of the structured architecture objects:
+  structured planning objects recovered: 5
+  reconstructed planned files: 38
+  unresolved semantic source dependencies after V37 normalization: 0
+  manifest completeness issues after V37 normalization: 0
+
+Representative V37 resolutions:
+  frontend/node_modules -> external/package metadata; not a source DAG edge
+  backend/app:App -> backend/app/__init__.py
+  backend/app.routes:routes -> backend/app/routes/__init__.py
+  backend/app.routes.projects:project_router -> backend/app/routes/projects.py
+  backend/app.services.projects:project_service -> backend/app/services/projects.py
+  backend/app.repositories.projects:projects -> backend/app/repositories/projects.py
+
+The V36.2 requirements diagnostic also exposed transport flattening: most of the original prompt had collapsed into one truncated UR-001 entry. V37 replaces this with a flattening-tolerant source-requirement ledger and preserves independently testable user requirements before model summarization.

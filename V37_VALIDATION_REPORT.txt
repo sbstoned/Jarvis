@@ -1,0 +1,75 @@
+JARVIS V37.0.0 VALIDATION REPORT
+================================
+
+Release: SMALL_MODEL_SOFTWARE_FACTORY
+Primary local-model target: Qwen3.5-9B Q4_K_M
+
+DETERMINISTIC REGRESSION SUITES
+-------------------------------
+V37 core compatibility:           55 / 55 PASS
+V37 real-run compatibility:       27 / 27 PASS
+V37 planner compatibility:        26 / 26 PASS
+V37 small-model regressions:      48 / 48 PASS
+                                  -----------
+TOTAL:                            156 / 156 PASS
+
+ACTUAL VALIDATOR SMOKE TESTS
+----------------------------
+Clean Python temporary project:
+  fresh project -> compile -> unittest -> startup validation: PASS
+
+Node temporary project:
+  package manifest -> npm setup -> real build -> node --test: PASS
+
+FULL SOURCE COMPILE
+-------------------
+python -m compileall -q . : PASS
+python -m py_compile local_qwen_project.py : PASS
+
+EXACT V36.2 TASKFORGE FAILURE REPLAY
+-----------------------------------
+The uploaded failed diagnostic project_20260828_211324 was re-read.
+Its architecture failure text contained 5 concatenated structured JSON planning objects.
+Those objects reconstruct to a 38-file TaskForge architecture.
+
+V36.2 incorrectly rejected that architecture because it treated dependency metadata as literal source-file paths, including:
+  frontend/node_modules
+  backend/app:App
+  backend/app.routes:routes
+  backend/app.routes.projects:project_router
+  backend/app.services.projects:project_service
+  backend/app.repositories.projects:projects
+
+Under V37 semantic dependency normalization:
+  - node_modules is classified as external/package metadata and removed from source DAG edges.
+  - sqlite3 and other runtime/package dependencies are external metadata, not source providers.
+  - backend/app:App resolves to backend/app/__init__.py.
+  - backend/app.routes:routes resolves to backend/app/routes/__init__.py.
+  - backend/app.routes.projects:project_router resolves to backend/app/routes/projects.py.
+  - backend/app.services.projects:project_service resolves to backend/app/services/projects.py.
+  - backend/app.repositories.projects:projects resolves to backend/app/repositories/projects.py.
+
+Replay result:
+  reconstructed files:             38
+  unresolved semantic dependencies: 0
+  manifest completeness issues:     0
+
+The prior user-facing "Bootstrap recovery exhausted without any materializable source" message was also traced to architecture/preflight failure falling through the legacy bootstrap error branch. V37 preserves architecture/preflight failures as their own actionable failure class instead.
+
+SMALL-MODEL OPERATING PROFILE
+-----------------------------
+When not explicitly overridden by environment variables:
+  native llama.cpp context: unchanged / may remain 262,144
+  plan working context:     32,768
+  generate working context: 32,768
+  repair working context:   32,768
+  audit working context:    32,768
+  normal file output cap:    6,144 tokens
+  continuation rounds:       2
+  per-file wall time cap:    720 seconds
+
+These are working budgets, not model capability limits. Jarvis can still use the larger native server context when an explicitly oversized situation requires it.
+
+IMPORTANT INTERPRETATION
+------------------------
+These tests validate the Jarvis V37 machinery and reproduce/fix the specific V36.2 TaskForge planner rejection. They do not prove that Qwen3.5-9B will solve every arbitrary long-horizon project. The purpose of V37 is to improve odds by giving the model smaller, more precise engineering tasks while Jarvis owns requirements, dependency semantics, repository structure, contracts, validation, checkpoints, and repair history.

@@ -1,0 +1,50 @@
+{
+  "version": "V42.35.0",
+  "engine": "CANDIDATE_RUNTIME_PARITY_UNIVERSAL_CONVERGENCE_FACTORY",
+  "validated_at_utc": "2026-09-04T18:17:14Z",
+  "inputs": {
+    "jarvis_zip_sha256": "cbf45541e4df0f96dcbafc6ffe16d64e60064a4c8bb030b5dd660b0860fab001",
+    "geartrack_checkpoint_zip_sha256": "6f0d4b31935064c8592a1ea7c90706acc67c0acd1307569b773d4646c54257d9"
+  },
+  "root_causes": [
+    {
+      "id": "candidate_dependency_loss",
+      "finding": "V42.25 moved TypeScript repair candidates outside the accepted workspace and excluded node_modules, while V42.24 invoked the accepted workspace's tsc against that external clone. Node resolution could no longer reach installed React/Vite dependencies, so correct repairs appeared to regress from 8 diagnostics to 57-64 diagnostics and were rejected."
+    },
+    {
+      "id": "false_regression_confidence",
+      "finding": "V42.30's last-mile regression asserted transformed source text but did not compile a real external dependency-less candidate, so it did not cover the failing integration boundary."
+    },
+    {
+      "id": "package_shadow_alias",
+      "finding": "After the TypeScript tail closed, the real Vite build exposed a package alias mapping @tauri-apps/api to a missing local JSON path. The alias hijacked legitimate package subpath imports."
+    },
+    {
+      "id": "declared_test_without_owner",
+      "finding": "The Node validator treated a non-noop test script as mandatory, but resume/test-debt policy allowed all test files to be absent. Vitest therefore failed every otherwise-green project with 'No test files found'."
+    },
+    {
+      "id": "stale_resume_projection",
+      "finding": "Accepted compiler repairs did not invalidate the matching current_blocker in the compact event projection, so later resume logic could continue targeting an already-repaired file."
+    },
+    {
+      "id": "code_checkpoint_provenance_mismatch",
+      "finding": "The supplied Jarvis source identified V42.30 while the supplied checkpoint projection contained later V42.32-V42.34 metadata. A stale running process or mismatched code/checkpoint lineage can make reported behavior differ from the files being inspected. V42.35 adds a disk/running-engine guard."
+    }
+  ],
+  "verification": {
+    "python_import_and_syntax": "PASS",
+    "v4235_regression": "33/33 PASS",
+    "external_candidate_dependency_parity": "PASS",
+    "source_diff_link_pruning": "PASS",
+    "dependency_avalanche_classification": "PASS",
+    "stale_projection_invalidation": "PASS",
+    "declared_test_contract_routing": "PASS",
+    "existing_test_filter_failure_not_hidden": "PASS",
+    "geartrack_typescript_diagnostics": "8 -> 0",
+    "geartrack_vite_build": "PASS; 43 modules transformed",
+    "geartrack_vitest": "PASS; 1 file, 1 test",
+    "geartrack_rust_backend": "NOT VERIFIED ON THIS HOST; cargo/rustc unavailable"
+  },
+  "acceptance_scope": "The exact reported frontend/compiler failure path is reproduced and repaired. V42.35 preserves the universal adapter/declared-command architecture and existing-project edit mode. No finite regression can guarantee every future prompt, language, SDK, operating system, or external service; Jarvis must continue to report host-limited validation honestly instead of claiming completion without the required native toolchain."
+}

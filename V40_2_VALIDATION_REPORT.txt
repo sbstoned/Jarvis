@@ -1,0 +1,24 @@
+JARVIS V40.2 VALIDATION REPORT
+==============================
+
+Primary regression: project_20260830_000441 / GearTrack architecture preflight.
+
+PASS: Python py_compile
+PASS: Exact replay detects missing Rust canonical owners before self-heal
+PASS: Exact replay auto-adds src-tauri/src/domain.rs
+PASS: Tool owner repaired
+PASS: Category owner repaired
+PASS: UserAssignment owner repaired via CamelCase/human-word usage aliasing
+PASS: Exact replay canonical-owner errors after self-heal: 0
+PASS: Rust consumers receive canonical provider dependency
+PASS: Architecture duplicate paths merged deterministically
+PASS: Auto-heal is idempotent
+PASS: Python provider synthesis
+PASS: Go provider synthesis
+PASS: Java provider synthesis
+PASS: .NET provider synthesis
+PASS: C/C++ provider synthesis
+PASS: Flutter provider synthesis
+PASS: Swift provider synthesis
+
+V40.2 repairs architecture metadata only. Synthesized providers still must be implemented by Qwen and pass the existing candidate, compile, test, runtime, milestone and acceptance gates before publication.

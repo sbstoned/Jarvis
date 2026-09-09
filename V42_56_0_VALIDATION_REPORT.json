@@ -1,0 +1,36 @@
+{
+  "version": "V42.56.0",
+  "engine": "EVIDENCE_CLOSED_SCOPED_CONVERGENCE_FACTORY",
+  "status": "validated",
+  "root_causes": [
+    "functional related-source ranking omitted the actual same-language integration seam under a tight evidence budget",
+    "precise validator findings did not constrain unrelated hunks in the same target file",
+    "one stale zero-match SEARCH could reject otherwise exact useful sibling hunks",
+    "two internal model attempts were insufficient for late-stage mixed functional repairs"
+  ],
+  "changes": {
+    "related_source_max_files": 14,
+    "related_source_max_chars": 90000,
+    "model_attempts_per_transaction": 3,
+    "integration_seam_priority": true,
+    "validator_owned_scope_pruning": true,
+    "stale_zero_match_hunk_salvage": true,
+    "existing_acceptance_gates_preserved": true,
+    "stack_agnostic": true
+  },
+  "tests": {
+    "CHECK_V4250_REGRESSION_SAFE_FUNCTIONAL_PROMOTION.py": "17/17 PASS",
+    "CHECK_V4251_FUNCTIONAL_TRANSACTIONS.py": "17/17 PASS",
+    "CHECK_V4252_DURABLE_FUNCTIONAL_PROGRESS.py": "19/19 PASS",
+    "CHECK_V4255_MODEL_PROTOCOL.py": "35/35 PASS",
+    "CHECK_V4256_EVIDENCE_CLOSED_SCOPED_REPAIR.py": "5/5 PASS",
+    "CHECK_V4254_WORKFLOW_CONVERGENCE.py": "sandbox timeout before assertion result; not counted as pass"
+  },
+  "uploaded_run_replay": {
+    "tools_rs_actual_v4255_hunks": 3,
+    "tools_rs_v4256_retained_hunks": 1,
+    "tools_rs_target_functional_issues": "1 -> 0",
+    "joined_row_decoder_preserved": true,
+    "csv_target_now_includes_real_integration_seam": "src/hooks/useTauriCommands.ts"
+  }
+}

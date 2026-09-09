@@ -1,0 +1,42 @@
+{
+  "version": "V41.3.2",
+  "engine": "UNIVERSAL_REPAIR_CONVERGENCE_FACTORY",
+  "generated_utc": "2026-08-30T20:14:41.000543+00:00",
+  "regression": "project_20260830_091222 / missing src-tauri/src/lib.rs after failed repair convergence",
+  "validation": {
+    "v411_universal": {
+      "passed": 135,
+      "total": 135
+    },
+    "v412_react_vite": {
+      "passed": 14,
+      "total": 14
+    },
+    "v413_repair_convergence": {
+      "passed": 29,
+      "total": 29
+    },
+    "v413_failed_workspace_replay": {
+      "passed": 7,
+      "total": 7
+    },
+    "aggregate": {
+      "passed": 185,
+      "total": 185
+    },
+    "python_compile": {
+      "files": 9,
+      "errors": 0
+    },
+    "archive_integrity": "PASS - no compressed-data errors"
+  },
+  "fixes": [
+    "accepted revision ledger separates on-disk drafts from commit-authoritative files",
+    "unaccepted/missing milestone files regenerate whole instead of entering patch-only mode",
+    "bounded no-commit milestone regeneration retries before terminal failure",
+    "display line number normalization for SEARCH/REPLACE blocks",
+    "deterministic dependency-closed React/Tauri Foundation boot shells",
+    "Tauri build.rs and tauri.conf.json plan self-healing",
+    "Tauri 1 / SQLx Cargo feature coherence hardening"
+  ]
+}

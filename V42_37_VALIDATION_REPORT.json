@@ -1,0 +1,69 @@
+{
+  "release": "V42.37.0",
+  "engine": "COMPONENT_ISOLATED_TRANSACTION_SANDBOX_FACTORY",
+  "validated_at_utc": "2026-09-04",
+  "result": "PASS",
+  "captured_run_assessment": {
+    "input": ".jarvis_backups.zip",
+    "input_sha256": "c828b8ea5055fc39c7cc48ad18b5ba6ff858a0ea80e90bca3abeb1b6b398a96a",
+    "latest_event_sequence": 211,
+    "status": "not progressing at capture time",
+    "evidence": [
+      "Fresh V42.36 diagnostics selected src-tauri/src/models/tool.rs and src-tauri/src/tools.rs from 75 Cargo errors.",
+      "No Rust source change was accepted after selection.",
+      "The 9B repair call exceeded its two-minute watchdog and the 27B rescue exceeded four minutes.",
+      "Same-revision loop hygiene then blocked inherited fallback attempts.",
+      "The last accepted source progress remained the earlier TypeScript diagnostic reduction from 8 to 0.",
+      "A Vite package-shadow alias failure was misclassified as validator infrastructure."
+    ]
+  },
+  "root_causes_fixed": [
+    "Candidate replay could validate the first non-Python component instead of the exact failing component.",
+    "Model transport timeouts were allowed to consume/poison semantic repair convergence.",
+    "Long inherited repair watchdogs made a no-output cycle take minutes before fallback.",
+    "A successful bundler launch followed by an imported-file ENOENT was classified as missing-tool infrastructure.",
+    "V42.37 initially bypassed V42.36 component-aware stale-blocker invalidation; the compatibility suite found and the release fixes this regression.",
+    "Known provider-token passthrough was removed before the explicit private-dependency allowlist could apply."
+  ],
+  "current_acceptance": {
+    "evergreen_suites": 17,
+    "checks_passed": 571,
+    "checks_failed": 0,
+    "focused_v4237": "28/28",
+    "v4236_compatibility": "31/31",
+    "v4235_compatibility": "33/33",
+    "runtime_command_broker": "20/20",
+    "python_files_compiled": 50,
+    "critical_json_files_parsed": true
+  },
+  "acceptance_suites": [
+    "CHECK_V411_UNIVERSAL_FACTORY.py",
+    "CHECK_V412_REACT_VITE_CONVERGENCE.py",
+    "CHECK_V413_FAILED_WORKSPACE_REPLAY.py",
+    "CHECK_V413_REPAIR_CONVERGENCE.py",
+    "CHECK_V420_CAPABILITY_SANDBOX.py",
+    "CHECK_V421_TAURI_CARGO_CONVERGENCE.py",
+    "CHECK_V422_COMPONENT_BOUNDARY_CONVERGENCE.py",
+    "CHECK_V423_PROGRESSIVE_GLOBAL_CONVERGENCE.py",
+    "CHECK_V425_QWEN38_27B_SELECTOR.py",
+    "CHECK_V428_CONTRACT_GRAPH_RECONCILIATION.py",
+    "CHECK_V429_WHOLE_PROJECT_AUDIT.py",
+    "CHECK_V4211_ROBUST_ZIP_RESUME_IMPORT.py",
+    "CHECK_V4212_ATTACHED_ZIP_RESUME_TRIAL_ISOLATION.py",
+    "CHECK_V4215_RUST_TOPOLOGY_RESUME_AUTHORITY.py",
+    "CHECK_V4235_CANDIDATE_RUNTIME_PARITY.py",
+    "CHECK_V4236_FRESH_NATIVE_AUTHORITY.py",
+    "CHECK_V4237_COMPONENT_TRANSACTION_SANDBOX.py"
+  ],
+  "bounded_repair_defaults": {
+    "worker_patch_watchdog_seconds": 90,
+    "specialist_patch_watchdog_seconds": 150,
+    "transport_retries_per_repository_state": 2,
+    "transport_retry_cooldown_seconds": 600,
+    "semantic_no_delta_budget_consumed_by_transport_failure": false
+  },
+  "host_limitations": [
+    "The validation host did not provide Cargo/Rust or the user's local Qwen endpoints, so the exact Windows GearTrack binary and live model inference were not executed here.",
+    "Captured compiler/model failures were reproduced with deterministic component, transaction, timeout, and sandbox fixtures."
+  ]
+}

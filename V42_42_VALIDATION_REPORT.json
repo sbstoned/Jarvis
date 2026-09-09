@@ -1,0 +1,52 @@
+{
+  "version": "V42.42.2",
+  "engine": "REVISION_SCOPED_CONVERGENCE_MEMORY_FACTORY",
+  "status": "PASS",
+  "validated_at": "2026-09-05T07:19:11Z",
+  "focused_and_compatibility_checks": {
+    "passed": 302,
+    "failed": 0,
+    "suites": [
+      {"name": "CHECK_V4242_REVISION_MEMORY_CONVERGENCE.py", "passed": 79, "failed": 0},
+      {"name": "CHECK_V4241_AUTHORITATIVE_REPAIR.py", "passed": 35, "failed": 0},
+      {"name": "CHECK_V4240_CHECKPOINT_UI_RECOVERY.py", "passed": 47, "failed": 0},
+      {"name": "CHECK_V4237_COMPONENT_TRANSACTION_SANDBOX.py", "passed": 28, "failed": 0},
+      {"name": "CHECK_V4236_FRESH_NATIVE_AUTHORITY.py", "passed": 31, "failed": 0},
+      {"name": "CHECK_V4235_CANDIDATE_RUNTIME_PARITY.py", "passed": 33, "failed": 0},
+      {"name": "CHECK_V420_CAPABILITY_SANDBOX.py", "passed": 20, "failed": 0},
+      {"name": "CHECK_V413_REPAIR_CONVERGENCE.py", "passed": 29, "failed": 0}
+    ]
+  },
+  "static_validation": {
+    "python_compileall": "PASS",
+    "root_json_files_parsed": 47,
+    "invalid_root_json_files": 0,
+    "dashboard_javascript_syntax": "PASS",
+    "original_binary_assets_compared": 119,
+    "missing_binary_assets": 0,
+    "changed_binary_assets": 0,
+    "root_files_with_common_live_token_patterns": 0
+  },
+  "acceptance_scope": [
+    "full V42.42 through retained V42.41 generator/editor launch chain",
+    "true stale-process marker rejection",
+    "revision/component circuit breaker and legacy-ledger migration",
+    "automatic exhausted safe-boundary control",
+    "durable nested workspace registration and post-finish recovery",
+    "representative diagnostics from the complete compiler stream",
+    "bounded second model cycle and one-time new-release strategy reopen",
+    "atomic compiler-directed Rust repair transaction",
+    "current-audit project state reducer",
+    "SQLite WAL scoped shared memory and privacy boundary",
+    "structured worker handoff and project heartbeat",
+    "MCP capability discovery without secret disclosure",
+    "manual stop/checkpoint and dashboard layout compatibility",
+    "candidate runtime parity and component sandbox isolation",
+    "line-numbered exact-patch transport recovery"
+  ],
+  "notes": [
+    "Historical point-release tests that intentionally assert an exact obsolete version, engine, timeout, or superseded provider-first policy are archival and are not used as V42.42 release identity tests.",
+    "One historical replay test requires an external /mnt/data checkpoint that is not distributed in the attached V42.41 source ZIP.",
+    "Validation proves the included control paths and fixtures; it is not a claim that every arbitrary third-party project can be repaired without its required toolchains, services, credentials, or additional repair strategies."
+  ]
+}

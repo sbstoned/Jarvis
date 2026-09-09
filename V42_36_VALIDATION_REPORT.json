@@ -1,0 +1,52 @@
+{
+  "version": "V42.36.0",
+  "engine": "FRESH_COMPONENT_NATIVE_COMPILER_AUTHORITY_FACTORY",
+  "root_causes": [
+    {
+      "id": "component_root_blocker_not_invalidated",
+      "finding": "V42.35 compared a stale blocker file literally with changed files. A blocker stored as '.' for the React component survived a committed vite.config.ts repair."
+    },
+    {
+      "id": "stale_component_overrode_fresh_native_failure",
+      "finding": "The saved V35 validation was React green and Rust red, but the event projection and convergence state still identified the old React/Vite failure."
+    },
+    {
+      "id": "global_fast_recovery_crossed_component_boundary",
+      "finding": "The inherited pre-audit TypeScript fast-recovery pass could change InventoryView.tsx before routing the fresh Cargo failure, creating misleading progress with no lasting accepted-source improvement."
+    },
+    {
+      "id": "component_relative_compiler_paths_lost",
+      "finding": "Cargo ran from src-tauri and emitted src\\tools.rs and src\\models\\tool.rs, but generic localization did not reliably convert those paths to project-relative src-tauri paths."
+    },
+    {
+      "id": "native_progress_signature_was_line_sensitive",
+      "finding": "The prior compact failure signature was based on a single file/line/column location, allowing line movement or a different truncated tail to appear like progress."
+    },
+    {
+      "id": "generic_candidate_dependency_parity_gap",
+      "finding": "V42.35 projected node_modules into TypeScript cluster candidates but the generic non-Python candidate clone used for Rust repair replay could still omit the already-green frontend dependency substrate."
+    }
+  ],
+  "corrections": {
+    "fresh_component_result_owns_current_blocker": true,
+    "component_aware_invalidation": true,
+    "projection_controller_dashboard_state_aligned": true,
+    "component_relative_native_path_resolution": true,
+    "definition_evidence_priority": true,
+    "green_component_freeze": true,
+    "global_pre_audit_mutation_disabled": true,
+    "distinct_native_target_budget_per_revision": 4,
+    "strict_native_error_count_delta": true,
+    "line_movement_is_not_progress": true,
+    "generic_candidate_dependency_parity": true
+  },
+  "verification": {
+    "python_compile_all": "PASS",
+    "v4236_regression": "31/31 PASS",
+    "v4235_compatibility_regression": "33/33 PASS",
+    "exact_geartrack_checkpoint_state_replay": "PASS; current blocker becomes src-tauri/src/models/tool.rs with Rust/Cargo authority",
+    "geartrack_frontend_evidence": "Previously verified and preserved: Vite build 43 modules; Vitest 1 file / 1 test",
+    "geartrack_rust_backend": "NOT EXECUTED ON THIS HOST; cargo/rustc unavailable. The captured 75-error output is used as a routing/state regression fixture."
+  },
+  "acceptance_scope": "V42.36 repairs the demonstrated stale-evidence, cross-component routing, component-relative path, candidate-parity, and no-progress loop defects. It preserves new-project generation and existing-project ZIP editing. Completion remains conditional on every required real toolchain build, test, runtime, integration, and explicit requirement gate passing."
+}

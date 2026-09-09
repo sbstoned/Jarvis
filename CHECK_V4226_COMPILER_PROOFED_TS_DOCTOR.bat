@@ -1,0 +1,2 @@
+@echo off
+python CHECK_V4226_COMPILER_PROOFED_TS_DOCTOR.py

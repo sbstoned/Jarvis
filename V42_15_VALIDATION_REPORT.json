@@ -1,0 +1,30 @@
+{
+  "version": "V42.15",
+  "engine": "rust-module-topology-resume-authority-endgame-guard",
+  "generated_at": "2026-09-01T15:23:41.149856+00:00",
+  "regression_suites": 20,
+  "regression_checks_passed": 633,
+  "regression_checks_failed": 0,
+  "v4215_specific_checks": 25,
+  "exact_captured_geartrack_state_replay": "PASS",
+  "python_files_compiled": 27,
+  "python_compile_errors": 0,
+  "javascript_syntax_checks": [
+    "ui/app.js",
+    "ui/airtouch/airtouch.js",
+    "ui/airtouch/airtouch-worker.js"
+  ],
+  "javascript_syntax": "PASS",
+  "registered_toolchain_adapters": 73,
+  "skill_cards": 88,
+  "key_fixes": [
+    "word-boundary guard prevents escalate->Scala and trust->Rust false locks",
+    "generated conflicting resume toolchain locks are sanitized",
+    "unplanned Scala/sbt pollution quarantined before component discovery",
+    "Rust crate module paths resolve through mod.rs and semantic child modules",
+    "materialized stale flat Rust aggregate providers are suppressed",
+    "stale accepted revisions are pruned after resume migration",
+    "all-planned-accepted endgame blocks phantom provider synthesis",
+    "@tauri-apps/api normalized as runtime dependency"
+  ]
+}

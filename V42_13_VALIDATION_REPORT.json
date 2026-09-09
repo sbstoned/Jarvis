@@ -1,0 +1,22 @@
+{
+  "version": "V42.13",
+  "engine": "bounded-specialist-progress-watchdog",
+  "validated_at_utc": "2026-09-01T11:51:13.360050+00:00",
+  "regression_suites": 18,
+  "regression_checks_passed": 578,
+  "regression_checks_total": 578,
+  "python_top_level_files_compiled": 25,
+  "python_compile_errors": 0,
+  "dashboard_javascript_syntax": "PASS",
+  "skill_cards": 85,
+  "toolchain_adapters": 73,
+  "key_changes": [
+    "One provider-specialist 27B call per canonical provider per unchanged accepted repository state by default.",
+    "One global 27B clustering call per identical whole-project error signature and accepted repository state.",
+    "Immediate deterministic graph/provider/config escape when a specialist returns without accepted-state progress.",
+    "Bounded whole-project no-progress circuit breaker prevents overnight convergence loops.",
+    "Accepted revisions and cleaner real audit evidence are the only progress authority; model responses alone are not progress.",
+    "AUTO remains Qwen3.5 9B worker + new Qwen3.8 27B Aggressive Q2_K_P specialist only; manual selections remain strict.",
+    "V42.12 robust attached-ZIP resume import/trial isolation and V42.10 whole-project audit/endgame fixes preserved."
+  ]
+}

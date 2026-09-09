@@ -1,0 +1,5 @@
+JARVIS V37.0.0
+SMALL_MODEL_SOFTWARE_FACTORY
+
+Designed specifically around Qwen3.5-9B Q4_K_M local inference.
+Native llama.cpp context may remain 262,144 tokens; ordinary V37 engineering turns default to a focused 32,768-token working budget unless explicitly overridden.

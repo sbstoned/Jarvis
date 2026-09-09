@@ -1,0 +1,53 @@
+{
+  "version": "V42.4.0",
+  "engine": "PROVIDER_FIRST_FAST_GLOBAL_CONVERGENCE_FACTORY",
+  "release_focus": [
+    "provider-first global convergence",
+    "planned canonical provider injection into subsystem repair",
+    "transpiled JavaScript/TypeScript source import alias resolution",
+    "faster bounded leaf repair escalation",
+    "focused repair prompt prefill",
+    "strict zero-debt final publish gate preserved"
+  ],
+  "live_regression": {
+    "scenario": "GearTrack overnight V42.3 convergence",
+    "planned_files": 33,
+    "accepted_files_observed": 32,
+    "missing_or_unaccepted_canonical_provider": "src/types.ts",
+    "affected_consumers": [
+      "src/store/tool-store.ts",
+      "src/store/category-store.ts",
+      "src/store/user-store.ts",
+      "src/store/checkout-store.ts"
+    ],
+    "root_cause": "consumer-first repair churn while shared canonical provider was planned but unaccepted and absent from useful live graph routing"
+  },
+  "regression_results": {
+    "V41_1_universal_factory": "169/169 PASS",
+    "V41_2_react_vite": "14/14 PASS",
+    "V41_3_repair_convergence": "29/29 PASS",
+    "V41_3_failed_workspace_replay": "7/7 PASS",
+    "V42_0_capability_sandbox": "20/20 PASS",
+    "V42_1_tauri_cargo": "26/26 PASS",
+    "V42_2_component_boundary": "19/19 PASS",
+    "V42_3_progressive_global_convergence": "40/40 PASS",
+    "V42_4_provider_first_fast_convergence": "31/31 PASS",
+    "total": "355/355 PASS"
+  },
+  "python_compile": {
+    "top_level_python_files": 16,
+    "errors": 0
+  },
+  "registries": {
+    "toolchain_adapters_in_toolchains_json": 72,
+    "skill_cards": 79
+  },
+  "repair_defaults": {
+    "leaf_patch_candidates": 2,
+    "runtime_repair_targets": 3,
+    "per_file_repair_wall_seconds": 480,
+    "focused_leaf_repair_prompt_tokens": 24000,
+    "focused_subsystem_prompt_tokens": 30000
+  },
+  "publish_policy": "No project ZIP may be published until whole-repository deterministic checks, real build/test/runtime validation, requested-behavior acceptance, and zero unresolved debt succeed."
+}

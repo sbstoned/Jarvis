@@ -1,0 +1,33 @@
+{
+  "fixture_available": true,
+  "note": "The full npm build could not be executed in this sandbox because required npm packages are not available in the local cache and package download access is unavailable.",
+  "parsed_typescript_diagnostics": 37,
+  "old_checkpoint_contained_provider_first": true,
+  "provider_first_rules_removed": 1,
+  "deterministic_changed_files": [
+    "src/vite-env.d.ts",
+    "src/App.tsx",
+    "src/components/DashboardView.tsx",
+    "src/components/InventoryView.tsx",
+    "src/hooks/useCheckouts.ts",
+    "src/hooks/useDashboardStats.ts",
+    "src/hooks/useFiltering.ts",
+    "src/hooks/useTauriCommands.ts"
+  ],
+  "deterministic_changed_file_count": 8,
+  "app_consumer_context_has": {
+    "useTools": true,
+    "useCategories": true,
+    "usePersons": true,
+    "useCheckouts": true,
+    "useDashboardStats": true
+  },
+  "key_repairs": {
+    "unused_App_React_import_removed": true,
+    "vite_client_typing_present": true,
+    "useCheckouts_useState_imported": true,
+    "useCheckouts_null_mismatch_removed": true,
+    "useFiltering_duplicate_reexport_removed": true,
+    "tauri2_invoke_migrated": true
+  }
+}

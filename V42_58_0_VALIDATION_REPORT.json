@@ -1,0 +1,163 @@
+{
+  "version": "42.58.0",
+  "engine": "CONNECTED_CLUSTER_FUNCTIONAL_TRANSACTIONS_FACTORY",
+  "created_at_utc": "2026-09-08T15:12:06.285758+00:00",
+  "source_archive": "Jarvis_V42_57_0_COMPLETE.zip",
+  "source_archive_sha256": "564bcd32562e0bf9ddba9a06d5bf792a114fc6cb51c4417aeec4aa88d2665446",
+  "distribution": "complete V42.57 Jarvis distribution plus V42.58 connected-cluster convergence and rejected-trial evidence retention",
+  "behavioral_changes": {
+    "connected_functional_clusters": true,
+    "max_issue_owners_per_cluster": 6,
+    "same_language_alone_never_clusters": true,
+    "cluster_progress_is_acceptance_unit": true,
+    "peer_owner_improvement_can_be_promoted": true,
+    "owned_issue_regressions_rejected": true,
+    "per_owner_validator_scope": true,
+    "independent_target_starvation_protection": true,
+    "rejected_trial_evidence_preserved": true,
+    "rejected_trial_source_never_promoted": true,
+    "rejected_trial_evidence_file": "JARVIS_V4258_REJECTED_TRIAL_EVIDENCE.json",
+    "active_qwen_absolute_stream_timeout_seconds": 0,
+    "dead_stream_idle_timeout_preserved": true,
+    "cooperative_user_stop_preserved": true,
+    "compiler_functional_test_publish_gates_preserved": true
+  },
+  "test_results": {
+    "v4250": {
+      "passed": 17,
+      "failed": 0
+    },
+    "v4251": {
+      "passed": 17,
+      "failed": 0
+    },
+    "v4252": {
+      "passed": 19,
+      "failed": 0
+    },
+    "v4253_job_lifecycle": {
+      "passed": 8,
+      "failed": 0
+    },
+    "v4253_project_uploads": {
+      "passed": 19,
+      "failed": 0
+    },
+    "v4254_selected": {
+      "passed": 29,
+      "failed": 0
+    },
+    "v4255": {
+      "passed": 35,
+      "failed": 0
+    },
+    "v4256": {
+      "passed": 5,
+      "failed": 0
+    },
+    "v4257": {
+      "passed": 6,
+      "failed": 0
+    },
+    "v4258": {
+      "passed": 7,
+      "failed": 0
+    },
+    "focused_total_passed": 162,
+    "focused_total_failed": 0,
+    "python_compileall": "passed"
+  },
+  "geartrack_checkpoint_replay": {
+    "source": "uploaded GearTrack resumable checkpoint from 2026-09-08",
+    "input_functional_group_count": 9,
+    "scheduled_clusters": [
+      {
+        "phase": 0,
+        "owners": [
+          "src-tauri/src/checkout.rs",
+          "src-tauri/src/tools.rs",
+          "src-tauri/src/main.rs"
+        ],
+        "cluster": true,
+        "evidence_files": [
+          "src-tauri/src/checkout.rs",
+          "src-tauri/src/tools.rs",
+          "src-tauri/src/main.rs",
+          "src-tauri/src/persons.rs",
+          "src-tauri/src/app.rs",
+          "src-tauri/src/categories.rs",
+          "src-tauri/src/db.rs",
+          "src-tauri/src/lib.rs",
+          "src-tauri/src/migrations.rs",
+          "src-tauri/src/models/tool.rs",
+          "src/types/tool.ts",
+          "src/hooks/useCheckouts.ts",
+          "src/components/CheckoutHistoryView.tsx",
+          "src/hooks/useFiltering.ts",
+          "src-tauri/Cargo.toml",
+          "src-tauri/src/models/checkout_record.rs",
+          "src/types/checkout_record.ts",
+          "src-tauri/src/models/person.rs"
+        ]
+      },
+      {
+        "phase": 1,
+        "owners": [
+          "src/hooks/useCSVImportExport.ts",
+          "src/hooks/useCategories.ts",
+          "src/hooks/useCheckouts.ts",
+          "src/hooks/usePersons.ts"
+        ],
+        "cluster": true,
+        "evidence_files": [
+          "src/hooks/useCSVImportExport.ts",
+          "src/hooks/useCategories.ts",
+          "src/hooks/useCheckouts.ts",
+          "src/hooks/usePersons.ts",
+          "src/hooks/useFiltering.ts",
+          "src/hooks/useTauriCommands.ts",
+          "src/main.tsx",
+          "src/vite-env.d.ts",
+          "src-tauri/src/app.rs",
+          "src-tauri/src/lib.rs",
+          "src-tauri/src/main.rs",
+          "src/hooks/useDashboardStats.ts",
+          "src/hooks/useTools.ts",
+          "src-tauri/src/tools.rs",
+          "src/types/tool.ts",
+          "src-tauri/src/models/tool.rs",
+          "src/components/InventoryView.tsx",
+          "src/App.tsx"
+        ]
+      },
+      {
+        "phase": 5,
+        "owners": [
+          "src-tauri/tests/application.rs"
+        ],
+        "cluster": false
+      },
+      {
+        "phase": 5,
+        "owners": [
+          "tests/application.integration.test.ts"
+        ],
+        "cluster": false
+      }
+    ],
+    "production_cluster_count": 2,
+    "expected_production_transactions_per_audit_round": 2
+  },
+  "limits": [
+    "No live local Qwen server is available in this sandbox, so model-quality/convergence itself cannot be proven end-to-end here.",
+    "The long V42.54 checkpoint-import fixture was excluded from the focused 29-test workflow subset and is not counted as a pass.",
+    "The GearTrack checkpoint was used to replay scheduling/evidence topology only; this Jarvis package does not falsely declare GearTrack complete."
+  ],
+  "package_policy": {
+    "preserve_all_original_archive_members": true,
+    "replace_only_intended_files": true,
+    "exclude_runtime_pycache_changes": true,
+    "verify_zip_integrity_before_delivery": true,
+    "also_package_changed_files_only": true
+  }
+}

@@ -1,0 +1,3 @@
+@echo off
+python CHECK_V428_CONTRACT_GRAPH_RECONCILIATION.py
+pause
