@@ -45,40 +45,25 @@ def install(g):
     except OSError:
         pass
 
-    # V42.66 bounds connected transaction size and malformed-output recovery.
-    from jarvis_v4266_repair import install as _v4266_install
-    _v4266_install(g)
-
-    # V42.67 narrows BEFORE evidence collection and replaces normal owner repairs
-    # with compact target-only SEARCH/REPLACE transport. It also carries forward
-    # the V42.65 workflow-test/cache endgame fixes without installing V42.63's
-    # one-owner scheduler as the validation policy.
-    from jarvis_v4267_repair import install as _v4267_install
-    _v4267_install(g)
-
-    # V42.68 keeps the V42.67 owner-local scheduler but lets the model work on one
-    # issue through bounded host-controlled search/view/reference/edit/diagnose
-    # turns. Current diagnostics and rejected repair history persist across trials.
-    from jarvis_v4268_repair import install as _v4268_install
-    _v4268_install(g)
-
-    # V42.69 keeps V42.68's durable tool session and fixes the live-run blockers:
-    # export-aware JS/TS closure, safe wrapped tool extraction, and real component
-    # compiler/test feedback inside the SAME repair session with exact-proof reuse.
-    from jarvis_v4269_repair import install as _v4269_install
-    _v4269_install(g)
-
-    # V42.69.1 closes SQLite repair-memory handles at context exit so Windows can
-    # delete disposable candidate/temp workspaces immediately after validation.
-    from jarvis_v4269_1_repair import install as _v4269_1_install
-    _v4269_1_install(g)
-
-    # V42.69.2 replaces legacy delete-then-move resume promotion with a cache-safe
-    # in-place authored-source sync, prevents trial_N/trial_M nesting, self-recovers
-    # one legacy nested project root, and keeps .jarvis_memory out of app acceptance.
-    from jarvis_v4269_2_repair import install as _v4269_2_install
-    _v4269_2_install(g)
-
-    # Keep the same disposable candidate through newly exposed provider debt.
-    from jarvis_v4269_3_repair import install as _v4269_3_install
-    _v4269_3_install(g)
+    # V42.64 and V42.65 are layered successors to this bootstrap. The main
+    # project engine historically imported only V42.63, leaving the newer
+    # functional/test endgame repairs present on disk but inactive. Activate
+    # successors in order so each layer wraps the exact previous generation.
+    emit = g.get('_emit')
+    for module_name, label in (
+        ('jarvis_v4264_repair', 'V42.64'),
+        ('jarvis_v4265_repair', 'V42.65'),
+    ):
+        try:
+            module = __import__(module_name)
+            module.install(g)
+        except ModuleNotFoundError as exc:
+            if exc.name != module_name:
+                raise
+            if callable(emit):
+                emit(f"[Jarvis/{label}] successor repair module unavailable: {exc}")
+            break
+        except Exception as exc:
+            if callable(emit):
+                emit(f"[Jarvis/{label}] successor repair activation failed: {exc}")
+            raise
