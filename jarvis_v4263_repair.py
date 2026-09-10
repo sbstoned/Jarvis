@@ -72,3 +72,9 @@ def install(g):
     # delete disposable candidate/temp workspaces immediately after validation.
     from jarvis_v4269_1_repair import install as _v4269_1_install
     _v4269_1_install(g)
+
+    # V42.69.2 replaces legacy delete-then-move resume promotion with a cache-safe
+    # in-place authored-source sync, prevents trial_N/trial_M nesting, self-recovers
+    # one legacy nested project root, and keeps .jarvis_memory out of app acceptance.
+    from jarvis_v4269_2_repair import install as _v4269_2_install
+    _v4269_2_install(g)
