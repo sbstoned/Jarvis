@@ -67,3 +67,8 @@ def install(g):
     # compiler/test feedback inside the SAME repair session with exact-proof reuse.
     from jarvis_v4269_repair import install as _v4269_install
     _v4269_install(g)
+
+    # V42.69.1 closes SQLite repair-memory handles at context exit so Windows can
+    # delete disposable candidate/temp workspaces immediately after validation.
+    from jarvis_v4269_1_repair import install as _v4269_1_install
+    _v4269_1_install(g)
