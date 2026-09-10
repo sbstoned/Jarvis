@@ -8,6 +8,7 @@ import jarvis_v4250_repair as gates
 import jarvis_v4251_repair as transactions
 import jarvis_v4268_repair as sessions
 import jarvis_v4269_repair as v
+import jarvis_v4269_1_repair as hotfix
 
 
 class V4269Checks(unittest.TestCase):
@@ -68,6 +69,8 @@ class V4269Checks(unittest.TestCase):
         old_tx = transactions.repair_transaction
         old_parse = sessions._parse_action
         old_closure = sessions._local_closure_errors
+        old_memory_connect = sessions._memory_connect
+        old_memory_flag = getattr(sessions, "_v4269_1_memory_close_installed", False)
         calls = {"n": 0}
 
         def fake_proof(g, root, clone, manifest, rel, progress_callback=None):
@@ -95,6 +98,7 @@ class V4269Checks(unittest.TestCase):
                     "JARVIS_DIR": td,
                 }
                 v.install(g)
+                hotfix.install(g)
                 sessions._SESSION.root = str(root)
                 try:
                     errors = sessions._quick_diagnostics(
@@ -115,11 +119,13 @@ class V4269Checks(unittest.TestCase):
                             pass
 
                 identity = g["_v36_release_identity"]()
-                self.assertEqual(identity["version"], "V42.69.0")
+                self.assertEqual(identity["version"], "V42.69.1")
                 self.assertTrue(identity["export_aware_js_ts_closure"])
                 self.assertTrue(identity["wrapped_tool_action_extraction"])
                 self.assertTrue(identity["real_component_proof_inside_same_repair_session"])
                 self.assertTrue(identity["same_transaction_compiler_refinement"])
+                self.assertTrue(identity["sqlite_memory_connection_close_on_context_exit"])
+                self.assertTrue(identity["windows_candidate_cleanup_safe"])
                 self.assertFalse(identity["arbitrary_model_shell_access"])
         finally:
             gates._component_candidate_proof = old_proof
@@ -127,6 +133,8 @@ class V4269Checks(unittest.TestCase):
             transactions.repair_transaction = old_tx
             sessions._parse_action = old_parse
             sessions._local_closure_errors = old_closure
+            sessions._memory_connect = old_memory_connect
+            sessions._v4269_1_memory_close_installed = old_memory_flag
 
 
 if __name__ == "__main__":
@@ -134,4 +142,4 @@ if __name__ == "__main__":
     result = unittest.TextTestRunner(verbosity=2).run(suite)
     if not result.wasSuccessful():
         raise SystemExit(1)
-    print(f"V42.69 compiler-loop checks passed: {result.testsRun}/{result.testsRun}")
+    print(f"V42.69.1 compiler-loop checks passed: {result.testsRun}/{result.testsRun}")
