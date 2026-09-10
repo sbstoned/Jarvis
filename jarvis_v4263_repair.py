@@ -45,8 +45,13 @@ def install(g):
     except OSError:
         pass
 
-    # V42.66 is a focused post-startup repair policy layer. Keeping the import
-    # here avoids rewriting the very large local_qwen_project.py bootstrap while
-    # ensuring every normal V42.63 startup activates the bounded repair fixes.
+    # V42.66 bounds connected transaction size and malformed-output recovery.
     from jarvis_v4266_repair import install as _v4266_install
     _v4266_install(g)
+
+    # V42.67 narrows BEFORE evidence collection and replaces normal owner repairs
+    # with compact target-only SEARCH/REPLACE transport. It also carries forward
+    # the V42.65 workflow-test/cache endgame fixes without installing V42.63's
+    # one-owner scheduler as the validation policy.
+    from jarvis_v4267_repair import install as _v4267_install
+    _v4267_install(g)
