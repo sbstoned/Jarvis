@@ -55,3 +55,9 @@ def install(g):
     # one-owner scheduler as the validation policy.
     from jarvis_v4267_repair import install as _v4267_install
     _v4267_install(g)
+
+    # V42.68 keeps the V42.67 owner-local scheduler but lets the model work on one
+    # issue through bounded host-controlled search/view/reference/edit/diagnose
+    # turns. Current diagnostics and rejected repair history persist across trials.
+    from jarvis_v4268_repair import install as _v4268_install
+    _v4268_install(g)
