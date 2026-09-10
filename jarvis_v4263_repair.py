@@ -44,3 +44,26 @@ def install(g):
              'JARVIS_ACTIVE_ENGINE.txt').write_text('V' + VERSION + '\n', encoding='utf-8')
     except OSError:
         pass
+
+    # V42.64 and V42.65 are layered successors to this bootstrap. The main
+    # project engine historically imported only V42.63, leaving the newer
+    # functional/test endgame repairs present on disk but inactive. Activate
+    # successors in order so each layer wraps the exact previous generation.
+    emit = g.get('_emit')
+    for module_name, label in (
+        ('jarvis_v4264_repair', 'V42.64'),
+        ('jarvis_v4265_repair', 'V42.65'),
+    ):
+        try:
+            module = __import__(module_name)
+            module.install(g)
+        except ModuleNotFoundError as exc:
+            if exc.name != module_name:
+                raise
+            if callable(emit):
+                emit(f"[Jarvis/{label}] successor repair module unavailable: {exc}")
+            break
+        except Exception as exc:
+            if callable(emit):
+                emit(f"[Jarvis/{label}] successor repair activation failed: {exc}")
+            raise
