@@ -61,3 +61,9 @@ def install(g):
     # turns. Current diagnostics and rejected repair history persist across trials.
     from jarvis_v4268_repair import install as _v4268_install
     _v4268_install(g)
+
+    # V42.69 keeps V42.68's durable tool session and fixes the live-run blockers:
+    # export-aware JS/TS closure, safe wrapped tool extraction, and real component
+    # compiler/test feedback inside the SAME repair session with exact-proof reuse.
+    from jarvis_v4269_repair import install as _v4269_install
+    _v4269_install(g)
