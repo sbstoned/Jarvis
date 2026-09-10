@@ -79,7 +79,7 @@ Jarvis follows a few core rules:
 4. Preserve the best verified state instead of destroying working progress.
 5. Keep the architecture stack-agnostic instead of overfitting to one language or framework.
 
-The current V42.65 validation notes report **163 focused regression checks passed** across endgame recovery, cache isolation, model runtime behavior, adaptive I/O, connected functional repairs, durable progress, model protocol, and job lifecycle behavior.
+V42.69.3 keeps related caller/provider repairs in one disposable candidate and feeds compiler and workflow failures back into that session. Its regression workflow exercises persistence, invalid input, separate-process reads, promotion, rollback, and Stop. See `V42_69_3_README.txt` and `CHECK_V4269_3_FUNCTIONAL_CLOSURE.py`. Each generated project still has to pass its own build, runtime, and functional acceptance checks before completion.
 
 ## Quick start
 

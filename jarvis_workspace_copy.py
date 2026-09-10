@@ -32,6 +32,28 @@ class CandidateWorkspaceError(OSError):
     """Validation infrastructure failed before a model candidate was requested."""
 
 
+def cleanup_candidate_workspace(handle, g=None, root=None):
+    """A locked disposable cache must never replace a repair/stop/commit result."""
+    if handle is None:
+        return
+    for attempt in range(2):
+        try:
+            handle.cleanup()
+            return
+        except OSError as exc:
+            if not attempt:
+                time.sleep(0.05)
+                continue
+            reporter = (g or {}).get('_append_project_event')
+            if callable(reporter) and root is not None:
+                try:
+                    reporter(root, 'candidate_cleanup_deferred',
+                             'Temporary candidate cleanup failed; the transaction result and repair evidence were preserved.',
+                             error=str(exc)[-1600:], final_acceptance=False)
+                except Exception:
+                    pass
+
+
 def copy_source_tree(src, dst, *, ignore=None, **kwargs):
     """Compose the caller's exclusions with owned caches at every depth.
 

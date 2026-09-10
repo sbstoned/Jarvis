@@ -23,6 +23,7 @@ from typing import Any
 import jarvis_v4251_repair as transactions
 import jarvis_v4259_repair as adaptive_io
 import jarvis_v4265_repair as endgame
+from jarvis_workspace_copy import cleanup_candidate_workspace
 
 VERSION = "42.67.0"
 ENGINE = "OWNER_LOCAL_COMPACT_REPAIR_FACTORY"
@@ -426,7 +427,7 @@ def install(g: dict[str, Any]):
             try:
                 g["_copy_resume_workspace"](source, clone)
             except Exception:
-                temp.cleanup()
+                cleanup_candidate_workspace(temp, g, source)
                 raise
             return temp, clone
         g["_copy_project_for_candidate_validation"] = copy_project_for_candidate_validation

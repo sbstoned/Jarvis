@@ -78,3 +78,7 @@ def install(g):
     # one legacy nested project root, and keeps .jarvis_memory out of app acceptance.
     from jarvis_v4269_2_repair import install as _v4269_2_install
     _v4269_2_install(g)
+
+    # Keep the same disposable candidate through newly exposed provider debt.
+    from jarvis_v4269_3_repair import install as _v4269_3_install
+    _v4269_3_install(g)

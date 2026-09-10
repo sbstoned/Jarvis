@@ -43,6 +43,7 @@ MAX_MEMORY_EVENTS = max(3, min(20, int(os.getenv("JARVIS_V4268_MEMORY_EVENTS", "
 WHOLE_FILE_REWRITE_RATIO = max(0.55, min(0.95, float(os.getenv("JARVIS_V4268_WHOLE_FILE_RATIO", "0.86"))))
 MEMORY_DIR = ".jarvis_memory"
 MEMORY_DB = "project_memory.sqlite3"
+MAX_SESSION_FILES = 3  # Primary owner plus two validator-proven dependencies.
 
 _SESSION = threading.local()
 
@@ -549,19 +550,29 @@ def _quick_diagnostics(g, clone, manifest, target, before, draft):
 
 def _functional_preflight(root, clone, request, manifest, group):
     """Run Jarvis's own functional debt detector before ending the model session."""
+    _SESSION.functional_blockers = []
     try:
         delta = transactions._cluster_functional_delta(
             Path(root).resolve(), Path(clone).resolve(), str(request), manifest or {}, group
         )
     except Exception as exc:
         return ["functional preflight tool error: " + str(exc)[-1800:]]
+    added = transactions._new_functional_debt(delta)
+    _SESSION.functional_blockers = added
+    new_debt_errors = []
+    if added:
+        new_debt_errors = [
+            "Candidate introduced new functional debt. Repair these dependencies in the SAME disposable "
+            "candidate before requesting promotion; keep the useful caller draft:\n"
+            + json.dumps(added, ensure_ascii=False, default=str)[:5500]
+        ]
     if delta.get("improved"):
-        return []
+        return new_debt_errors
     owner_set = set(transactions._cluster_owner_files(group))
     after_rows = [
         row for row in (delta.get("after") or [])
         if isinstance(row, dict) and str(row.get("file") or "") in owner_set
-    ]
+    ] + new_debt_errors
     payload = after_rows or {
         "before_owned": delta.get("before_owned"),
         "after_owned": delta.get("after_owned"),
@@ -572,6 +583,72 @@ def _functional_preflight(root, clone, request, manifest, group):
         "functional preflight: candidate is statically clean but does not yet reduce the owned functional debt. "
         + json.dumps(payload, ensure_ascii=False, default=str)[:4500]
     ]
+
+
+def _enroll_dependencies(root, clone, rows, manifest, evidence, originals, drafts, groups):
+    """Only live validator findings can authorize another existing authored file.
+
+    Complete original source is registered with the outer transaction before an
+    edit is allowed. Neither a model-supplied path nor related-source ranking is
+    sufficient to expand write scope.
+    """
+    candidates = {str(row.get('file') or '').replace('\\', '/') for row in rows if isinstance(row, dict)}
+    if not candidates - set(drafts):
+        return []
+    declared = [item.get('path', '') if isinstance(item, dict) else item
+                for item in (manifest or {}).get('files', [])]
+    available = dict(transactions.source_files(root, declared))
+    enrolled = []
+    for rel in sorted(candidates - set(drafts)):
+        if len(drafts) >= MAX_SESSION_FILES:
+            break
+        if (rel not in available or not transactions._safe_path(root, rel)
+                or not transactions._safe_path(clone, rel)):
+            continue
+        accepted = _safe_tool_path(root, rel)
+        candidate = _safe_tool_path(clone, rel)
+        if accepted is None or candidate is None:
+            continue
+        original = available[rel]
+        if candidate.read_text(encoding='utf-8', errors='replace') != original:
+            raise ValueError('Dependency source changed since the candidate was cloned: ' + rel)
+        owned = [row for row in rows if str(row.get('file') or '').replace('\\', '/') == rel]
+        groups[rel] = {'file': rel, 'rows': owned,
+                       'kinds': sorted({str(row.get('kind') or '') for row in owned}),
+                       'problems': [str(row.get('problem') or '') for row in owned]}
+        evidence[rel] = original
+        originals[rel] = original
+        drafts[rel] = original
+        enrolled.append(rel)
+    return enrolled
+
+
+def _session_diagnostics(g, root, clone, request, manifest, group, target, before, draft,
+                         originals=None, drafts=None):
+    functional = _functional_preflight(root, clone, request, manifest, group)
+    # Run cheap syntax/content checks while a connected operation is incomplete.
+    # Once dependency closure is reached, real compiler/test proof runs in-session.
+    _SESSION.defer_component_proof = bool(functional)
+    _SESSION.failed_target = target
+    try:
+        errors = list(_quick_diagnostics(g, clone, manifest, target, before, draft) or []) + functional
+        integrity = transactions._test_integrity_error(target, (originals or {}).get(target, before), draft)
+        if integrity:
+            errors.append(integrity)
+        # A connected edit can cross compiler boundaries. Feed failures from
+        # EVERY changed component back into this session before returning it.
+        if not errors:
+            for rel, text in (drafts or {}).items():
+                original = (originals or {}).get(rel, text)
+                if rel == target or text == original:
+                    continue
+                errors = list(_quick_diagnostics(g, clone, manifest, rel, original, text) or [])
+                if errors:
+                    _SESSION.failed_target = rel
+                    break
+        return errors
+    finally:
+        _SESSION.defer_component_proof = False
 
 
 def _tool_result(action, root, clone, target, draft, obj):
@@ -625,9 +702,10 @@ def _agent_model_candidate(g, request, manifest, root, group, evidence, errors, 
     if not clone or not clone.exists():
         return fallback(g, request, manifest, root, group, evidence, errors, attempt, callback)
 
-    evidence = owner_local._select_evidence(evidence, target)
-    contract = _contract(root, target, group, source, evidence, manifest, errors)
-    durable = _memory_summary(root, target, group, source)
+    primary = target
+    originals = {target: source}
+    drafts = {target: source}
+    groups = {target: group}
     draft = source
     transcript = []
     inspection_steps = 0
@@ -637,13 +715,25 @@ def _agent_model_candidate(g, request, manifest, root, group, evidence, errors, 
 
     _remember(
         root, target, group, source, "session_started",
-        f"repair_class={owner_local._repair_class(group)} memory_loaded={durable != '(no previous repair events for this target)'}",
+        f"repair_class={owner_local._repair_class(group)} dependency_closure=True",
         attempt=attempt,
     )
 
     for step in range(1, MAX_TOOL_STEPS + 1):
+        from jarvis_v4240_repair import _STOP_EVENT, ProjectStopRequested
+        if _STOP_EVENT.is_set():
+            raise ProjectStopRequested('Stop requested inside a connected repair session.')
         if edit_rounds >= MAX_EDIT_ROUNDS:
             break
+        source, draft = originals[target], drafts[target]
+        current_group = groups[target]
+        related = transactions.related_sources(clone, target, manifest)
+        # Keep already edited callers visible while repairing their providers.
+        related = {target: draft, **{rel: text for rel, text in drafts.items() if rel != target},
+                   **{rel: text for rel, text in related.items() if rel not in drafts}}
+        context = owner_local._select_evidence(related, target)
+        contract = _contract(clone, target, current_group, source, context, manifest, errors)
+        durable = _memory_summary(root, target, current_group, source)
         transcript_text = "\n\n".join(transcript)
         if len(transcript_text) > MAX_TRANSCRIPT_CHARS:
             transcript_text = transcript_text[-MAX_TRANSCRIPT_CHARS:]
@@ -655,7 +745,10 @@ def _agent_model_candidate(g, request, manifest, root, group, evidence, errors, 
             "Patch the smallest coherent function/method/region. Never return whole-file content. "
             "After every edit Jarvis automatically writes only the disposable candidate and runs immediate diagnostics. "
             "If diagnostics fail, fix those diagnostics in the SAME repair session rather than starting over.\n"
-            "SEARCH/VIEW are read-only. You cannot run arbitrary shell commands or edit outside the candidate owner.\n\n"
+            "SEARCH/VIEW are read-only. You cannot run arbitrary shell commands. "
+            "Edit only the CURRENT target. To revisit another authorized file, view its path first. "
+            "Only Jarvis's live validator may authorize a dependency file; naming a file does not authorize it.\n"
+            f"AUTHORIZED CANDIDATE FILES: {', '.join(drafts)}\n\n"
             f"{contract}\n\n"
             "DURABLE PROJECT REPAIR MEMORY (previous trials/restarts):\n"
             f"{durable}\n\n"
@@ -673,11 +766,11 @@ def _agent_model_candidate(g, request, manifest, root, group, evidence, errors, 
         except Exception:
             model_target = ""
         budget = min(
-            owner_local._budget_for(model_target, owner_local._repair_class(group), max(1, edit_rounds + 1)),
+            owner_local._budget_for(model_target, owner_local._repair_class(current_group), max(1, edit_rounds + 1)),
             4096 if edit_rounds else 3072,
         )
 
-        owner_local._CALL.repair_class = owner_local._repair_class(group)
+        owner_local._CALL.repair_class = owner_local._repair_class(current_group)
         owner_local._CALL.attempt = max(1, edit_rounds + 1)
         owner_local._CALL.target = target
         try:
@@ -724,12 +817,16 @@ def _agent_model_candidate(g, request, manifest, root, group, evidence, errors, 
         _remember(root, target, group, source, "tool_action", json.dumps(obj, ensure_ascii=False)[:5000], attempt, step)
 
         if action in {"search", "view", "references", "symbol"}:
-            if inspection_steps >= MAX_INSPECTION_STEPS:
+            focus = str(obj.get('path') or '').replace('\\', '/')
+            if action == 'view' and focus in drafts and focus != target:
+                target = focus
+                result = 'Focus changed to authorized candidate file ' + target + '; complete current source follows in the next prompt.'
+            elif inspection_steps >= MAX_INSPECTION_STEPS:
                 result = (
                     "Inspection budget reached. Use the supplied contract/current source and make the smallest coherent edit now."
                 )
             else:
-                result = _tool_result(action, root, clone, target, draft, obj)
+                result = _tool_result(action, clone, clone, target, draft, obj)
                 inspection_steps += 1
             result = str(result)[:MAX_TOOL_RESULT_CHARS]
             transcript.append(f"TOOL {action.upper()} RESULT:\n{result}")
@@ -738,7 +835,7 @@ def _agent_model_candidate(g, request, manifest, root, group, evidence, errors, 
         if action == "diagnose":
             (clone / target).parent.mkdir(parents=True, exist_ok=True)
             (clone / target).write_text(draft, encoding="utf-8")
-            diagnostics = _quick_diagnostics(g, clone, manifest, target, source, draft)
+            diagnostics = _session_diagnostics(g, root, clone, request, manifest, group, target, source, draft, originals, drafts)
             result = "\n".join(diagnostics) if diagnostics else "Diagnostics are clean. Make/finish the necessary functional edit."
             transcript.append("DIAGNOSTICS:\n" + result[-MAX_TOOL_RESULT_CHARS:])
             _remember(root, target, group, source, "diagnostics", result, attempt, step)
@@ -749,6 +846,10 @@ def _agent_model_candidate(g, request, manifest, root, group, evidence, errors, 
             transcript.append("TOOL ERROR: unsupported action; choose search/view/references/symbol/edit/diagnose.")
             continue
 
+        if str(obj.get('path') or target).replace('\\', '/') != target:
+            transcript.append('EDIT REJECTED: path must match CURRENT target; view an authorized file first to change focus.')
+            edit_rounds += 1
+            continue
         replacements = obj.get("replacements")
         if not isinstance(replacements, list) or not replacements:
             transcript.append("EDIT REJECTED: edit action needs one or more exact SEARCH/REPLACE hunks.")
@@ -760,7 +861,7 @@ def _agent_model_candidate(g, request, manifest, root, group, evidence, errors, 
             edit_rounds += 1
             continue
         try:
-            replacements = transactions._scoped_replacements(group, draft, replacements)
+            replacements = transactions._scoped_replacements(current_group, draft, replacements)
             replacements = transactions._applicable_replacements(draft, replacements)
             if not replacements:
                 raise ValueError("No exact in-scope hunks remain; SEARCH must match CURRENT CANDIDATE SOURCE exactly once.")
@@ -779,9 +880,13 @@ def _agent_model_candidate(g, request, manifest, root, group, evidence, errors, 
 
         (clone / target).parent.mkdir(parents=True, exist_ok=True)
         (clone / target).write_text(new_draft, encoding="utf-8")
-        diagnostics = _quick_diagnostics(g, clone, manifest, target, draft, new_draft)
-        if not diagnostics:
-            diagnostics.extend(_functional_preflight(root, clone, request, manifest, group))
+        drafts[target] = new_draft
+        diagnostics = _session_diagnostics(g, root, clone, request, manifest, group, target, draft, new_draft, originals, drafts)
+        blockers = list(getattr(_SESSION, 'functional_blockers', []) or [])
+        enrolled = _enroll_dependencies(root, clone, blockers, manifest, evidence, originals, drafts, groups)
+        if enrolled:
+            _remember(root, primary, group, originals[primary], 'dependency_enrolled',
+                      json.dumps({'files': enrolled, 'findings': blockers}, ensure_ascii=False), attempt, step)
         diff = _compact_diff(draft, new_draft, target)
         impact = _changed_identifier_map(draft, new_draft, root)
         edit_rounds += 1
@@ -800,8 +905,8 @@ def _agent_model_candidate(g, request, manifest, root, group, evidence, errors, 
                 repair_edit_round=edit_rounds,
                 internal_preflight_clean=True,
             )
-            _SESSION.last_draft = new_draft
-            return {target: new_draft}
+            _SESSION.last_draft = drafts[primary]
+            return {rel: text for rel, text in drafts.items() if text != originals[rel]}
 
         draft = new_draft
         last_diagnostics = diagnostics
@@ -812,6 +917,13 @@ def _agent_model_candidate(g, request, manifest, root, group, evidence, errors, 
             "IMMEDIATE DIAGNOSTICS (fix these in the SAME session):\n"
             + "\n".join(diagnostics)
         )
+        pending = [str(row.get('file') or '').replace('\\', '/') for row in blockers]
+        # Keep the draft and move straight to the validator-owned dependency.
+        # Once there, remain on it until its finding clears or the model revisits
+        # another explicitly authorized target through view.
+        if target not in pending:
+            failed = str(getattr(_SESSION, 'failed_target', target))
+            target = next((rel for rel in pending if rel in drafts), failed if failed in drafts else target)
 
     message = (
         f"V{VERSION} internal repair session exhausted before static preflight became clean. "
@@ -862,7 +974,7 @@ def install(g: dict[str, Any]):
             )
             return changed, out_errors
         finally:
-            for name in ("clone", "root", "last_target", "last_draft"):
+            for name in ("clone", "root", "last_target", "last_draft", "functional_blockers", "defer_component_proof", "failed_target"):
                 try:
                     delattr(_SESSION, name)
                 except Exception:

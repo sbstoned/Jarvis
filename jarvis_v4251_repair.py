@@ -12,7 +12,7 @@ import re
 from collections import Counter
 from pathlib import Path
 from jarvis_model_protocol import exact_replacements, fit_source_prompt, parse_object, parse_source_file, save_response
-from jarvis_workspace_copy import CandidateWorkspaceError, prepare_candidate_workspace, workspace_failure
+from jarvis_workspace_copy import CandidateWorkspaceError, prepare_candidate_workspace, workspace_failure, cleanup_candidate_workspace
 import jarvis_v4249_repair as planner
 import jarvis_v4250_repair as gates
 from jarvis_workflow_contracts import is_test, debt_key, has_inline_tests
@@ -283,6 +283,21 @@ def _cluster_functional_delta(root, clone, user_request, manifest, group):
         'improved':bool(before_owned > 0 and after_owned < before_owned and not regressions),
         'before':before, 'after':after,
     }
+
+
+def _new_functional_debt(delta):
+    """Share the exact promotion rule with the internal repair-session preflight."""
+    before = Counter(debt_key(row) for row in delta.get('before', []) if isinstance(row, dict))
+    added = []
+    for row in delta.get('after', []):
+        if not isinstance(row, dict):
+            continue
+        key = debt_key(row)
+        if before[key]:
+            before[key] -= 1
+        elif row.get('kind') not in {'functional_bridge', 'functional_runtime_state'}:
+            added.append(row)
+    return added
 
 
 def _family(rel):
@@ -760,6 +775,17 @@ def repair_transaction(g, request, manifest, root, group, callback=None, prior_e
             handle, clone = prepare_candidate_workspace(g, root, callback)
             clone = Path(clone).resolve()
             changes = _model_candidate(g,request,manifest,root,group,evidence,errors,attempt,callback)
+            # A session may enroll a validator-proven dependency after a caller
+            # exposes it. The complete ORIGINAL source is supplied before editing;
+            # include it in the same atomic commit and concurrent-change guard.
+            for rel in changes:
+                if rel not in evidence or not _safe_path(root, rel) or _IS_SENSITIVE(rel):
+                    raise ValueError('Candidate edit has no authorized source evidence: ' + str(rel))
+                if rel not in originals:
+                    path = root / rel
+                    if not path.is_file() or path.read_text(encoding='utf-8', errors='replace') != evidence[rel]:
+                        raise ValueError('Dependency source changed during repair: ' + rel)
+                    originals[rel] = path.read_bytes()
             digest = hashlib.sha256(json.dumps(changes,sort_keys=True).encode()).hexdigest()
             if digest in fingerprints: raise ValueError('Repeated rejected candidate; change the repair strategy.')
             fingerprints.add(digest)
@@ -800,12 +826,7 @@ def repair_transaction(g, request, manifest, root, group, callback=None, prior_e
             # Do not replace one production defect with a different one. Bridge
             # reachability can legitimately expand when real callers are added;
             # it remains explicit debt for the next runtime phase, never hidden.
-            before = Counter(debt_key(x) for x in delta.get('before',[]))
-            added = []
-            for row in delta.get('after',[]):
-                key = debt_key(row)
-                if before[key]: before[key] -= 1
-                elif row.get('kind') not in {'functional_bridge','functional_runtime_state'}: added.append(row)
+            added = _new_functional_debt(delta)
             if added: raise ValueError('Candidate introduced new functional debt: ' + json.dumps(added)[-4500:])
             proved = set()
             for rel in changes:
@@ -817,6 +838,8 @@ def repair_transaction(g, request, manifest, root, group, callback=None, prior_e
                     raise ValueError(rel + ': component proof ' + str(proof.get('kind')) + '\n' + str(proof.get('output'))[-5000:])
                 proved.add(identity)
             if _STOP_EVENT.is_set(): raise ProjectStopRequested('Stop requested before committing the validated candidate.')
+            if any(((root/rel).read_bytes() if (root/rel).exists() else None) != data for rel,data in originals.items()):
+                raise ValueError('Source changed during candidate validation; re-audit before committing.')
             _commit(g,root,clone,originals,changes,manifest)
             _event(g,root,'v4251_transaction_committed',f'V{VERSION} promoted a validated connected functional transaction.',
                    files=list(changes),owners=_cluster_owner_files(group),before=delta.get('before_total'),after=delta.get('after_total'),
@@ -834,7 +857,7 @@ def repair_transaction(g, request, manifest, root, group, callback=None, prior_e
             _event(g,root,'v4251_transaction_rejected',f'V{VERSION} rejected a disposable connected candidate; its evidence will inform the next attempt.',
                    file=group['file'],owners=_cluster_owner_files(group),attempt=attempt,error=errors[-1],final_acceptance=False)
         finally:
-            if handle is not None: handle.cleanup()
+            cleanup_candidate_workspace(handle, g, root)
     return False, _result_errors(errors)
 
 

@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -142,9 +143,27 @@ def _file_digest(path: Path) -> str:
         return ""
 
 
-def _proof_key(clone, rel):
+def _proof_key(clone, rel, manifest=None):
+    """Proof belongs to the complete authored revision, including dependencies."""
     clone = Path(clone).resolve()
-    return (str(clone), str(rel).replace("\\", "/"), _file_digest(clone / rel))
+    digest = hashlib.sha256()
+    digest.update(json.dumps(manifest or {}, sort_keys=True, default=str).encode())
+    for directory, dirs, files in os.walk(clone, followlinks=False):
+        dirs[:] = sorted(name for name in dirs
+                         if name not in transactions.SKIP and not name.startswith('.jarvis')
+                         and not Path(directory, name).is_symlink())
+        for name in sorted(files):
+            path = Path(directory, name)
+            relative = path.relative_to(clone).as_posix()
+            if (path.is_symlink() or name.startswith(('JARVIS_', '.jarvis'))
+                    or transactions._IS_SENSITIVE(relative)):
+                continue
+            digest.update(relative.encode() + b'\0')
+            with path.open('rb') as stream:
+                for block in iter(lambda: stream.read(1024 * 1024), b''):
+                    digest.update(block)
+            digest.update(b'\0')
+    return (str(clone), str(rel).replace("\\", "/"), digest.hexdigest())
 
 
 def _topology_hint(root, target):
@@ -209,15 +228,19 @@ def install(g: dict[str, Any]):
     previous_component_proof = gates._component_candidate_proof
 
     def component_proof(g2, root, clone, manifest, rel, progress_callback=None):
-        key = _proof_key(clone, rel)
+        try:
+            key = _proof_key(clone, rel, manifest)
+        except OSError:
+            key = None  # Unreadable/racing files require fresh proof, never reuse.
         cache = getattr(sessions._SESSION, "v4269_component_proof_cache", None)
-        if isinstance(cache, dict) and key in cache:
+        if key is not None and isinstance(cache, dict) and key in cache:
             return dict(cache[key])
         result = previous_component_proof(g2, root, clone, manifest, rel, progress_callback)
         if not isinstance(cache, dict):
             cache = {}
             sessions._SESSION.v4269_component_proof_cache = cache
-        cache[key] = dict(result or {})
+        if key is not None:
+            cache[key] = dict(result or {})
         return result
 
     gates._component_candidate_proof = component_proof
@@ -226,7 +249,7 @@ def install(g: dict[str, Any]):
 
     def quick_diagnostics(g2, clone, manifest, target, before, draft):
         errors = list(previous_quick(g2, clone, manifest, target, before, draft) or [])
-        if errors or str(before) == str(draft):
+        if errors or str(before) == str(draft) or getattr(sessions._SESSION, "defer_component_proof", False):
             return errors
 
         root_value = str(getattr(sessions._SESSION, "root", "") or "")
